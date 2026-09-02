@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Tracker</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <h1>Car Tracker</h1>
+    <p class="tagline">Compact SUV hunt &middot; Phoenix metro &middot; target $22k&ndash;$26k</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="stats" id="stats"></section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Listings</h2>
+      <div class="controls">
+        <label class="sr-only" for="sort">Sort by</label>
+        <select id="sort">
+          <option value="score">Best score</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="miles">Lowest mileage</option>
+          <option value="year">Newest year</option>
+          <option value="added">Recently added</option>
+        </select>
+        <label class="check"><input type="checkbox" id="hideDead"> Hide sold/passed</label>
+      </div>
+    </div>
+    <div id="listings" class="listings"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2 id="formTitle">Add a listing</h2>
+      <button type="button" class="ghost" id="resetForm">Clear</button>
+    </div>
+
+    <form id="listingForm" autocomplete="off">
+      <input type="hidden" id="editId">
+
+      <div class="grid">
+        <div class="field span2">
+          <label for="url">Listing URL</label>
+          <input type="url" id="url" placeholder="https://dealer.example.com/inventory/...">
+          <p class="hint">Prefer the dealer's own vehicle-detail page, not a search results page.</p>
+        </div>
+
+        <div class="field span2">
+          <label for="vin">VIN</label>
+          <div class="row">
+            <input type="text" id="vin" maxlength="17" placeholder="17 characters">
+            <button type="button" id="decodeVin">Decode</button>
+          </div>
+          <p class="hint" id="vinStatus">Decodes free via NHTSA &mdash; fills year, make, model, trim.</p>
+        </div>
+
+        <div class="field"><label for="year">Year</label><input type="number" id="year" min="1990" max="2027" required></div>
+        <div class="field"><label for="make">Make</label><input type="text" id="make" required></div>
+        <div class="field"><label for="model">Model</label><input type="text" id="model" required></div>
+        <div class="field"><label for="trim">Trim</label><input type="text" id="trim" placeholder="XLE, EX, Touring..."></div>
+
+        <div class="field"><label for="price">Price ($)</label><input type="number" id="price" min="0" step="100" required></div>
+        <div class="field"><label for="miles">Mileage</label><input type="number" id="miles" min="0" step="1000" required></div>
+
+        <div class="field">
+          <label for="title">Title</label>
+          <select id="title">
+            <option value="clean">Clean</option>
+            <option value="unknown">Unknown / not stated</option>
+            <option value="salvage">Salvage</option>
+            <option value="rebuilt">Rebuilt / restored salvage</option>
+            <option value="flood">Flood</option>
+            <option value="other-branded">Other branded</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="accidents">Accident history</label>
+          <select id="accidents">
+            <option value="none">No accidents reported</option>
+            <option value="unknown">Unknown</option>
+            <option value="minor">Minor damage</option>
+            <option value="major">Major / structural</option>
+          </select>
+        </div>
+
+        <div class="field"><label for="drive">Drive</label>
+          <select id="drive"><option value="fwd">FWD</option><option value="awd">AWD</option></select>
+        </div>
+        <div class="field"><label for="location">Location</label><input type="text" id="location" placeholder="Phoenix, AZ"></div>
+        <div class="field span2"><label for="dealer">Dealer</label><input type="text" id="dealer"></div>
+      </div>
+
+      <fieldset>
+        <legend>Safety &amp; driver assistance</legend>
+        <div class="checks" id="safetyChecks"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Comfort &amp; convenience</legend>
+        <div class="checks" id="comfortChecks"></div>
+      </fieldset>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="watching">Watching</option>
+          <option value="contacted">Contacted dealer</option>
+          <option value="seen">Went to see it</option>
+          <option value="passed">Passed</option>
+          <option value="sold">Sold / gone</option>
+        </select>
+      </div>
+
+      <div class="field span2"><label for="notes">Notes</label><textarea id="notes" rows="3"></textarea></div>
+
+      <div class="actions">
+        <button type="submit" class="primary" id="submitBtn">Add listing</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Data</h2></div>
+    <p class="hint">
+      Listings live in your browser as you work. Export to <code>data/listings.json</code> and commit it
+      to save your data into the repo and publish it.
+    </p>
+    <div class="actions">
+      <button type="button" id="exportBtn">Export JSON</button>
+      <button type="button" id="loadRepoBtn">Load from repo</button>
+      <label class="filebtn">Import JSON<input type="file" id="importFile" accept="application/json" hidden></label>
+    </div>
+    <p class="hint" id="dataStatus"></p>
+  </section>
+
+</main>
+
+<template id="cardTpl">
+  <article class="card">
+    <div class="card-main">
+      <div class="card-head">
+        <h3 class="card-title"></h3>
+        <div class="score" title="Score against your criteria"><span class="score-num"></span><span class="score-max">/100</span></div>
+      </div>
+      <p class="card-sub"></p>
+      <ul class="flags"></ul>
+      <div class="pricebox">
+        <span class="price"></span>
+        <span class="pricedelta"></span>
+      </div>
+      <div class="breakdown"></div>
+      <div class="card-actions">
+        <a class="link" target="_blank" rel="noopener noreferrer">Open listing</a>
+        <button type="button" class="ghost act-price">Update price</button>
+        <button type="button" class="ghost act-edit">Edit</button>
+        <button type="button" class="ghost danger act-del">Delete</button>
+      </div>
+      <details class="history"><summary>Price history</summary><ol></ol></details>
+    </div>
+  </article>
+</template>
+
+<script src="assets/criteria.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
