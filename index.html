@@ -132,12 +132,13 @@
   <section class="panel">
     <div class="panel-head"><h2>Data</h2></div>
     <p class="hint">
-      Listings live in your browser as you work. Export to <code>data/listings.json</code> and commit it
-      to save your data into the repo and publish it.
+      The tracked listings sync automatically from <code>data/listings.json</code> each visit.
+      Anything you add here stays in this browser until you export it and commit the file.
+      A status you set yourself &mdash; passed, sold &mdash; survives syncing.
     </p>
     <div class="actions">
       <button type="button" id="exportBtn">Export JSON</button>
-      <button type="button" id="loadRepoBtn">Load from repo</button>
+      <button type="button" id="loadRepoBtn">Sync now</button>
       <label class="filebtn">Import JSON<input type="file" id="importFile" accept="application/json" hidden></label>
     </div>
     <p class="hint" id="dataStatus"></p>

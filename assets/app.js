@@ -322,16 +322,62 @@ function importJson(file) {
   r.readAsText(file);
 }
 
-async function loadFromRepo() {
+function mergeHistory(a = [], b = []) {
+  const seen = new Set();
+  return [...a, ...b]
+    .filter(h => {
+      const k = `${h.date}|${h.price}`;
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    })
+    .sort((x, y) => String(x.date).localeCompare(String(y.date)));
+}
+
+// The repo file is the maintained dataset, so it wins on vehicle facts and price.
+// The one thing it must not stomp is a status the user set themselves — marking a car
+// "passed" should survive the next sync.
+async function syncFromRepo({ quiet = false } = {}) {
   try {
     const res = await fetch('data/listings.json', { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    if (!Array.isArray(data)) throw new Error('Expected an array');
-    listings = data;
-    save(); render();
-    status(`Loaded ${data.length} listing(s) from the repo.`);
+    const repo = await res.json();
+    if (!Array.isArray(repo)) throw new Error('Expected an array');
+
+    const byId = new Map(listings.map(v => [v.id, v]));
+    let added = 0, priceChanged = 0;
+
+    for (const r of repo) {
+      const local = byId.get(r.id);
+      if (!local) {
+        listings.push({ ...r, source: 'repo' });
+        added++;
+        continue;
+      }
+      const userSetStatus = local.status && local.status !== 'watching';
+      if (Number(local.price) !== Number(r.price)) priceChanged++;
+      Object.assign(local, r, {
+        status: userSetStatus ? local.status : r.status,
+        history: mergeHistory(local.history, r.history),
+        source: 'repo',
+      });
+    }
+
+    save();
+    render();
+
+    if (!quiet || added || priceChanged) {
+      const bits = [];
+      if (added) bits.push(`${added} new`);
+      if (priceChanged) bits.push(`${priceChanged} price change${priceChanged > 1 ? 's' : ''}`);
+      status(bits.length ? `Synced: ${bits.join(', ')}.` : `Up to date (${repo.length} listing(s)).`);
+    }
   } catch (e) {
+    // On the published site this is the only data source, so say so plainly.
+    if (!listings.length) {
+      $('#listings').innerHTML =
+        `<p class="empty">Could not load listings: ${e.message}</p>`;
+    }
     status(`Could not load repo data: ${e.message}`);
   }
 }
@@ -350,7 +396,11 @@ function init() {
   $('#sort').addEventListener('change', render);
   $('#hideDead').addEventListener('change', render);
   $('#exportBtn').addEventListener('click', exportJson);
-  $('#loadRepoBtn').addEventListener('click', loadFromRepo);
+  $('#loadRepoBtn').addEventListener('click', () => syncFromRepo({ quiet: false }));
+
+  // Pull the maintained dataset on every visit — otherwise the published site shows
+  // an empty page to anyone who has not clicked the sync button.
+  syncFromRepo({ quiet: true });
   $('#importFile').addEventListener('change', e => {
     if (e.target.files[0]) importJson(e.target.files[0]);
   });
