@@ -115,17 +115,33 @@ function scoreListing(v) {
   // --- Mileage (20) ---
   const m = Number(v.miles) || 0;
   const { band, ratio } = mileageBand(m, Number(v.year));
-  const bandScore = { 'excellent': 1, 'good': 0.95, 'normal': 0.85, 'upper end': 0.6, 'high': 0.3, 'very high': 0.1 }[band];
-
-  // The age-ratio bands and the absolute 45k-60k preference disagree on newer cars:
-  // a 2022 at 52k is "upper end" by the 11k/yr baseline but sits mid-sweet-spot.
-  // The stated range is the real preference, so it takes precedence where it applies.
+  // Scored on absolute mileage first, because that is how the preference was stated:
+  // 45k-60k good, 80k-100k+ avoid. Judging by the 11k/yr age ratio alone punished a
+  // 2022 at 66k as harshly as a genuinely worn-out car, which is not the intent.
   const inSweetSpot = m >= CRITERIA.miles.idealLow && m <= CRITERIA.miles.idealHigh;
-  let mileScore = inSweetSpot ? Math.max(bandScore, 0.92) : bandScore;
+  let mileScore;
+  if (m <= CRITERIA.miles.idealLow)       mileScore = 1;
+  else if (m <= CRITERIA.miles.idealHigh) mileScore = 0.95;
+  else if (m <= 75000)                    mileScore = 0.70;
+  else if (m <= 90000)                    mileScore = 0.45;
+  else if (m <= CRITERIA.miles.hardHigh)  mileScore = 0.25;
+  else                                    mileScore = 0.10;
+
+  // The age ratio survives as a nudge only — enough to reward an older car carrying
+  // light miles, not enough to overturn the absolute judgment above.
+  if (ratio > 0 && ratio <= 0.70)      mileScore = Math.min(1, mileScore + 0.05);
+  else if (ratio >= 1.60)              mileScore = Math.max(0.10, mileScore - 0.05);
   if (m > CRITERIA.miles.hardHigh) { mileScore = Math.min(mileScore, 0.15); flags.push({ level: 'bad', text: `${m.toLocaleString()} miles is very high` }); }
   const miles = mileScore * W.miles;
-  const mileLabel = inSweetSpot ? `Mileage (sweet spot)` : `Mileage (${band})`;
-  parts.push({ label: mileLabel, got: miles, max: W.miles });
+  // Label the absolute band being scored, not the age ratio — showing "high" next to
+  // 14/20 just looks like a bug.
+  const mileLabel =
+    inSweetSpot        ? 'sweet spot' :
+    m <= CRITERIA.miles.idealLow ? 'low' :
+    m <= 75000         ? 'a bit high' :
+    m <= 90000         ? 'high' :
+    m <= CRITERIA.miles.hardHigh ? 'very high' : 'excessive';
+  parts.push({ label: `Mileage (${mileLabel})`, got: miles, max: W.miles });
 
   // --- Title & history (15) ---
   let titleScore = { clean: 1, unknown: 0.5, salvage: 0, rebuilt: 0, flood: 0, 'other-branded': 0.1 }[v.title] ?? 0.5;
