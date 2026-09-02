@@ -9,16 +9,27 @@ as a good car.
 
 ## Running it
 
-No build step, no dependencies. Open `index.html` in a browser, or serve the folder:
+No build step, no dependencies, nothing to install.
+
+**Easiest:** double-click `index.html`. Everything works except the **Load from repo**
+button, which needs a real `http://` origin because `fetch` cannot read `file://` URLs.
+
+**With a local server** (needed only for that button). If you have Python or Node:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit http://localhost:8000.
+If you have neither, Windows PowerShell can serve the folder on its own:
 
-> Serving over `http://` rather than opening the file directly is required for the
-> **Load from repo** button, since `fetch` cannot read `file://` URLs.
+```powershell
+powershell -ExecutionPolicy Bypass -File serve.ps1
+```
+
+Then visit http://localhost:8765.
+
+Once the site is published to GitHub Pages, the hosted URL is the simplest way to use
+it — including from your phone at a dealership.
 
 ## How it works
 
