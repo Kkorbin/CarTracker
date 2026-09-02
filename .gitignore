@@ -2,6 +2,12 @@
 NOTES.local.md
 *.local.md
 
+# Secrets. The Discord webhook URL is a bearer token: anyone holding it can post
+# to the channel. This repo is public, so these must never be committed.
+.secrets.local.json
+*.local.json
+secrets/
+
 # OS / editor cruft
 Thumbs.db
 desktop.ini
