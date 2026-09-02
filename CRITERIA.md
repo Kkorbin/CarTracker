@@ -18,12 +18,12 @@ equipment, around $24k–$26k.
 
 ## Budget
 
-- **Target:** $25,000 or less.
-- **Flexible above that** when the vehicle is clearly better value — lower mileage,
-  newer year, better trim, or stronger safety equipment.
+- **Target:** around $25,000.
 - Value over sticker price: a $25–26k car with 45k miles beats a $21k car with 85k miles.
-- Financing a modest amount is acceptable rather than draining cash or settling for a
-  worse vehicle to stay under a hard cap.
+
+> Negotiating position — how far above target is acceptable, and the financing stance —
+> is deliberately kept out of this repo. It lives in `NOTES.local.md`, which is
+> gitignored and never published.
 
 ## Mileage
 

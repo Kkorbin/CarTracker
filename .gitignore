@@ -1,0 +1,10 @@
+# Private notes — negotiating position, never publish
+NOTES.local.md
+*.local.md
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
