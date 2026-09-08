@@ -8,6 +8,10 @@ NOTES.local.md
 *.local.json
 secrets/
 
+# Personal working documents — will fill up with dealer-visit notes and opinions
+# that shouldn't sit in a public repo. Not code, doesn't need version control.
+*.xlsx
+
 # OS / editor cruft
 Thumbs.db
 desktop.ini
