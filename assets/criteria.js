@@ -4,7 +4,10 @@ const CRITERIA = {
   currentYear: 2026,
   milesPerYear: 11000,
 
-  price: { target: 25000, stretch: 27000, ceiling: 30000 },
+  // Budget applies to the STICKER price, since that is how listings are priced and
+  // searched. Tax and fees are computed separately and shown alongside — at Phoenix
+  // rates a $23,000 car lands near $25,600 out the door, so read both numbers.
+  price: { budgetLow: 18000, target: 23000, stretch: 25000, ceiling: 27000 },
   miles: { idealLow: 45000, idealHigh: 60000, hardHigh: 100000 },
   year:  { preferredLow: 2021, preferredHigh: 2024 },
 
@@ -46,6 +49,35 @@ const CRITERIA = {
     majorDamage:      45,  // major or structural damage
     missingEssential: 75,  // missing a feature marked essential (Apple CarPlay)
   },
+
+  // Arizona purchase costs.
+  fees: {
+    // TPT ("sales tax") is levied at the DEALER's city rate, not the buyer's, so a
+    // Scottsdale dealer is cheaper than a Phoenix one on the same car. Only rates
+    // actually verified are listed; anything else falls back to the Phoenix rate,
+    // which is the highest of the group and so errs toward over-estimating.
+    // Verified 2026-09-12. Exact rate depends on the dealer's street address.
+    tptByCity: {
+      'phoenix':    0.086,  // 5.6 state + 0.7 Maricopa + 2.3 city
+      'scottsdale': 0.080,
+      'peoria':     0.081,
+      'gilbert':    0.083,
+      'mesa':       0.083,
+    },
+    defaultTpt: 0.086,
+
+    // Arizona does not cap dealer doc fees. Used where a listing doesn't state one.
+    defaultDocFee: 599,
+
+    // Title $4 + registration $8 + plate $5 + air quality $1.50.
+    titleRegPlate: 18.50,
+
+    // Vehicle License Tax, collected at registration. Assessed on 60% of the
+    // ORIGINAL MSRP, reduced 16.25% for each year since new, taxed at $2.89 per
+    // $100 of that value. What you actually pay for the car is irrelevant to it,
+    // which is why a cheap late-model car still carries a high VLT.
+    vlt: { assessedShare: 0.60, annualDecline: 0.1625, ratePer100: 2.89 },
+  },
 };
 
 /* ---------- helpers ---------- */
@@ -75,6 +107,43 @@ function trimMeetsFloor(model, trim) {
   if (!trim) return false;
   const t = String(trim).toLowerCase();
   return floors.some(f => t.includes(f));
+}
+
+/* ---------- Arizona cost of purchase ---------- */
+
+function tptRateFor(location) {
+  const city = String(location || '').split(',')[0].trim().toLowerCase();
+  return CRITERIA.fees.tptByCity[city] ?? CRITERIA.fees.defaultTpt;
+}
+
+function estimateVlt(msrp, year) {
+  const base = Number(msrp);
+  if (!base) return null;
+  const { assessedShare, annualDecline, ratePer100 } = CRITERIA.fees.vlt;
+  const age = Math.max(0, CRITERIA.currentYear - Number(year));
+  const assessed = base * assessedShare * Math.pow(1 - annualDecline, age);
+  return (assessed / 100) * ratePer100;
+}
+
+// Everything you actually hand over to drive away, not just the advertised price.
+function outTheDoor(v) {
+  const price = Number(v.price) || 0;
+  const rate = tptRateFor(v.location);
+  const tax = price * rate;
+  const docKnown = v.docFee != null && v.docFee !== '';
+  const doc = docKnown ? Number(v.docFee) : CRITERIA.fees.defaultDocFee;
+  const reg = CRITERIA.fees.titleRegPlate;
+  const vlt = estimateVlt(v.msrp, v.year);
+
+  return {
+    price, rate, tax, doc, reg, vlt,
+    total: price + tax + doc + reg + (vlt || 0),
+    docIsEstimate: !docKnown,
+    vltIsEstimate: Boolean(v.msrpEstimated),
+    cityKnown: Object.prototype.hasOwnProperty.call(
+      CRITERIA.fees.tptByCity, String(v.location || '').split(',')[0].trim().toLowerCase()
+    ),
+  };
 }
 
 /* ---------- scoring ---------- */

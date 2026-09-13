@@ -1,10 +1,12 @@
 # Vehicle Search Criteria
 
-The target: a clean-title 2021–2024 compact SUV, around 40k–60k miles, full modern
-safety package, Apple CarPlay, mid-level-or-better trim, priced around $22k–$26k.
+The target: a clean-title compact SUV, around 40k–60k miles, full modern safety package,
+Apple CarPlay, mid-level-or-better trim, priced **$18k–$23k**.
 
-**RAV4 sweet spot:** a 2021–2022 RAV4 XLE, ~45k–60k miles, clean title, full safety
-equipment, around $24k–$26k.
+> **Budget revised 2026-09-12** from $22k–$26k down to $18k–$23k. This is a material
+> change: at the lower ceiling, 2021–2022 examples of the RAV4, CR-V and Forester are
+> largely out of reach in Phoenix, and the search shifts toward either older model years
+> or higher mileage. See "The trade-off at this budget" below.
 
 ## Vehicle
 
@@ -18,8 +20,27 @@ equipment, around $24k–$26k.
 
 ## Budget
 
-- **Target:** around $25,000.
-- Value over sticker price: a $25–26k car with 45k miles beats a $21k car with 85k miles.
+- **Target:** $18,000–$23,000 sticker.
+- Value over sticker price: a car at the top of the range with lower mileage beats a
+  cheaper one carrying 85k+ miles.
+- **Budget is measured on sticker, not out the door.** Arizona adds roughly 8–8.6% tax
+  plus a doc fee, so a $23,000 car is about $25,600 before you drive away. The tracker
+  shows both numbers per listing.
+
+## The trade-off at this budget
+
+Against Phoenix inventory in September 2026, $18k–$23k does not buy a low-mileage
+2021–2022 example of most of these models. Roughly what the money reaches:
+
+| Model | What $18k–$23k gets |
+| --- | --- |
+| Mazda CX-5 | The best fit — 2021 Touring around 55k–75k miles lands inside the range |
+| Subaru Forester | 2021 Limited at ~73k miles, or a 2018–2020 at lower mileage |
+| Toyota RAV4 | 2019–2020, or a 2022 carrying 100k+ miles |
+| Honda CR-V | 2018–2020 EX/EX-L, typically 90k+ miles |
+
+The binding constraint is that the 45k–60k mileage preference and the $23k ceiling now
+pull against each other on every model except the CX-5.
 
 > Negotiating position — how far above target is acceptable, and the financing stance —
 > is deliberately kept out of this repo. It lives in `NOTES.local.md`, which is

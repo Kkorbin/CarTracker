@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price vs Mileage — Car Tracker</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <h1>Price vs Mileage</h1>
+    <p class="tagline">What the Phoenix market charges &middot; <a href="index.html">&larr; back to listings</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Pick a vehicle</h2>
+    </div>
+    <div class="grid">
+      <div class="field">
+        <label for="fMake">Make</label>
+        <select id="fMake"></select>
+      </div>
+      <div class="field">
+        <label for="fModel">Model</label>
+        <select id="fModel"></select>
+      </div>
+      <div class="field">
+        <label for="fYear">Year</label>
+        <select id="fYear"></select>
+      </div>
+      <div class="field">
+        <label for="fTrim">Trim</label>
+        <select id="fTrim"></select>
+      </div>
+    </div>
+    <p class="hint">
+      Narrowing to a single year and trim usually leaves only a handful of cars. The point
+      count below tells you how much to trust the line.
+    </p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Baseline</h2>
+      <span class="sample" id="sample"></span>
+    </div>
+    <div id="chart" class="chartwrap"></div>
+    <div id="readout" class="readout"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Check a price</h2></div>
+    <div class="grid">
+      <div class="field">
+        <label for="qMiles">Mileage</label>
+        <input type="number" id="qMiles" min="0" step="1000" placeholder="55000">
+      </div>
+      <div class="field">
+        <label for="qPrice">Asking price ($)</label>
+        <input type="number" id="qPrice" min="0" step="100" placeholder="22000">
+      </div>
+    </div>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>About this data</h2></div>
+    <p class="hint" id="meta"></p>
+  </section>
+
+</main>
+
+<script src="assets/criteria.js"></script>
+<script src="assets/market.js"></script>
+</body>
+</html>

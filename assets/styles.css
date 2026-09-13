@@ -143,6 +143,44 @@ button.danger:hover { border-color: var(--poor); color: var(--poor); }
 .history summary { cursor: pointer; color: var(--muted); }
 .history ol { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
 
+/* out-the-door cost breakdown */
+.otd { margin-top: 10px; font-size: 13px; }
+.otd summary { cursor: pointer; color: var(--muted); }
+.otd-total { font-weight: 600; color: var(--ink); }
+.otd-note { font-size: 11px; color: var(--muted); }
+.otd-table { width: 100%; max-width: 340px; margin-top: 8px; border-collapse: collapse; font-size: 13px; }
+.otd-table td { padding: 3px 0; color: var(--muted); }
+.otd-table td.num { text-align: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+.otd-table tr:last-child td { border-top: 1px solid var(--line); padding-top: 6px; }
+
+/* market chart */
+.chartwrap { overflow-x: auto; }
+.chart { width: 100%; min-width: 520px; height: auto; display: block; }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .axis { fill: var(--muted); font-size: 11px; font-family: inherit; }
+.chart .axis-title { fill: var(--muted); font-size: 12px; font-family: inherit; }
+.chart .fitline { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 6 4; }
+.chart .dot { fill: var(--accent); opacity: .55; }
+.chart .dot.mine { fill: var(--good); opacity: 1; stroke: var(--panel); stroke-width: 2; }
+.chart .budget { fill: var(--good); opacity: .10; }
+.chart .badge { fill: var(--good); font-size: 11px; font-family: inherit; }
+
+.sample { font-size: 12px; padding: 3px 9px; border-radius: 20px; border: 1px solid; }
+.sample.ok   { color: var(--good); border-color: var(--good); }
+.sample.thin { color: var(--ok);   border-color: var(--ok); }
+.sample.poor { color: var(--poor); border-color: var(--poor); }
+
+.readout { margin-top: 14px; }
+.statrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.statrow > div { display: flex; flex-direction: column; gap: 3px; }
+.statrow .k { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.statrow .v { font-size: 17px; font-weight: 600; }
+.warn-note { margin: 10px 0 0; font-size: 13px; color: var(--ok); }
+
+.verdict { margin: 4px 0 0; font-size: 14px; }
+.verdict.good { color: var(--good); }
+.verdict.bad  { color: var(--poor); }
+
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 @media (max-width: 560px) {

@@ -211,6 +211,27 @@ function render() {
       dEl.classList.add(delta < 0 ? 'down' : 'up');
     }
 
+    // Out-the-door cost: sticker is what you search on, this is what you actually pay.
+    const otd = outTheDoor(v);
+    node.querySelector('.otd-total').textContent = money(Math.round(otd.total));
+    const caveats = [];
+    if (!otd.cityKnown) caveats.push('city rate assumed');
+    if (otd.docIsEstimate) caveats.push('doc fee estimated');
+    if (otd.vltIsEstimate) caveats.push('MSRP estimated');
+    if (!otd.vlt) caveats.push('no VLT — MSRP unknown');
+    node.querySelector('.otd-note').textContent = caveats.length ? `(${caveats.join(', ')})` : '';
+
+    const rows = [
+      ['Sticker price', money(otd.price)],
+      [`AZ tax (${(otd.rate * 100).toFixed(1)}%)`, money(Math.round(otd.tax))],
+      [otd.doc === 0 ? 'Doc fee (already in price)' : 'Dealer doc fee', money(Math.round(otd.doc))],
+      ['Title, reg &amp; plate', money(otd.reg)],
+    ];
+    if (otd.vlt) rows.push(['Vehicle License Tax (yr 1)', money(Math.round(otd.vlt))]);
+    rows.push(['<strong>Total</strong>', `<strong>${money(Math.round(otd.total))}</strong>`]);
+    node.querySelector('.otd-table').innerHTML =
+      rows.map(([k, val]) => `<tr><td>${k}</td><td class="num">${val}</td></tr>`).join('');
+
     node.querySelector('.breakdown').innerHTML = s.parts.map(p => {
       const pct = p.max ? Math.round((p.got / p.max) * 100) : 0;
       return `<div class="bar"><span class="bl">${p.label}</span>
