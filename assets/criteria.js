@@ -86,7 +86,7 @@ const CRITERIA = {
   // Applies to every car, on top of whatever that specific listing needs checked.
   // Written as things to DO, in the order you'd do them.
   standardChecks: [
-    'Run the VIN at nhtsa.gov/recalls for UNREPAIRED recalls on this specific car — the recall list on the card is model-wide, not car-specific',
+    'Run the VIN check on the card for UNREPAIRED recalls on this specific car, and have the dealer complete any that come back (free at a franchise dealer)',
     'Get an independent pre-purchase inspection — not the selling dealer\'s',
     'Test drive on the freeway, not just around the block',
     'Check tire tread and date codes — four tires is ~$800',

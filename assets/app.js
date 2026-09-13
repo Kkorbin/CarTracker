@@ -219,13 +219,17 @@ function vinLookupBlock(v) {
       <button type="button" class="ghost act-copyvin" data-vin="${v.vin}">Copy VIN</button>
     </div>
     <div class="vl-links">
-      <a href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener noreferrer">NHTSA VIN check &rarr;</a>
+      <a href="https://www.nhtsa.gov/recalls?vymm=${encodeURIComponent(v.vin)}"
+         target="_blank" rel="noopener noreferrer"><strong>Check this VIN at NHTSA &rarr;</strong></a>
       ${mfr ? `<a href="${mfr}" target="_blank" rel="noopener noreferrer">${v.make} owner lookup &rarr;</a>` : ''}
     </div>
-    <p class="hint">Paste the VIN to see what is still <em>unrepaired</em> on this
-      particular car. A clean result reads "0 unrepaired recalls associated with this
-      VIN". Note it won't show recalls already repaired, ones over 15 years old, or very
-      new campaigns where VINs aren't assigned yet.</p>
+    <p class="hint">Opens with the VIN already filled in; press Search. It reports only
+      what is still <em>unrepaired</em> on this particular car — a clean result reads
+      "0 unrepaired recalls associated with this VIN".
+      <strong>A lower count here than in the list below does not mean the rest were
+      repaired</strong> — most recall campaigns cover only a slice of a model year's
+      production, so many probably never applied to this car. Either way, the number
+      above is the one that matters.</p>
   </div>`;
 }
 
@@ -250,11 +254,12 @@ async function loadRecalls(v, host) {
 
     body.innerHTML = `
       ${vinLookupBlock(v)}
-      <p class="hint"><strong>This list is for the ${v.year} ${v.make} ${v.model} as a
-        model, not for this specific car.</strong> It tells you what was recalled, not
-        what is still outstanding — many will already have been repaired. Use the VIN
-        lookup above for that. Any recall still open is repaired free at a franchise
-        dealer, so it is leverage, not a dealbreaker.</p>
+      <p class="hint"><strong>This list is every campaign that touched the ${v.year}
+        ${v.make} ${v.model} as a model — not this car's status.</strong> Campaigns
+        usually cover a specific range of build dates or plants, so a given car is
+        typically affected by only some of them. Expect the VIN check to return far
+        fewer. Anything it does return is repaired free at a franchise dealer, which
+        makes it leverage rather than a dealbreaker.</p>
       <ul class="recall-list">${list.map(r => `
         <li>
           <div class="rc-head">
