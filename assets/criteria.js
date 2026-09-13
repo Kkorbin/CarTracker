@@ -149,10 +149,12 @@ function outTheDoor(v) {
   const doc = docKnown ? Number(v.docFee) : CRITERIA.fees.defaultDocFee;
   const reg = CRITERIA.fees.titleRegPlate;
   const vlt = estimateVlt(v.msrp, v.year);
+  // Online sellers ship. A cheap car 1,300 miles away is not a cheap car.
+  const shipping = Number(v.shipping) || 0;
 
   return {
-    price, rate, tax, doc, reg, vlt,
-    total: price + tax + doc + reg + (vlt || 0),
+    price, rate, tax, doc, reg, vlt, shipping,
+    total: price + tax + doc + reg + (vlt || 0) + shipping,
     docIsEstimate: !docKnown,
     vltIsEstimate: Boolean(v.msrpEstimated),
     cityKnown: Object.prototype.hasOwnProperty.call(

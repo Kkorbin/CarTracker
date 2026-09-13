@@ -25,12 +25,27 @@
     ],
     "notes": "Cheapest way into a sweet-spot-mileage CR-V. 50,288 mi is ~38k BELOW the age-expected 88k for a 2018. Clean title, 1 owner, full safety suite confirmed, plus heated seats, power liftgate, moonroof, leather and memory seat. Scottsdale's 8.0% tax is the lowest of any dealer we've tracked. CAVEAT: an accident is REPORTED on the history - severity is not stated, so the score assumes minor. Pull the CarFax before anything else; if it turns out to be structural this drops off the list entirely.",
     "features": {
-      "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
-      "heatedseats": true, "liftgate": true, "moonroof": true, "leather": true,
-      "powerseats": false, "memoryseats": true, "remotestart": false
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": true,
+      "remotestart": false
     },
     "added": "2026-09-12",
-    "history": [{ "date": "2026-09-12", "price": 20798 }]
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 20798
+      }
+    ]
   },
   {
     "id": "a9e2c5f7-6b34-4d18-8a71-4f2d9c6e0077",
@@ -58,12 +73,27 @@
     ],
     "notes": "The EX you asked about, at sweet-spot mileage. Clean title, 1 owner, all six safety features confirmed, heated seats and moonroof, cloth interior. Honda franchise dealer with a 5-day/250-mile money-back guarantee. CAVEAT: accident REPORTED per AutoCheck, severity unstated - same CarFax caveat as the Scottsdale EX-L. Costs $1,199 MORE than that EX-L while giving up leather, power liftgate and memory seat, which is why the EX-L outranks it despite EX being the cheaper trim in general.",
     "features": {
-      "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
-      "heatedseats": true, "moonroof": true, "liftgate": false, "leather": false,
-      "powerseats": false, "memoryseats": false, "remotestart": false
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
     },
     "added": "2026-09-12",
-    "history": [{ "date": "2026-09-12", "price": 21997 }]
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 21997
+      }
+    ]
   },
   {
     "id": "c4b8d1e6-2f57-4a92-b3c8-8d5f2a7e0088",
@@ -91,13 +121,27 @@
     ],
     "notes": "The only CR-V of the three with a genuinely CLEAN accident history - 0 accidents reported. Newest of the three at 2019 and the cheapest at $20,298. Trade-offs: 69,940 mi is above your preferred band, adaptive cruise and rear cross-traffic are NOT listed (unusual for an EX with Honda Sensing - worth confirming, it may just be an incomplete listing), and it has multiple previous owners. If the missing features turn out to be present, this becomes the strongest of the three.",
     "features": {
-      "carplay": true, "bsm": true, "aeb": true, "lane": true,
-      "acc": false, "rcta": false,
-      "heatedseats": true, "moonroof": true, "liftgate": false, "leather": false,
-      "powerseats": false, "memoryseats": false, "remotestart": false
+      "carplay": true,
+      "bsm": true,
+      "aeb": true,
+      "lane": true,
+      "acc": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
     },
     "added": "2026-09-12",
-    "history": [{ "date": "2026-09-12", "price": 20298 }]
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 20298
+      }
+    ]
   },
   {
     "id": "c3a8e1f4-7d92-4b05-a6e8-1f4b9c2d0033",
@@ -125,12 +169,27 @@
     ],
     "notes": "Standout on paper. 35,974 miles on a 2021 is roughly 19k BELOW the age-expected 55k. Clean title, 0 accidents, single owner. Every safety feature confirmed, plus heated seats, power liftgate, moonroof, leather, memory seat and remote start. Top Touring trim. BUDGET: at $26,599 this is ~$3.6k above the new $23k ceiling, and roughly $29.5k out the door — the single most expensive car on the list. Selling dealer is a Lexus franchise, so this came in as a trade rather than off a Subaru lot.",
     "features": {
-      "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
-      "heatedseats": true, "liftgate": true, "moonroof": true, "leather": true,
-      "powerseats": false, "memoryseats": true, "remotestart": true
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": true,
+      "remotestart": true
     },
     "added": "2026-09-02",
-    "history": [{ "date": "2026-09-02", "price": 26599 }]
+    "history": [
+      {
+        "date": "2026-09-02",
+        "price": 26599
+      }
+    ]
   },
   {
     "id": "d5b9f2a6-3e17-4c88-b2d4-6a1e8f3c0044",
@@ -157,12 +216,27 @@
     ],
     "notes": "Mileage lands mid-sweet-spot at 48k on a 2022. Clean title, 0 accidents, though multiple previous owners rather than one. Full safety suite confirmed plus heated seats, power liftgate, moonroof, leather and remote start. Newer than the Earnhardt car by a year for $320 less, trading away ~12k extra miles and the single-owner history.",
     "features": {
-      "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
-      "heatedseats": true, "liftgate": true, "moonroof": true, "leather": true,
-      "powerseats": false, "memoryseats": false, "remotestart": true
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": true
     },
     "added": "2026-09-02",
-    "history": [{ "date": "2026-09-02", "price": 26279 }]
+    "history": [
+      {
+        "date": "2026-09-02",
+        "price": 26279
+      }
+    ]
   },
   {
     "id": "a1f3c2d8-4b6e-4f10-9c31-8e2d5a7b0011",
@@ -190,12 +264,27 @@
     ],
     "notes": "Clean title, 0 accidents, 1 owner, full safety suite, AWD. BUDGET: at $24,593 it now sits ~$1.6k above the $23k ceiling, roughly $27.3k out the door. Weak points: 66,146 miles is ~22k above what a 2022 should carry, and it has none of the comfort extras the Foresters have. Independent dealer, so a CarFax matters more here. Ask what drove the mileage.",
     "features": {
-      "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
-      "powerseats": true, "heatedseats": false, "liftgate": false, "moonroof": false,
-      "leather": false, "memoryseats": false, "remotestart": false
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "powerseats": true,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "memoryseats": false,
+      "remotestart": false
     },
     "added": "2026-09-02",
-    "history": [{ "date": "2026-09-02", "price": 24593 }]
+    "history": [
+      {
+        "date": "2026-09-02",
+        "price": 24593
+      }
+    ]
   },
   {
     "id": "e7c4a9b1-8f36-4d20-9e57-2b6d4f1a0055",
@@ -223,12 +312,27 @@
     ],
     "notes": "THE ONLY CANDIDATE STILL INSIDE THE $18-23k BUDGET. The $22,836 already includes the $599 doc fee, so none is added again in the cost breakdown. Sweet-spot mileage at 55,700 and a clean 0-accident title. CAVEAT: rear cross-traffic alert and automatic emergency braking are not itemised on the listing, so the score below undercounts it. Both are standard i-Activsense equipment on a 2021 CX-5 Touring, so they are almost certainly fitted - confirm with the dealer and the score jumps roughly 8 points.",
     "features": {
-      "carplay": true, "acc": true, "bsm": true, "lane": true, "rcta": false, "aeb": false,
-      "heatedseats": true, "leather": true, "powerseats": true,
-      "liftgate": false, "moonroof": false, "memoryseats": false, "remotestart": false
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "lane": true,
+      "rcta": false,
+      "aeb": false,
+      "heatedseats": true,
+      "leather": true,
+      "powerseats": true,
+      "liftgate": false,
+      "moonroof": false,
+      "memoryseats": false,
+      "remotestart": false
     },
     "added": "2026-09-02",
-    "history": [{ "date": "2026-09-02", "price": 22836 }]
+    "history": [
+      {
+        "date": "2026-09-02",
+        "price": 22836
+      }
+    ]
   },
   {
     "id": "b7e4d9a2-1c85-4a73-b0f6-3d9c1e6a0022",
@@ -253,12 +357,764 @@
     ],
     "notes": "PRIOR USE: RENTAL, per the seller notes. At $27,998 it is ~$5k over the new $23k ceiling. Title and accident history undisclosed. Adaptive cruise, rear cross-traffic and AEB all absent from the feature list. Costs $3.4k more than the Miracle Motors RAV4 while offering less. VIN on the page was malformed. CarMax is no-haggle. Included mainly as a benchmark for what to avoid.",
     "features": {
-      "carplay": true, "bsm": true, "lane": true,
-      "acc": false, "rcta": false, "aeb": false, "powerseats": false,
-      "heatedseats": false, "liftgate": false, "moonroof": false,
-      "leather": false, "memoryseats": false, "remotestart": false
+      "carplay": true,
+      "bsm": true,
+      "lane": true,
+      "acc": false,
+      "rcta": false,
+      "aeb": false,
+      "powerseats": false,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "memoryseats": false,
+      "remotestart": false
     },
     "added": "2026-09-02",
-    "history": [{ "date": "2026-09-02", "price": 27998 }]
+    "history": [
+      {
+        "date": "2026-09-02",
+        "price": 27998
+      }
+    ]
+  },
+  {
+    "id": "46610149-0293-4968-8ed4-baf1c21f3563",
+    "url": "https://www.cars.com/vehicledetail/5673b7f0-7cc8-468a-9ec8-12d66dc41765/",
+    "vin": "5J6RW1H8XKA001329",
+    "msrp": 30500,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 20496,
+    "miles": 56677,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Henderson, NV",
+    "dealer": "EchoPark Automotive Las Vegas",
+    "status": "watching",
+    "notes": "Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate.",
+    "checks": [
+      "Confirm how tax works buying out of state — AZ use tax at registration, not dealer TPT",
+      "Ask whether they will deliver to Phoenix or whether you drive 5 hours each way",
+      "Verify the single-owner, zero-accident history on the CarFax",
+      "Confirm AZ registration and emissions can be completed on an out-of-state purchase"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 20496
+      }
+    ]
+  },
+  {
+    "id": "5824a711-1a31-47b8-a506-5ceb235e1c20",
+    "url": "https://www.cars.com/vehicledetail/2658c854-ed96-4a16-88a4-e5011d634a63/",
+    "vin": "7FARW1H87JE048091",
+    "msrp": 30300,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 21990,
+    "miles": 61281,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Henderson, NV",
+    "dealer": "Towbin Kia",
+    "status": "watching",
+    "notes": "Carfax-certified one owner, clean title, 0 accidents, and the listing notes it is 30,227 miles below market average for its year. Rear cross-traffic is the only safety item not listed. Also in Henderson, NV — same out-of-state caveat as the EchoPark car, and $1,494 more expensive for similar equipment and 4,600 more miles.",
+    "checks": [
+      "Confirm rear cross-traffic alert is fitted",
+      "Same out-of-state tax and registration questions as the other Nevada car",
+      "Compare directly against the EchoPark 2019 EX-L, which is newer, cheaper and lower mileage"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": false,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 21990
+      }
+    ]
+  },
+  {
+    "id": "09d98a59-07be-4367-a6dd-36e451c8004e",
+    "url": "https://www.cars.com/vehicledetail/80ea13d2-fd31-41e5-9dad-ec1a5d135707/",
+    "vin": "7FARW1H85KE007394",
+    "msrp": 30500,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 21987,
+    "miles": 65804,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Prescott, AZ",
+    "dealer": "Galpin Ford - AZ",
+    "status": "watching",
+    "notes": "Clean title, 0 accidents, 1 owner, verified through Experian AutoCheck. In state, but Prescott is ~100 miles north of Phoenix. ODD: the listing does not mention Apple CarPlay, blind-spot monitor or heated seats, all of which should be present on a 2019 EX-L. That is almost certainly an incomplete listing rather than a car missing standard equipment — the score below is harsh until it is confirmed.",
+    "checks": [
+      "CONFIRM Apple CarPlay — it is standard on 2019 EX-L and its absence from the listing is suspect. The score is capped at 75 until confirmed.",
+      "Confirm blind-spot monitor and heated seats",
+      "Prescott is a ~2 hour drive each way — worth it only if the equipment checks out"
+    ],
+    "features": {
+      "carplay": false,
+      "acc": true,
+      "bsm": false,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": false,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 21987
+      }
+    ]
+  },
+  {
+    "id": "56278693-3727-4f8a-8edf-182fb8293647",
+    "url": "https://www.cars.com/vehicledetail/5774080c-eda6-48d7-b3ee-6aa34e702b56/",
+    "vin": "2HKRW1H84JH509535",
+    "msrp": 30300,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 16500,
+    "miles": 68603,
+    "title": "clean",
+    "accidents": "minor",
+    "drive": "fwd",
+    "location": "Phoenix, AZ",
+    "dealer": "DV Auto Center",
+    "status": "watching",
+    "notes": "THE OUTLIER. At $16,500 this is roughly $4,300 under the median for the spec, fully equipped, clean title. Price has already dropped $1,495 from $17,995 back in December, so it has been sitting. Explanations on the listing: an accident is reported and there are multiple previous owners — but neither obviously accounts for that big a discount. The listing also says 'seller has not disclosed fees', which at an independent lot is worth taking literally. Your own criteria say to investigate cars this cheap, so treat it as a lead to verify rather than a bargain to grab.",
+    "checks": [
+      "FIND OUT WHY IT IS THIS CHEAP — $4.3k under median with no stated reason",
+      "Pull the CarFax yourself; do not accept a dealer-printed summary",
+      "Ask directly: has this car ever been a rental, fleet, or auction vehicle?",
+      "Get every fee in writing up front — the listing explicitly does not disclose them",
+      "Independent pre-purchase inspection is mandatory on this one, not optional",
+      "It has been listed since at least December — ask why it has not sold"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 16500
+      }
+    ]
+  },
+  {
+    "id": "fecfec48-1f57-4223-8452-88df12aca319",
+    "url": "https://www.carvana.com/vehicle/4618292",
+    "vin": "",
+    "msrp": 27700,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 22990,
+    "miles": 40000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$690 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22990
+      }
+    ],
+    "shipping": 690,
+    "docFee": 0
+  },
+  {
+    "id": "11f3012b-e498-420b-adbb-8088915ec2c3",
+    "url": "https://www.carvana.com/vehicle/4541414",
+    "vin": "",
+    "msrp": 30300,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 22990,
+    "miles": 50000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "Free shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. Free shipping, delivery Monday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. No shipping cost, so the sticker is the sticker.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22990
+      }
+    ],
+    "docFee": 0
+  },
+  {
+    "id": "e83d6154-40fa-4a62-aec1-1981b935ec53",
+    "url": "https://www.carvana.com/vehicle/4392843",
+    "vin": "",
+    "msrp": 27700,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 22990,
+    "miles": 54000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$1,290 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$1,290 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $1,290 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22990
+      }
+    ],
+    "shipping": 1290,
+    "docFee": 0
+  },
+  {
+    "id": "8eaf1bb1-3195-473c-ac0a-9069c79aeb7b",
+    "url": "https://www.carvana.com/vehicle/4668593",
+    "vin": "",
+    "msrp": 30300,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 22590,
+    "miles": 57000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$690 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22590
+      }
+    ],
+    "shipping": 690,
+    "docFee": 0
+  },
+  {
+    "id": "3ad6db3f-7fde-4a4f-a2d1-78bb7abfd6ec",
+    "url": "https://www.carvana.com/vehicle/4583158",
+    "vin": "",
+    "msrp": 29700,
+    "msrpEstimated": true,
+    "year": 2017,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 20990,
+    "miles": 62000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "Free shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. Free shipping, delivery tomorrow. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. No shipping cost, so the sticker is the sticker.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 20990
+      }
+    ],
+    "docFee": 0
+  },
+  {
+    "id": "e20739a6-4c3a-44d5-9cd4-a4c892448d76",
+    "url": "https://www.carvana.com/vehicle/4685229",
+    "vin": "",
+    "msrp": 30300,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 22590,
+    "miles": 62000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$690 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22590
+      }
+    ],
+    "shipping": 690,
+    "docFee": 0
+  },
+  {
+    "id": "8e89838a-b2e9-419e-87a2-9eb53768042f",
+    "url": "https://www.carvana.com/vehicle/4587791",
+    "vin": "",
+    "msrp": 30500,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 22590,
+    "miles": 64000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "Free shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. Free shipping, delivery tomorrow. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. No shipping cost, so the sticker is the sticker.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22590
+      }
+    ],
+    "docFee": 0
+  },
+  {
+    "id": "f57c7b4d-b927-4690-970b-f80c29f79955",
+    "url": "https://www.carvana.com/vehicle/4655521",
+    "vin": "",
+    "msrp": 30300,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 21990,
+    "miles": 67000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$290 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$290 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $290 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 21990
+      }
+    ],
+    "shipping": 290,
+    "docFee": 0
+  },
+  {
+    "id": "d12f4e43-0faf-46e9-800c-ddcefdabfee7",
+    "url": "https://www.carvana.com/vehicle/4708440",
+    "vin": "",
+    "msrp": 27100,
+    "msrpEstimated": true,
+    "year": 2017,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 21590,
+    "miles": 67000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$1,390 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$1,390 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $1,390 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 21590
+      }
+    ],
+    "shipping": 1390,
+    "docFee": 0
+  },
+  {
+    "id": "73e81343-32b6-4d68-880b-3328d154f9de",
+    "url": "https://www.carvana.com/vehicle/4639985",
+    "vin": "",
+    "msrp": 30500,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 22990,
+    "miles": 68000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "Free shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. Free shipping, delivery tomorrow. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. No shipping cost, so the sticker is the sticker.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22990
+      }
+    ],
+    "docFee": 0
+  },
+  {
+    "id": "b702f48c-861b-4140-84ca-8c6ad9d853c4",
+    "url": "https://www.carvana.com/vehicle/4666167",
+    "vin": "",
+    "msrp": 27900,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 22990,
+    "miles": 68000,
+    "title": "unknown",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "+$990 shipping",
+    "dealer": "Carvana",
+    "status": "watching",
+    "notes": "Carvana, no-haggle. +$990 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $990 shipping is real money and is counted in the out-the-door total.",
+    "checks": [
+      "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
+      "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
+      "Carvana's 7-day return window is effectively the only cooling-off period available in Arizona — use it for an independent inspection",
+      "No dealer doc fee, but shipping is real money and is included in the out-the-door figure above"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "aeb": true,
+      "lane": true,
+      "bsm": false,
+      "rcta": false,
+      "heatedseats": true,
+      "moonroof": true,
+      "liftgate": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-12",
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22990
+      }
+    ],
+    "shipping": 990,
+    "docFee": 0
   }
 ]

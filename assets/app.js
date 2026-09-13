@@ -369,6 +369,7 @@ function render() {
       [otd.doc === 0 ? 'Doc fee (already in price)' : 'Dealer doc fee', money(Math.round(otd.doc))],
       ['Title, reg &amp; plate', money(otd.reg)],
     ];
+    if (otd.shipping) rows.push(['Shipping', money(otd.shipping)]);
     if (otd.vlt) rows.push(['Vehicle License Tax (yr 1)', money(Math.round(otd.vlt))]);
     rows.push(['<strong>Total</strong>', `<strong>${money(Math.round(otd.total))}</strong>`]);
     node.querySelector('.otd-table').innerHTML =
