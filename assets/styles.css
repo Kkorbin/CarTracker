@@ -221,6 +221,43 @@ button.danger:hover { border-color: var(--poor); color: var(--poor); }
 .cmp td.lbl { color: var(--muted); white-space: nowrap; }
 .cmp td.best { color: var(--good); font-weight: 600; }
 
+/* comparable value box */
+.valuebox {
+  margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line);
+  border-radius: 7px; display: flex; flex-direction: column; gap: 3px; font-size: 13px;
+}
+.vb-label { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.vb-range { font-size: 16px; font-weight: 600; }
+.vb-mid { color: var(--muted); font-size: 12px; }
+.vb-verdict { margin-top: 2px; }
+.vb-verdict.good { color: var(--good); }
+.vb-verdict.bad { color: var(--poor); }
+.vb-kbb { margin-top: 4px; }
+.vb-kbb a { color: var(--accent); }
+
+/* recalls */
+.recalls { margin-top: 12px; font-size: 13px; }
+.recalls summary { cursor: pointer; font-weight: 500; }
+.recall-count { font-weight: 400; color: var(--muted); }
+.recall-count.ok { color: var(--good); }
+.recall-count.warn { color: var(--ok); }
+.recall-count.bad { color: var(--poor); }
+.recall-list { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-direction: column; gap: 10px; }
+.recall-list li { border-left: 2px solid var(--line); padding-left: 10px; }
+.rc-head { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.rc-id { color: var(--muted); font-size: 11px; }
+.rc-flag { font-size: 10px; padding: 2px 6px; border-radius: 20px; border: 1px solid; letter-spacing: .03em; }
+.rc-flag.bad { color: var(--poor); border-color: var(--poor); }
+.rc-consequence { color: var(--muted); margin-top: 3px; line-height: 1.45; }
+
+/* buying guide */
+.panel.alert { border-left: 3px solid var(--ok); }
+.panel h2 { margin: 0 0 12px; font-size: 16px; }
+.panel p { line-height: 1.6; margin: 0 0 12px; }
+.panel p:last-child { margin-bottom: 0; }
+ul.guide { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 11px; line-height: 1.6; }
+ul.guide strong { color: var(--ink); }
+
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 @media (max-width: 560px) {

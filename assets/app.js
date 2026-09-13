@@ -6,6 +6,7 @@ const DONE_KEY = 'car-tracker/checks/v1';
 const $ = sel => document.querySelector(sel);
 
 let listings = [];
+let marketPoints = [];        // comparable local listings, for the value range
 let finance = { ...CRITERIA.finance };
 let doneChecks = {};          // { [listingId]: { [checkText]: true } }
 const compareSet = new Set();
@@ -200,6 +201,49 @@ function sortListings(arr) {
   }
 }
 
+/* ---------- recalls ---------- */
+
+async function loadRecalls(v, host) {
+  const countEl = host.querySelector('.recall-count');
+  const body = host.querySelector('.recall-body');
+  countEl.textContent = '— checking…';
+
+  try {
+    const list = await fetchRecalls(v);
+    if (!list.length) {
+      countEl.textContent = '— none';
+      countEl.className = 'recall-count ok';
+      body.innerHTML = `<p class="hint">NHTSA lists no open recalls for the
+        ${v.year} ${v.make} ${v.model}.</p>`;
+      return;
+    }
+
+    const severe = list.filter(r => r.parkIt || r.parkOutside).length;
+    countEl.textContent = `— ${list.length}${severe ? `, ${severe} severe` : ''}`;
+    countEl.className = 'recall-count ' + (severe ? 'bad' : 'warn');
+
+    body.innerHTML = `
+      <p class="hint">Recalls are per year/make/model, not per VIN — some may already
+        have been done on this car. Ask the dealer for proof, and have any outstanding
+        one fixed free at a franchise dealer before you buy.</p>
+      <ul class="recall-list">${list.map(r => `
+        <li>
+          <div class="rc-head">
+            <strong>${r.component}</strong>
+            ${r.parkIt ? '<span class="rc-flag bad">DO NOT DRIVE</span>' : ''}
+            ${r.parkOutside ? '<span class="rc-flag bad">PARK OUTSIDE</span>' : ''}
+            <span class="rc-id">${r.campaign}</span>
+          </div>
+          ${r.consequence ? `<div class="rc-consequence">${r.consequence}</div>` : ''}
+        </li>`).join('')}</ul>`;
+  } catch (e) {
+    countEl.textContent = '— lookup failed';
+    body.innerHTML = `<p class="hint">Could not reach NHTSA: ${e.message}.
+      Check manually at <a href="https://www.nhtsa.gov/recalls" target="_blank"
+      rel="noopener noreferrer">nhtsa.gov/recalls</a>.</p>`;
+  }
+}
+
 /* ---------- compare ---------- */
 
 function renderCompare() {
@@ -330,6 +374,26 @@ function render() {
     node.querySelector('.otd-table').innerHTML =
       rows.map(([k, val]) => `<tr><td>${k}</td><td class="num">${val}</td></tr>`).join('');
 
+    // What comparable local cars are actually asking, plus a way out to KBB.
+    const vb = node.querySelector('.valuebox');
+    const cmpRange = comparableRange(v, marketPoints);
+    const kbb = `<a href="${kbbUrl(v)}" target="_blank" rel="noopener noreferrer">KBB value &rarr;</a>`;
+    if (cmpRange) {
+      const d = cmpRange.delta;
+      const verdict = d < -750 ? 'below' : d > 750 ? 'above' : 'in line with';
+      const cls = d < -750 ? 'good' : d > 750 ? 'bad' : '';
+      vb.innerHTML =
+        `<span class="vb-label">Comparable asking prices</span>
+         <span class="vb-range">${money(cmpRange.low)} – ${money(cmpRange.high)}</span>
+         <span class="vb-mid">median ${money(Math.round(cmpRange.median))} · ${cmpRange.n} car${cmpRange.n === 1 ? '' : 's'}${cmpRange.widened ? ', widened search' : ''}</span>
+         <span class="vb-verdict ${cls}">This one is ${verdict} the median${d ? ` (${d > 0 ? '+' : '−'}${money(Math.round(Math.abs(d)))})` : ''}</span>
+         <span class="vb-kbb">${kbb}</span>`;
+    } else {
+      vb.innerHTML = `<span class="vb-label">Comparable asking prices</span>
+        <span class="vb-mid">Not enough similar local listings to build a range.</span>
+        <span class="vb-kbb">${kbb}</span>`;
+    }
+
     // The research behind the score. Without this the card shows "Title & history 11/15"
     // and no hint that it is because an accident is reported.
     const notesEl = node.querySelector('.notes');
@@ -348,6 +412,12 @@ function render() {
     }).join('');
 
     node.querySelector('.act-cmp').checked = compareSet.has(v.id);
+
+    // Recalls load on demand — one request per year/make/model, cached after that.
+    const rc = node.querySelector('.recalls');
+    rc.addEventListener('toggle', () => {
+      if (rc.open) loadRecalls(v, rc);
+    }, { once: true });
 
     node.querySelector('.breakdown').innerHTML = s.parts.map(p => {
       const pct = p.max ? Math.round((p.got / p.max) * 100) : 0;
@@ -588,6 +658,12 @@ function init() {
   // Pull the maintained dataset on every visit — otherwise the published site shows
   // an empty page to anyone who has not clicked the sync button.
   syncFromRepo({ quiet: true });
+
+  // Comparable-price data. Failure here only costs the value box, so don't block on it.
+  fetch('data/market.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(d => { if (d && Array.isArray(d.points)) { marketPoints = d.points; render(); } })
+    .catch(() => { /* value box degrades to the KBB link alone */ });
   $('#importFile').addEventListener('change', e => {
     if (e.target.files[0]) importJson(e.target.files[0]);
   });

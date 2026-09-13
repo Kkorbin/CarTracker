@@ -172,6 +172,84 @@ function monthlyPayment(principal, apr, months) {
   return p * r * f / (f - 1);
 }
 
+/* ---------- recalls (NHTSA, free, no key) ---------- */
+
+const _recallCache = new Map();
+
+async function fetchRecalls(v) {
+  const key = `${v.year}|${v.make}|${v.model}`.toLowerCase();
+  if (_recallCache.has(key)) return _recallCache.get(key);
+
+  const url = 'https://api.nhtsa.gov/recalls/recallsByVehicle'
+    + `?make=${encodeURIComponent(v.make)}`
+    + `&model=${encodeURIComponent(v.model)}`
+    + `&modelYear=${encodeURIComponent(v.year)}`;
+
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+
+  const list = (data.results || []).map(r => ({
+    campaign: r.NHTSACampaignNumber,
+    component: r.Component,
+    summary: r.Summary,
+    consequence: r.Consequence,
+    remedy: r.Remedy,
+    // NHTSA flags the severe ones explicitly.
+    parkIt: Boolean(r.parkIt),
+    parkOutside: Boolean(r.parkOutSide),
+  }));
+  _recallCache.set(key, list);
+  return list;
+}
+
+/* ---------- what a comparable car actually sells for ---------- */
+
+// KBB's own widget will not hand over a number to automation, so this derives a
+// range from the local listings we collected instead. Same make and model, similar
+// mileage and year — and it names how many cars are behind the number so you can
+// judge it, which a single KBB figure never tells you.
+function comparableRange(v, points) {
+  if (!Array.isArray(points) || !points.length) return null;
+
+  const pick = (milesWindow, yearWindow) => points.filter(p =>
+    p.make === v.make && p.model === v.model &&
+    Math.abs(p.miles - v.miles) <= milesWindow &&
+    Math.abs(p.year - v.year) <= yearWindow
+  );
+
+  let set = pick(15000, 2);
+  let widened = false;
+  if (set.length < 3) { set = pick(25000, 3); widened = true; }
+  if (set.length < 3) return null;
+
+  const prices = set.map(p => p.price).sort((a, b) => a - b);
+  const mid = Math.floor(prices.length / 2);
+  const median = prices.length % 2 ? prices[mid] : (prices[mid - 1] + prices[mid]) / 2;
+
+  return {
+    low: prices[0],
+    high: prices[prices.length - 1],
+    median,
+    n: prices.length,
+    widened,
+    delta: v.price - median,
+  };
+}
+
+function kbbUrl(v) {
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return `https://www.kbb.com/${slug(v.make)}/${slug(v.model)}/${v.year}/`;
+}
+
+/* ---------- Arizona registration quirks ---------- */
+
+// Area A (Phoenix metro) exempts the five newest model years. Everything older
+// tests every two years before it can be registered.
+function needsEmissionsTest(year) {
+  return (CRITERIA.currentYear - Number(year)) >= 5;
+}
+
 /* ---------- scoring ---------- */
 
 function scoreListing(v) {
