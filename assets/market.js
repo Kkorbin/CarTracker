@@ -136,11 +136,12 @@ function renderChart(points, model) {
     line = `<line x1="${sx(x0)}" y1="${sy(yA)}" x2="${sx(x1)}" y2="${sy(yB)}" class="fitline"/>`;
   }
 
-  const dots = points.map(p =>
-    `<circle cx="${sx(p.miles)}" cy="${sy(p.price)}" r="4" class="dot">
-       <title>${p.year} ${p.make} ${p.model} ${p.trim}\n${money(p.price)} · ${p.miles.toLocaleString()} mi</title>
-     </circle>`
-  ).join('');
+  const dots = points.map(p => {
+    const where = [p.source, p.location].filter(Boolean).join(' · ');
+    return `<circle cx="${sx(p.miles)}" cy="${sy(p.price)}" r="4" class="dot${p.source === 'Carvana' ? ' online' : ''}">
+       <title>${p.year} ${p.make} ${p.model} ${p.trim}\n${money(p.price)} · ${p.miles.toLocaleString()} mi${where ? '\n' + where : ''}</title>
+     </circle>`;
+  }).join('');
 
   const mine = relevant.map(t =>
     `<circle cx="${sx(t.miles)}" cy="${sy(t.price)}" r="7" class="dot mine">

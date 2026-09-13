@@ -161,6 +161,8 @@ button.danger:hover { border-color: var(--poor); color: var(--poor); }
 .chart .axis-title { fill: var(--muted); font-size: 12px; font-family: inherit; }
 .chart .fitline { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 6 4; }
 .chart .dot { fill: var(--accent); opacity: .55; }
+/* online-only sellers (Carvana) — no test drive before buying, so distinguish them */
+.chart .dot.online { fill: var(--ok); opacity: .6; }
 .chart .dot.mine { fill: var(--good); opacity: 1; stroke: var(--panel); stroke-width: 2; }
 .chart .budget { fill: var(--good); opacity: .10; }
 .chart .badge { fill: var(--good); font-size: 11px; font-family: inherit; }
