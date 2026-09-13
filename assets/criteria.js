@@ -86,7 +86,7 @@ const CRITERIA = {
   // Applies to every car, on top of whatever that specific listing needs checked.
   // Written as things to DO, in the order you'd do them.
   standardChecks: [
-    'Run the VIN for open recalls (free, nhtsa.gov/recalls)',
+    'Run the VIN at nhtsa.gov/recalls for UNREPAIRED recalls on this specific car — the recall list on the card is model-wide, not car-specific',
     'Get an independent pre-purchase inspection — not the selling dealer\'s',
     'Test drive on the freeway, not just around the block',
     'Check tire tread and date codes — four tires is ~$800',
@@ -237,6 +237,20 @@ function comparableRange(v, points) {
     widened,
     delta: v.price - median,
   };
+}
+
+// NHTSA's public API is year/make/model only — there is no VIN endpoint, and their
+// VIN tool is reCAPTCHA-protected, so per-car status has to be a link you click.
+// Manufacturers run their own VIN lookups, which are usually the faster route.
+const MFR_RECALL_LOOKUP = {
+  honda:  'https://owners.honda.com/recalls-campaigns',
+  toyota: 'https://www.toyota.com/recall/',
+  mazda:  'https://www.mazdausa.com/owners/recalls',
+  subaru: 'https://www.subaru.com/vehicle-recalls.html',
+};
+
+function mfrRecallUrl(make) {
+  return MFR_RECALL_LOOKUP[String(make || '').toLowerCase()] || null;
 }
 
 function kbbUrl(v) {

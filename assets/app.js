@@ -203,6 +203,32 @@ function sortListings(arr) {
 
 /* ---------- recalls ---------- */
 
+// NHTSA's VIN tool reports UNREPAIRED recalls for a specific car, which is the number
+// that actually matters — but it sits behind reCAPTCHA and has no public API, so this
+// gets the VIN onto the clipboard and opens the right page rather than automating it.
+function vinLookupBlock(v) {
+  const mfr = mfrRecallUrl(v.make);
+  if (!v.vin) {
+    return `<p class="vinlookup none">No VIN recorded for this car — ask the dealer for
+      it, then check it at
+      <a href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener noreferrer">nhtsa.gov/recalls</a>.</p>`;
+  }
+  return `<div class="vinlookup">
+    <div class="vl-row">
+      <code class="vl-vin">${v.vin}</code>
+      <button type="button" class="ghost act-copyvin" data-vin="${v.vin}">Copy VIN</button>
+    </div>
+    <div class="vl-links">
+      <a href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener noreferrer">NHTSA VIN check &rarr;</a>
+      ${mfr ? `<a href="${mfr}" target="_blank" rel="noopener noreferrer">${v.make} owner lookup &rarr;</a>` : ''}
+    </div>
+    <p class="hint">Paste the VIN to see what is still <em>unrepaired</em> on this
+      particular car. A clean result reads "0 unrepaired recalls associated with this
+      VIN". Note it won't show recalls already repaired, ones over 15 years old, or very
+      new campaigns where VINs aren't assigned yet.</p>
+  </div>`;
+}
+
 async function loadRecalls(v, host) {
   const countEl = host.querySelector('.recall-count');
   const body = host.querySelector('.recall-body');
@@ -223,9 +249,12 @@ async function loadRecalls(v, host) {
     countEl.className = 'recall-count ' + (severe ? 'bad' : 'warn');
 
     body.innerHTML = `
-      <p class="hint">Recalls are per year/make/model, not per VIN — some may already
-        have been done on this car. Ask the dealer for proof, and have any outstanding
-        one fixed free at a franchise dealer before you buy.</p>
+      ${vinLookupBlock(v)}
+      <p class="hint"><strong>This list is for the ${v.year} ${v.make} ${v.model} as a
+        model, not for this specific car.</strong> It tells you what was recalled, not
+        what is still outstanding — many will already have been repaired. Use the VIN
+        lookup above for that. Any recall still open is repaired free at a franchise
+        dealer, so it is leverage, not a dealbreaker.</p>
       <ul class="recall-list">${list.map(r => `
         <li>
           <div class="rc-head">
@@ -487,6 +516,15 @@ function onListClick(e) {
     card.querySelector('.checkcount').textContent =
       `(${items.filter(t => done[t]).length}/${items.length})`;
     renderCompare();
+    return;
+  }
+
+  if (e.target.classList.contains('act-copyvin')) {
+    const btn = e.target;
+    navigator.clipboard.writeText(btn.dataset.vin).then(
+      () => { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = 'Copy VIN'; }, 1500); },
+      () => { btn.textContent = 'Copy failed'; }
+    );
     return;
   }
 
