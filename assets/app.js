@@ -1,9 +1,45 @@
 /* Car Tracker — no build step, no dependencies. */
 
 const STORE_KEY = 'car-tracker/listings/v1';
+const FIN_KEY = 'car-tracker/finance/v1';
+const DONE_KEY = 'car-tracker/checks/v1';
 const $ = sel => document.querySelector(sel);
 
 let listings = [];
+let finance = { ...CRITERIA.finance };
+let doneChecks = {};          // { [listingId]: { [checkText]: true } }
+const compareSet = new Set();
+
+/* ---------- finance + checklist persistence ---------- */
+
+function loadPrefs() {
+  try {
+    const f = JSON.parse(localStorage.getItem(FIN_KEY) || 'null');
+    if (f) finance = { ...finance, ...f };
+  } catch { /* defaults are fine */ }
+  try {
+    doneChecks = JSON.parse(localStorage.getItem(DONE_KEY) || '{}') || {};
+  } catch { doneChecks = {}; }
+}
+
+function savePrefs() {
+  try { localStorage.setItem(FIN_KEY, JSON.stringify(finance)); } catch {}
+}
+
+function saveChecks() {
+  try { localStorage.setItem(DONE_KEY, JSON.stringify(doneChecks)); } catch {}
+}
+
+// Every car gets its own open questions plus the universal pre-purchase steps.
+function checksFor(v) {
+  return [...(v.checks || []), ...CRITERIA.standardChecks];
+}
+
+function paymentFor(v) {
+  const otd = outTheDoor(v);
+  const financed = Math.max(0, otd.total - finance.downPayment);
+  return monthlyPayment(financed, finance.apr, finance.termMonths);
+}
 
 /* ---------- persistence ---------- */
 
@@ -153,6 +189,8 @@ function sortListings(arr) {
   const c = [...arr];
   const s = v => scoreListing(v).total;
   switch (how) {
+    case 'otd':        return c.sort((a, b) => outTheDoor(a).total - outTheDoor(b).total);
+    case 'payment':    return c.sort((a, b) => paymentFor(a) - paymentFor(b));
     case 'price-asc':  return c.sort((a, b) => a.price - b.price);
     case 'price-desc': return c.sort((a, b) => b.price - a.price);
     case 'miles':      return c.sort((a, b) => a.miles - b.miles);
@@ -162,13 +200,72 @@ function sortListings(arr) {
   }
 }
 
+/* ---------- compare ---------- */
+
+function renderCompare() {
+  const panel = $('#comparePanel');
+  // Follow whatever order the list is currently sorted in, so columns line up
+  // with what you were just looking at.
+  const picked = sortListings(listings.filter(v => compareSet.has(v.id)));
+
+  if (picked.length < 2) { panel.hidden = true; return; }
+  panel.hidden = false;
+
+  // Only rows where the cars actually differ are worth eyeballing, but keep the
+  // money rows always — those are the decision.
+  const rows = [
+    ['Score', v => `${scoreListing(v).total}/100`],
+    ['Sticker', v => money(v.price)],
+    ['Out the door', v => money(Math.round(outTheDoor(v).total))],
+    ['Monthly', v => `${money(Math.round(paymentFor(v)))}/mo`],
+    ['Mileage', v => `${Number(v.miles).toLocaleString()} mi`],
+    ['Year', v => v.year],
+    ['Trim', v => v.trim || '—'],
+    ['Drive', v => (v.drive === 'awd' ? 'AWD' : 'FWD')],
+    ['Title', v => v.title === 'clean' ? 'Clean' : v.title],
+    ['Accidents', v => ({ none: 'None reported', minor: 'Reported (minor)', major: 'Major', unknown: 'Not stated' }[v.accidents] || v.accidents)],
+    ['Tax rate', v => `${(outTheDoor(v).rate * 100).toFixed(1)}%`],
+    ['Where', v => v.location || '—'],
+    ['Open items', v => {
+      const items = checksFor(v), done = doneChecks[v.id] || {};
+      return `${items.filter(t => !done[t]).length} left`;
+    }],
+  ];
+
+  const head = `<tr><th></th>${picked.map(v =>
+    `<th>${v.year} ${v.make} ${v.model}<br><span class="sub">${v.trim || ''}</span></th>`).join('')}</tr>`;
+
+  const body = rows.map(([label, fn]) => {
+    const vals = picked.map(fn);
+    // Highlight the best cell for the rows where "best" is unambiguous.
+    let bestIdx = -1;
+    if (label === 'Out the door' || label === 'Monthly' || label === 'Sticker') {
+      const nums = picked.map(v => label === 'Monthly' ? paymentFor(v)
+        : label === 'Sticker' ? Number(v.price) : outTheDoor(v).total);
+      bestIdx = nums.indexOf(Math.min(...nums));
+    } else if (label === 'Score') {
+      const nums = picked.map(v => scoreListing(v).total);
+      bestIdx = nums.indexOf(Math.max(...nums));
+    } else if (label === 'Mileage') {
+      const nums = picked.map(v => Number(v.miles));
+      bestIdx = nums.indexOf(Math.min(...nums));
+    }
+    return `<tr><td class="lbl">${label}</td>${vals.map((val, i) =>
+      `<td class="${i === bestIdx ? 'best' : ''}">${val}</td>`).join('')}</tr>`;
+  }).join('');
+
+  $('#cmpTable').innerHTML = head + body;
+}
+
 function render() {
   renderStats();
+  renderCompare();
   const host = $('#listings');
   host.innerHTML = '';
 
   let rows = listings;
   if ($('#hideDead').checked) rows = rows.filter(v => !['sold', 'passed'].includes(v.status));
+  if ($('#budgetOnly').checked) rows = rows.filter(v => Number(v.price) <= CRITERIA.price.target);
 
   if (!rows.length) {
     host.innerHTML = `<p class="empty">No listings yet. Add one below, or load the sample data from the repo.</p>`;
@@ -203,6 +300,7 @@ function render() {
     flags.innerHTML = s.flags.map(f => `<li class="flag ${f.level}">${f.text}</li>`).join('');
 
     node.querySelector('.price').textContent = money(v.price);
+    node.querySelector('.monthly').textContent = `≈ ${money(Math.round(paymentFor(v)))}/mo`;
     const hist = v.history || [];
     const delta = hist.length > 1 ? v.price - hist[0].price : 0;
     const dEl = node.querySelector('.pricedelta');
@@ -231,6 +329,25 @@ function render() {
     rows.push(['<strong>Total</strong>', `<strong>${money(Math.round(otd.total))}</strong>`]);
     node.querySelector('.otd-table').innerHTML =
       rows.map(([k, val]) => `<tr><td>${k}</td><td class="num">${val}</td></tr>`).join('');
+
+    // The research behind the score. Without this the card shows "Title & history 11/15"
+    // and no hint that it is because an accident is reported.
+    const notesEl = node.querySelector('.notes');
+    if (v.notes) notesEl.textContent = v.notes; else notesEl.remove();
+
+    // Pre-purchase checklist, ticked state kept per car across visits.
+    const items = checksFor(v);
+    const done = doneChecks[v.id] || {};
+    const doneCount = items.filter(t => done[t]).length;
+    node.querySelector('.checkcount').textContent = `(${doneCount}/${items.length})`;
+    node.querySelector('.checklist').innerHTML = items.map((t, i) => {
+      const specific = i < (v.checks || []).length;
+      return `<li class="${specific ? 'specific' : ''}">
+        <label><input type="checkbox" class="act-check" data-text="${t.replace(/"/g, '&quot;')}"
+          ${done[t] ? 'checked' : ''}> <span>${t}</span></label></li>`;
+    }).join('');
+
+    node.querySelector('.act-cmp').checked = compareSet.has(v.id);
 
     node.querySelector('.breakdown').innerHTML = s.parts.map(p => {
       const pct = p.max ? Math.round((p.got / p.max) * 100) : 0;
@@ -286,6 +403,27 @@ function onListClick(e) {
   const id = card.dataset.id;
   const v = listings.find(x => x.id === id);
   if (!v) return;
+
+  if (e.target.classList.contains('act-check')) {
+    const text = e.target.dataset.text;
+    doneChecks[id] = doneChecks[id] || {};
+    if (e.target.checked) doneChecks[id][text] = true;
+    else delete doneChecks[id][text];
+    saveChecks();
+    // Update the count in place — a full re-render would collapse the open <details>.
+    const items = checksFor(v);
+    const done = doneChecks[id] || {};
+    card.querySelector('.checkcount').textContent =
+      `(${items.filter(t => done[t]).length}/${items.length})`;
+    renderCompare();
+    return;
+  }
+
+  if (e.target.classList.contains('act-cmp')) {
+    if (e.target.checked) compareSet.add(id); else compareSet.delete(id);
+    renderCompare();
+    return;
+  }
 
   if (e.target.classList.contains('act-edit')) {
     fillForm(v);
@@ -405,10 +543,38 @@ async function syncFromRepo({ quiet = false } = {}) {
 
 /* ---------- init ---------- */
 
+function syncFinanceInputs() {
+  $('#fDown').value = finance.downPayment;
+  $('#fApr').value = finance.apr;
+  $('#fTerm').value = finance.termMonths;
+  $('#financeNote').textContent =
+    `${money(finance.downPayment)} down · ${finance.apr}% APR · ${finance.termMonths} mo`;
+}
+
+function onFinanceChange() {
+  finance.downPayment = Math.max(0, Number($('#fDown').value) || 0);
+  finance.apr = Math.max(0, Number($('#fApr').value) || 0);
+  finance.termMonths = Number($('#fTerm').value) || 60;
+  savePrefs();
+  syncFinanceInputs();
+  render();
+}
+
 function init() {
   buildChecks();
+  loadPrefs();
   load();
+  syncFinanceInputs();
   render();
+
+  for (const id of ['fDown', 'fApr', 'fTerm']) {
+    $('#' + id).addEventListener('change', onFinanceChange);
+  }
+  $('#budgetOnly').addEventListener('change', render);
+  $('#clearCompare').addEventListener('click', () => {
+    compareSet.clear();
+    render();
+  });
 
   $('#listingForm').addEventListener('submit', onSubmit);
   $('#listings').addEventListener('click', onListClick);

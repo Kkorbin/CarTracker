@@ -183,6 +183,44 @@ button.danger:hover { border-color: var(--poor); color: var(--poor); }
 .verdict.good { color: var(--good); }
 .verdict.bad  { color: var(--poor); }
 
+/* monthly payment */
+.monthly { font-size: 14px; color: var(--muted); }
+
+/* research notes — the reasoning behind the score */
+.notes {
+  margin: 12px 0 0; padding: 10px 12px; font-size: 13px; line-height: 1.5;
+  color: var(--ink); background: var(--panel); border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+
+/* pre-purchase checklist */
+.checks { margin-top: 12px; font-size: 13px; }
+.checks summary { cursor: pointer; font-weight: 500; }
+.checkcount { color: var(--muted); font-weight: 400; }
+.checklist { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-direction: column; gap: 7px; }
+.checklist li { line-height: 1.45; }
+.checklist label { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; cursor: pointer; }
+.checklist input { margin-top: 3px; width: auto; flex-shrink: 0; }
+.checklist input:checked + span { text-decoration: line-through; color: var(--muted); }
+/* car-specific items matter more than the boilerplate ones */
+.checklist li.specific > label > span { color: var(--ink); }
+.checklist li:not(.specific) > label > span { color: var(--muted); }
+
+.breakdown-wrap { margin-top: 12px; font-size: 13px; }
+.breakdown-wrap summary { cursor: pointer; color: var(--muted); }
+.breakdown-wrap .breakdown { margin-top: 10px; }
+
+.cmp-toggle { font-size: 13px; }
+
+/* compare table */
+.tablewrap { overflow-x: auto; }
+.cmp { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 13px; }
+.cmp th, .cmp td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); }
+.cmp th { font-size: 13px; vertical-align: bottom; }
+.cmp th .sub { font-weight: 400; color: var(--muted); font-size: 12px; }
+.cmp td.lbl { color: var(--muted); white-space: nowrap; }
+.cmp td.best { color: var(--good); font-weight: 600; }
+
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 @media (max-width: 560px) {

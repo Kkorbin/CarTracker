@@ -17,6 +17,12 @@
     "location": "Scottsdale, AZ",
     "dealer": "Volkswagen North Scottsdale",
     "status": "watching",
+    "checks": [
+      "PULL THE CARFAX — an accident is reported but severity is not stated. This decides whether the car stays on the list.",
+      "Ask specifically whether there was frame or structural damage",
+      "Ask why a VW dealer has a Honda — likely a trade-in, so ask if they have service records",
+      "Confirm the 8.0% Scottsdale tax rate applies at this address, not a higher one"
+    ],
     "notes": "Cheapest way into a sweet-spot-mileage CR-V. 50,288 mi is ~38k BELOW the age-expected 88k for a 2018. Clean title, 1 owner, full safety suite confirmed, plus heated seats, power liftgate, moonroof, leather and memory seat. Scottsdale's 8.0% tax is the lowest of any dealer we've tracked. CAVEAT: an accident is REPORTED on the history - severity is not stated, so the score assumes minor. Pull the CarFax before anything else; if it turns out to be structural this drops off the list entirely.",
     "features": {
       "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
@@ -44,6 +50,12 @@
     "location": "Chandler, AZ",
     "dealer": "AutoNation Honda Chandler",
     "status": "watching",
+    "checks": [
+      "PULL THE CARFAX — accident reported per AutoCheck, severity unstated",
+      "Ask them to price-match or beat the Scottsdale EX-L at $20,798, which has more equipment",
+      "Confirm the 5-day / 250-mile money-back guarantee in writing",
+      "Honda franchise — ask whether it was a Honda service customer and get the history"
+    ],
     "notes": "The EX you asked about, at sweet-spot mileage. Clean title, 1 owner, all six safety features confirmed, heated seats and moonroof, cloth interior. Honda franchise dealer with a 5-day/250-mile money-back guarantee. CAVEAT: accident REPORTED per AutoCheck, severity unstated - same CarFax caveat as the Scottsdale EX-L. Costs $1,199 MORE than that EX-L while giving up leather, power liftgate and memory seat, which is why the EX-L outranks it despite EX being the cheaper trim in general.",
     "features": {
       "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
@@ -71,6 +83,12 @@
     "location": "Chandler, AZ",
     "dealer": "Land Rover Chandler",
     "status": "watching",
+    "checks": [
+      "CONFIRM adaptive cruise and rear cross-traffic — both should be standard Honda Sensing on a 2019 EX, so the listing is probably just incomplete. If they are present this car jumps up the rankings.",
+      "Sit in it and check the infotainment for the radar cruise stalk",
+      "Multiple previous owners — ask how many and over what period",
+      "Cleanest history of the three CR-Vs (0 accidents), so use that as leverage elsewhere"
+    ],
     "notes": "The only CR-V of the three with a genuinely CLEAN accident history - 0 accidents reported. Newest of the three at 2019 and the cheapest at $20,298. Trade-offs: 69,940 mi is above your preferred band, adaptive cruise and rear cross-traffic are NOT listed (unusual for an EX with Honda Sensing - worth confirming, it may just be an incomplete listing), and it has multiple previous owners. If the missing features turn out to be present, this becomes the strongest of the three.",
     "features": {
       "carplay": true, "bsm": true, "aeb": true, "lane": true,
@@ -99,6 +117,12 @@
     "location": "Phoenix, AZ",
     "dealer": "Earnhardt Lexus",
     "status": "watching",
+    "checks": [
+      "$3.6k over budget and ~$29.8k out the door — decide if it is still in the running at all",
+      "Verify the 35,974 miles and single-owner history on the CarFax; unusually low for a 2021",
+      "Ask about Subaru CVT service history — the known weak point on this model",
+      "Sits near the top of the Forester price range, so there should be room to negotiate"
+    ],
     "notes": "Standout on paper. 35,974 miles on a 2021 is roughly 19k BELOW the age-expected 55k. Clean title, 0 accidents, single owner. Every safety feature confirmed, plus heated seats, power liftgate, moonroof, leather, memory seat and remote start. Top Touring trim. BUDGET: at $26,599 this is ~$3.6k above the new $23k ceiling, and roughly $29.5k out the door — the single most expensive car on the list. Selling dealer is a Lexus franchise, so this came in as a trade rather than off a Subaru lot.",
     "features": {
       "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
@@ -126,6 +150,11 @@
     "location": "Scottsdale, AZ",
     "dealer": "Pinnacle Nissan",
     "status": "watching",
+    "checks": [
+      "$3.3k over budget — same question as the other Forester",
+      "Multiple previous owners on a 4-year-old car; ask how many and why",
+      "Ask about CVT service history"
+    ],
     "notes": "Mileage lands mid-sweet-spot at 48k on a 2022. Clean title, 0 accidents, though multiple previous owners rather than one. Full safety suite confirmed plus heated seats, power liftgate, moonroof, leather and remote start. Newer than the Earnhardt car by a year for $320 less, trading away ~12k extra miles and the single-owner history.",
     "features": {
       "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
@@ -153,6 +182,12 @@
     "location": "Phoenix, AZ",
     "dealer": "Miracle Motors",
     "status": "watching",
+    "checks": [
+      "ASK WHY 66k MILES on a 2022 — highway commuting is fine, fleet or delivery use is not",
+      "Independent dealer, so an outside pre-purchase inspection matters more here",
+      "Over the $23k budget — decide whether the RAV4 resale advantage is worth $1.6k over the CR-V",
+      "Pull the CarFax for owner count and service intervals"
+    ],
     "notes": "Clean title, 0 accidents, 1 owner, full safety suite, AWD. BUDGET: at $24,593 it now sits ~$1.6k above the $23k ceiling, roughly $27.3k out the door. Weak points: 66,146 miles is ~22k above what a 2022 should carry, and it has none of the comfort extras the Foresters have. Independent dealer, so a CarFax matters more here. Ask what drove the mileage.",
     "features": {
       "carplay": true, "acc": true, "bsm": true, "rcta": true, "aeb": true, "lane": true,
@@ -181,6 +216,11 @@
     "location": "Peoria, AZ",
     "dealer": "Liberty Buick",
     "status": "watching",
+    "checks": [
+      "CONFIRM rear cross-traffic alert and automatic emergency braking — both are standard i-Activsense on a 2021 Touring but are not itemised on the listing. Confirming adds roughly 8 points to the score.",
+      "Doc fee is already inside the $22,836 — make sure it is not added a second time on the buyer's order",
+      "Ask why a Buick dealer has it and whether service records came with the trade"
+    ],
     "notes": "THE ONLY CANDIDATE STILL INSIDE THE $18-23k BUDGET. The $22,836 already includes the $599 doc fee, so none is added again in the cost breakdown. Sweet-spot mileage at 55,700 and a clean 0-accident title. CAVEAT: rear cross-traffic alert and automatic emergency braking are not itemised on the listing, so the score below undercounts it. Both are standard i-Activsense equipment on a 2021 CX-5 Touring, so they are almost certainly fitted - confirm with the dealer and the score jumps roughly 8 points.",
     "features": {
       "carplay": true, "acc": true, "bsm": true, "lane": true, "rcta": false, "aeb": false,
@@ -208,6 +248,9 @@
     "location": "Gilbert, AZ",
     "dealer": "CarMax Phoenix-Gilbert",
     "status": "watching",
+    "checks": [
+      "Former rental and $5k over budget — this is a benchmark, not a candidate. Consider marking it passed."
+    ],
     "notes": "PRIOR USE: RENTAL, per the seller notes. At $27,998 it is ~$5k over the new $23k ceiling. Title and accident history undisclosed. Adaptive cruise, rear cross-traffic and AEB all absent from the feature list. Costs $3.4k more than the Miracle Motors RAV4 while offering less. VIN on the page was malformed. CarMax is no-haggle. Included mainly as a benchmark for what to avoid.",
     "features": {
       "carplay": true, "bsm": true, "lane": true,

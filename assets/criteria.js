@@ -78,6 +78,21 @@ const CRITERIA = {
     // which is why a cheap late-model car still carries a high VLT.
     vlt: { assessedShare: 0.60, annualDecline: 0.1625, ratePer100: 2.89 },
   },
+
+  // Financing defaults. These are starting points for the estimate, not a quote —
+  // your own pre-approval rate is the number that matters, so it's editable.
+  finance: { downPayment: 3000, apr: 8.5, termMonths: 60 },
+
+  // Applies to every car, on top of whatever that specific listing needs checked.
+  // Written as things to DO, in the order you'd do them.
+  standardChecks: [
+    'Run the VIN for open recalls (free, nhtsa.gov/recalls)',
+    'Get an independent pre-purchase inspection — not the selling dealer\'s',
+    'Test drive on the freeway, not just around the block',
+    'Check tire tread and date codes — four tires is ~$800',
+    'Confirm the out-the-door number in writing before agreeing to anything',
+    'Ask what add-ons are pre-installed and whether they can be removed',
+  ],
 };
 
 /* ---------- helpers ---------- */
@@ -144,6 +159,17 @@ function outTheDoor(v) {
       CRITERIA.fees.tptByCity, String(v.location || '').split(',')[0].trim().toLowerCase()
     ),
   };
+}
+
+// Standard amortised loan payment. Handles 0% without dividing by zero.
+function monthlyPayment(principal, apr, months) {
+  const p = Math.max(0, Number(principal) || 0);
+  const n = Math.max(1, Number(months) || 1);
+  const r = (Number(apr) || 0) / 100 / 12;
+  if (p === 0) return 0;
+  if (r === 0) return p / n;
+  const f = Math.pow(1 + r, n);
+  return p * r * f / (f - 1);
 }
 
 /* ---------- scoring ---------- */
