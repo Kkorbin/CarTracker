@@ -14,13 +14,37 @@ Apple CarPlay, mid-level-or-better trim, priced **$18k–$23k**.
 | --- | --- |
 | Type | Compact SUV, roughly RAV4-sized |
 | Primary targets | Toyota RAV4, Honda CR-V, Mazda CX-5, Subaru Forester |
+| Added 2026-09-16 | Hyundai Tucson, Kia Sportage — see the caveats below |
+| Also searched | Subaru Crosstrek, Mazda CX-30 (both a size class down from a RAV4) |
 | Alternatives | Similarly sized competitors acceptable |
+
+## Hyundai / Kia — two model-year cutoffs that matter
+
+These two reach the $18k goal more easily than anything else, but only certain
+years are worth buying:
+
+- **Engine immobilizers became standard in November 2021.** Roughly 8.3 million
+  2011–2022 Hyundai/Kia vehicles shipped without one, and the resulting theft wave
+  led **State Farm and Progressive to decline coverage** on some models. A car you
+  cannot insure affordably is not cheap. **Prefer 2022 and newer**, and confirm
+  push-button start.
+- **Theta II engine (2.4L GDI, roughly 2011–2019 Tucson/Sportage)** has a
+  rod-bearing defect; replacement runs $5,000–$8,000. There is a **15-year/150,000-mile
+  warranty extension that transfers to used buyers**, and the KSDS recall status is
+  checkable by VIN. Verify both before buying one of these years.
+
+Practically: a **2022-or-newer** Tucson or Sportage avoids both problems entirely.
 | Model year | Prefer newer where it buys meaningful gains in safety, driver assistance, infotainment, or reliability |
 | Drive type | AWD is a bonus, not mandatory — a FWD car can win on overall value |
 
 ## Budget
 
-- **Target:** $18,000–$23,000 sticker.
+> **Retargeted 2026-09-16.** The goal is now roughly **$18,000 sticker** so the
+> out-the-door figure lands near **$20,000**. Scoring bands moved down to match:
+> full marks at or below $19,000, stretch to $21,500, ceiling $23,000. This
+> deliberately demotes several cars that previously ranked near the top.
+
+- **Target:** around $18,000 sticker; $19,000 still scores full marks.
 - Value over sticker price: a car at the top of the range with lower mileage beats a
   cheaper one carrying 85k+ miles.
 - **Budget is measured on sticker, not out the door.** Arizona adds roughly 8–8.6% tax

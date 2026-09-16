@@ -4,10 +4,11 @@ const CRITERIA = {
   currentYear: 2026,
   milesPerYear: 11000,
 
-  // Budget applies to the STICKER price, since that is how listings are priced and
-  // searched. Tax and fees are computed separately and shown alongside — at Phoenix
-  // rates a $23,000 car lands near $25,600 out the door, so read both numbers.
-  price: { budgetLow: 18000, target: 23000, stretch: 25000, ceiling: 27000 },
+  // Retargeted 2026-09-16: the goal is roughly $18k sticker so the out-the-door
+  // number lands near $20k. Budget applies to STICKER, since that is how listings
+  // are priced and searched — Phoenix tax plus a doc fee adds about $2,200 on an
+  // $18k car, so read both numbers on every card.
+  price: { budgetLow: 16500, target: 19000, stretch: 21500, ceiling: 23000 },
   miles: { idealLow: 45000, idealHigh: 60000, hardHigh: 100000 },
   year:  { preferredLow: 2021, preferredHigh: 2024 },
 
@@ -19,6 +20,14 @@ const CRITERIA = {
     'cx-5':     ['touring', 'preferred', 'grand touring', 'carbon', 'premium', 'signature'],
     'cx5':      ['touring', 'preferred', 'grand touring', 'carbon', 'premium', 'signature'],
     'forester': ['premium', 'limited', 'touring', 'sport', 'wilderness'],
+
+    // Added 2026-09-16. Base trims are excluded because they drop the safety kit:
+    // Tucson SE, Sportage LX, CX-30 base. Crosstrek base likewise.
+    'tucson':    ['sel', 'limited', 'ultimate', 'n line', 'xrt', 'value'],
+    'sportage':  ['s', 'ex', 'sx', 'x-line', 'x-pro', 'prestige'],
+    'crosstrek': ['premium', 'sport', 'limited', 'wilderness'],
+    'cx-30':     ['select', 'preferred', 'premium', 'carbon', 'turbo'],
+    'cx30':      ['select', 'preferred', 'premium', 'carbon', 'turbo'],
   },
 
   safety: [

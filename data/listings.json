@@ -1549,5 +1549,206 @@
         "price": 19990
       }
     ]
+  },
+  {
+    "id": "6e6ac3d6-ae7e-4b21-b006-e34bd3a3d614",
+    "url": "https://www.cars.com/vehicledetail/fb0e3bbc-c3f3-4fc2-9190-c95a761397a1/",
+    "vin": "5NMJB3DE8RH329662",
+    "msrp": 31000,
+    "msrpEstimated": true,
+    "year": 2024,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "trim": "SEL",
+    "price": 18688,
+    "miles": 58361,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Phoenix, AZ",
+    "dealer": "Auto House",
+    "status": "watching",
+    "notes": "BEST FIT YET FOR THE $18K GOAL. $18,688 sticker, roughly $21.3k out the door. Clean title, 0 accidents, ONE owner, and every one of the six safety features confirmed on the listing, plus heated seats and a power liftgate. Critically it is a 2024, which sidesteps BOTH Hyundai problems: it is well past the Nov-2021 immobilizer cutoff (it has keyless/push-button start, so no theft vulnerability and no insurance refusal risk), and it is the newer generation with no Theta II engine exposure. Cloth seats, no moonroof. FWD.",
+    "checks": [
+      "This is a 2024 with push-button start, so the Hyundai theft issue does NOT apply - but still get an insurance quote, since some carriers price the badge rather than the VIN",
+      "58,361 miles in under 2 years is high-use - ask whether it was a commuter, and check for fleet/lease history on the CarFax",
+      "Independent lot ('Auto House'), so the outside inspection matters more",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-16",
+    "history": [
+      {
+        "date": "2026-09-16",
+        "price": 18688
+      }
+    ]
+  },
+  {
+    "id": "7da92f90-2bd2-43d0-8f19-1af9137343a3",
+    "url": "https://www.cars.com/vehicledetail/11e7f81d-b705-472e-8241-4505b7290ed5/",
+    "vin": "5NMJF3DE2RH361334",
+    "msrp": 31500,
+    "msrpEstimated": true,
+    "year": 2024,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "trim": "SEL",
+    "price": 19174,
+    "miles": 52543,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Tempe, AZ",
+    "dealer": "Acura of Tempe",
+    "status": "watching",
+    "notes": "Second 2024 Tucson SEL, from a franchise dealer rather than an independent. Clean title, 0 accidents, 6k fewer miles, and it adds a moonroof and navigation over the Auto House car. Two drawbacks: MULTIPLE previous owners rather than one, and the listing does not itemise blind-spot monitoring or automatic emergency braking - both standard SmartSense equipment on a 2024 SEL, so almost certainly an incomplete listing rather than missing kit. Confirming them would put it level with or ahead of the Auto House car.",
+    "checks": [
+      "CONFIRM blind-spot monitor and AEB - standard on a 2024 SEL; the score is held down until verified",
+      "Multiple owners on a 2-year-old car - ask how many and why",
+      "$486 more than the Auto House Tucson; use one to negotiate the other",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": false,
+      "rcta": true,
+      "aeb": false,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-16",
+    "history": [
+      {
+        "date": "2026-09-16",
+        "price": 19174
+      }
+    ]
+  },
+  {
+    "id": "aa257ae5-927a-4d6b-8dfe-620723b771f0",
+    "url": "https://www.cars.com/vehicledetail/ba6997d5-f6f8-4660-b1c1-ae123b85d5cf/",
+    "vin": "KNDPM3ACXN7979120",
+    "msrp": 27000,
+    "msrpEstimated": true,
+    "year": 2022,
+    "make": "Kia",
+    "model": "Sportage",
+    "trim": "LX",
+    "price": 18300,
+    "miles": 79018,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Peoria, AZ",
+    "dealer": "Earnhardt Peoria Kia",
+    "status": "watching",
+    "notes": "Kia CERTIFIED PRE-OWNED, which is the real draw: 10yr/100k powertrain warranty, 165-point inspection, roadside assistance, $50 deductible, and it TRANSFERS. Clean title, 0 accidents. Being a 2022 it is on the right side of the Nov-2021 immobilizer cutoff. Downsides: LX is the base trim and the listing itemises almost no driver-assist equipment, 79,018 miles is the highest of the new candidates, and multiple previous owners. WATCH THE ADD-ONS: a $699 doc fee plus an optional 'Earnhardt Protection Package' at $999-$1,294 of tint, door guards and mats - decline it.",
+    "checks": [
+      "DECLINE the $999-$1,294 Earnhardt Protection Package - tint and mats are exactly the add-on category the AZ Attorney General says to refuse",
+      "$699 doc fee is above the state average; use it as a negotiating lever",
+      "LX is base trim - confirm in person whether it has blind-spot monitoring and AEB at all, since the listing suggests not",
+      "Get the Kia CPO warranty terms in writing and confirm transferability",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": false,
+      "bsm": false,
+      "rcta": false,
+      "aeb": false,
+      "lane": true,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-16",
+    "history": [
+      {
+        "date": "2026-09-16",
+        "price": 18300
+      }
+    ],
+    "docFee": 699
+  },
+  {
+    "id": "1d1a6ee7-db43-45d3-b0be-68429ccf9a39",
+    "url": "https://www.cars.com/vehicledetail/bd0f5ad2-b580-4e7d-adb3-485fe271baca/",
+    "vin": "JF2GTHSC5PH288722",
+    "msrp": 28000,
+    "msrpEstimated": true,
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Sport",
+    "price": 18999,
+    "miles": 14542,
+    "title": "other-branded",
+    "accidents": "minor",
+    "drive": "awd",
+    "location": "Mesa, AZ",
+    "dealer": "Caspian Auto Group",
+    "status": "passed",
+    "notes": "REJECTED - BRANDED TITLE. 14,542 miles on a 2023 at $18,999 looked like the single best find of this search. The detail page reports an 'Issue reported' title and a reported accident, and the seller's own notes reference 'restored title vehicles' generically - this lot appears to specialise in them. That is the entire explanation for the mileage-to-price ratio. Second branded-title trap found in two days, after the 2023 RAV4 at American Auto Sales. Marked PASSED so it does not resurface looking like a deal.",
+    "checks": [
+      "Do not pursue - branded title, ruled out by your criteria",
+      "Pattern worth remembering: on this list, a 2023 at half price has meant a branded title both times",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": false,
+      "rcta": false,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-16",
+    "history": [
+      {
+        "date": "2026-09-16",
+        "price": 18999
+      }
+    ]
   }
 ]
