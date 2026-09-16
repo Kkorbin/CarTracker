@@ -1116,5 +1116,159 @@
     ],
     "shipping": 990,
     "docFee": 0
+  },
+  {
+    "id": "bcc533c5-7458-4cf3-bc26-d115fb03fa87",
+    "url": "https://www.cars.com/vehicledetail/727f7389-3ff7-48cf-a4d1-efdae002f9cf/",
+    "vin": "JN1AF0BA8PM400628",
+    "msrp": 43190,
+    "msrpEstimated": true,
+    "year": 2023,
+    "make": "Nissan",
+    "model": "Ariya",
+    "trim": "ENGAGE",
+    "price": 16572,
+    "miles": 31601,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Tucson, AZ",
+    "dealer": "Bill Luke Marana",
+    "status": "watching",
+    "notes": "Cheapest Ariya found and a strong individual history: clean title, 0 accidents, 1 private owner (not a stated lease return), full ProPILOT Assist safety suite, heated front/rear seats, heated wheel, leather, memory seat. 63 kWh battery, 216 mi EPA range (FWD). Price is roughly 39% below the ~$43k original MSRP after 3 years — consistent with the Ariya's well-documented steep depreciation, not necessarily a red flag on this specific car. Same caveats as every Ariya here: 3 of its 4 recalls are propulsion-loss and Nissan has discontinued the model for the US as of MY2026.",
+    "checks": [
+      "Not a stated lease return like the other two — ask directly what the prior use was",
+      "31,601 miles in ~3 years is close to average; nothing unusual",
+      "RUN THE VIN — three of the Ariya's four recalls are propulsion-loss (inverter x2, traction motor); the fourth is a steering wheel bolt that can detach. Check this VIN specifically before anything else.",
+      "Ask for a battery health / State of Health report — some listings cite a Recurrent report; ask for one if it isn't already provided",
+      "Confirm whether the Nissan NACS adapter ($235) is included, since it's needed for Tesla Supercharger access",
+      "Confirm a home Level 2 charging setup is realistic before buying — there is no gas-station fallback the way there is with the other four models",
+      "Nissan discontinued the Ariya for the US starting MY2026 — factor that into how long you plan to keep it and what it will be worth when you sell",
+      "No federal or Arizona EV tax credit currently applies — do not price this expecting one"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "leather": true,
+      "liftgate": false,
+      "moonroof": false,
+      "powerseats": false,
+      "memoryseats": true,
+      "remotestart": false
+    },
+    "added": "2026-09-15",
+    "history": [
+      {
+        "date": "2026-09-15",
+        "price": 16572
+      }
+    ]
+  },
+  {
+    "id": "5ff5f339-439e-4d0f-b994-1c2068cde6fa",
+    "url": "https://www.cars.com/vehicledetail/ea8fed52-a8d1-42a4-82fe-1936809c3b84/",
+    "vin": "JN1AF0BA5RM432827",
+    "msrp": 43590,
+    "msrpEstimated": true,
+    "year": 2024,
+    "make": "Nissan",
+    "model": "Ariya",
+    "trim": "ENGAGE",
+    "price": 18172,
+    "miles": 20394,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Phoenix, AZ",
+    "dealer": "Bill Luke Chrysler Jeep Dodge RAM",
+    "status": "watching",
+    "notes": "Listing explicitly states ONE OWNER LEASE RETURN — direct confirmation of the pattern behind most of Bill Luke's Ariya inventory: these are coming off 1-year leases, not being dumped for a hidden defect. Clean title, 0 accidents, low mileage for a 2024, full ProPILOT safety suite, heated seats, leather. 63 kWh, ~220 mi expected range. Newer year and lower miles than the Marana car for $1,600 more.",
+    "checks": [
+      "Confirm what a 1-year lease-return typically means for wear (usually well-maintained, per lease-end inspection standards)",
+      "RUN THE VIN — three of the Ariya's four recalls are propulsion-loss (inverter x2, traction motor); the fourth is a steering wheel bolt that can detach. Check this VIN specifically before anything else.",
+      "Ask for a battery health / State of Health report — some listings cite a Recurrent report; ask for one if it isn't already provided",
+      "Confirm whether the Nissan NACS adapter ($235) is included, since it's needed for Tesla Supercharger access",
+      "Confirm a home Level 2 charging setup is realistic before buying — there is no gas-station fallback the way there is with the other four models",
+      "Nissan discontinued the Ariya for the US starting MY2026 — factor that into how long you plan to keep it and what it will be worth when you sell",
+      "No federal or Arizona EV tax credit currently applies — do not price this expecting one"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "leather": true,
+      "liftgate": false,
+      "moonroof": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-15",
+    "history": [
+      {
+        "date": "2026-09-15",
+        "price": 18172
+      }
+    ]
+  },
+  {
+    "id": "bcaf5340-238b-42d9-b698-5a2f45e0b6a2",
+    "url": "https://www.cars.com/vehicledetail/53209564-a985-4808-a86e-fc2fb66f7773/",
+    "vin": "JN1AF0BA1PM406979",
+    "msrp": 43190,
+    "msrpEstimated": true,
+    "year": 2023,
+    "make": "Nissan",
+    "model": "Ariya",
+    "trim": "ENGAGE",
+    "price": 20072,
+    "miles": 13615,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Phoenix, AZ",
+    "dealer": "Bill Luke Chrysler Jeep Dodge RAM",
+    "status": "watching",
+    "notes": "Also an explicit ONE OWNER LEASE RETURN. Lowest mileage of the three by a wide margin — 13,615 miles on a 2023, meaning it was barely driven during its lease. Clean title, 0 accidents, full safety suite, heated seats, leather. Costs $3,500 more than the Marana car for 18,000 fewer miles and one fewer model year of remaining battery warranty coverage.",
+    "checks": [
+      "Priced highest of the three — the case for it is almost entirely the low mileage; decide whether that's worth $3,500 over the Marana car",
+      "RUN THE VIN — three of the Ariya's four recalls are propulsion-loss (inverter x2, traction motor); the fourth is a steering wheel bolt that can detach. Check this VIN specifically before anything else.",
+      "Ask for a battery health / State of Health report — some listings cite a Recurrent report; ask for one if it isn't already provided",
+      "Confirm whether the Nissan NACS adapter ($235) is included, since it's needed for Tesla Supercharger access",
+      "Confirm a home Level 2 charging setup is realistic before buying — there is no gas-station fallback the way there is with the other four models",
+      "Nissan discontinued the Ariya for the US starting MY2026 — factor that into how long you plan to keep it and what it will be worth when you sell",
+      "No federal or Arizona EV tax credit currently applies — do not price this expecting one"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "leather": true,
+      "liftgate": false,
+      "moonroof": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-15",
+    "history": [
+      {
+        "date": "2026-09-15",
+        "price": 20072
+      }
+    ]
   }
 ]

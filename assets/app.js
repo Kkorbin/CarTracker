@@ -335,7 +335,19 @@ function renderCompare() {
   $('#cmpTable').innerHTML = head + body;
 }
 
+// Rebuilds the make dropdown's options without discarding the current selection,
+// so re-syncing from the repo doesn't silently reset what you were looking at.
+function refreshMakeFilter() {
+  const sel = $('#filterMake');
+  const current = sel.value;
+  const makes = [...new Set(listings.map(v => v.make))].filter(Boolean).sort();
+  sel.innerHTML = `<option value="__all__">All makes</option>`
+    + makes.map(m => `<option value="${m}">${m}</option>`).join('');
+  sel.value = makes.includes(current) ? current : '__all__';
+}
+
 function render() {
+  refreshMakeFilter();
   renderStats();
   renderCompare();
   const host = $('#listings');
@@ -344,6 +356,8 @@ function render() {
   let rows = listings;
   if ($('#hideDead').checked) rows = rows.filter(v => !['sold', 'passed'].includes(v.status));
   if ($('#budgetOnly').checked) rows = rows.filter(v => Number(v.price) <= CRITERIA.price.target);
+  const makeFilter = $('#filterMake').value;
+  if (makeFilter !== '__all__') rows = rows.filter(v => v.make === makeFilter);
 
   if (!rows.length) {
     host.innerHTML = `<p class="empty">No listings yet. Add one below, or load the sample data from the repo.</p>`;
@@ -685,6 +699,7 @@ function init() {
     $('#' + id).addEventListener('change', onFinanceChange);
   }
   $('#budgetOnly').addEventListener('change', render);
+  $('#filterMake').addEventListener('change', render);
   $('#clearCompare').addEventListener('click', () => {
     compareSet.clear();
     render();
