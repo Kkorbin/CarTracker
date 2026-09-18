@@ -511,8 +511,8 @@
     "drive": "fwd",
     "location": "Prescott, AZ",
     "dealer": "Galpin Ford - AZ",
-    "status": "watching",
-    "notes": "[PRICE DROP 2026-09-16: down $2,001 - the largest cut of anything tracked. Still needs the CarPlay/blind-spot confirmation before the score means much.] Clean title, 0 accidents, 1 owner, verified through Experian AutoCheck. In state, but Prescott is ~100 miles north of Phoenix. ODD: the listing does not mention Apple CarPlay, blind-spot monitor or heated seats, all of which should be present on a 2019 EX-L. That is almost certainly an incomplete listing rather than a car missing standard equipment — the score below is harsh until it is confirmed.",
+    "status": "sold",
+    "notes": "[DELISTED 2026-09-19 - cars.com reports no longer available. It had just taken the largest price cut on the list, $2,001 down to $19,986, which evidently found a buyer. The CarPlay/blind-spot question on it was never resolved.] [PRICE DROP 2026-09-16: down $2,001 - the largest cut of anything tracked. Still needs the CarPlay/blind-spot confirmation before the score means much.] Clean title, 0 accidents, 1 owner, verified through Experian AutoCheck. In state, but Prescott is ~100 miles north of Phoenix. ODD: the listing does not mention Apple CarPlay, blind-spot monitor or heated seats, all of which should be present on a 2019 EX-L. That is almost certainly an incomplete listing rather than a car missing standard equipment — the score below is harsh until it is confirmed.",
     "checks": [
       "CONFIRM Apple CarPlay — it is standard on 2019 EX-L and its absence from the listing is suspect. The score is capped at 75 until confirmed.",
       "Confirm blind-spot monitor and heated seats",
@@ -605,7 +605,7 @@
     "make": "Honda",
     "model": "CR-V",
     "trim": "EX",
-    "price": 22990,
+    "price": 22590,
     "miles": 39195,
     "title": "unknown",
     "accidents": "unknown",
@@ -613,7 +613,7 @@
     "location": "+$690 shipping",
     "dealer": "Carvana",
     "status": "watching",
-    "notes": "Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
+    "notes": "[PRICE DROP 2026-09-19: down $400.] Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
     "checks": [
       "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
       "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
@@ -640,6 +640,10 @@
       {
         "date": "2026-09-12",
         "price": 22990
+      },
+      {
+        "date": "2026-09-19",
+        "price": 22590
       }
     ],
     "shipping": 690,
@@ -960,7 +964,7 @@
     "make": "Honda",
     "model": "CR-V",
     "trim": "EX-L",
-    "price": 21990,
+    "price": 21590,
     "miles": 67000,
     "title": "unknown",
     "accidents": "unknown",
@@ -968,7 +972,7 @@
     "location": "+$290 shipping",
     "dealer": "Carvana",
     "status": "watching",
-    "notes": "[SHIPPING UP 2026-09-18: Carvana now quotes $690 to deliver this one, up from $290 - a +400 change to the out-the-door figure with no change to the car.] Carvana, no-haggle. +$290 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $290 shipping is real money and is counted in the out-the-door total.",
+    "notes": "[PRICE DROP 2026-09-19: down $400.] [SHIPPING UP 2026-09-18: Carvana now quotes $690 to deliver this one, up from $290 - a +400 change to the out-the-door figure with no change to the car.] Carvana, no-haggle. +$290 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $290 shipping is real money and is counted in the out-the-door total.",
     "checks": [
       "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
       "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
@@ -995,6 +999,10 @@
       {
         "date": "2026-09-12",
         "price": 21990
+      },
+      {
+        "date": "2026-09-19",
+        "price": 21590
       }
     ],
     "shipping": 690,
