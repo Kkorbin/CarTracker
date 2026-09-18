@@ -238,6 +238,22 @@ button.danger:hover { border-color: var(--poor); color: var(--poor); }
 .vb-kbb { margin-top: 4px; }
 .vb-kbb a { color: var(--accent); }
 
+/* powertrain longevity */
+.longevity {
+  margin-top: 12px; padding: 10px 12px; border-radius: 7px; font-size: 13px;
+  line-height: 1.5; display: flex; flex-direction: column; gap: 4px;
+  border-left: 3px solid var(--line); background: var(--panel);
+}
+.longevity.strong  { border-left-color: var(--good); }
+.longevity.ok      { border-left-color: var(--accent); }
+.longevity.caution { border-left-color: var(--ok); }
+.lng-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 600;
+  color: var(--muted);
+}
+.longevity.strong  .lng-label { color: var(--good); }
+.longevity.caution .lng-label { color: var(--ok); }
+
 /* recalls */
 .recalls { margin-top: 12px; font-size: 13px; }
 .recalls summary { cursor: pointer; font-weight: 500; }

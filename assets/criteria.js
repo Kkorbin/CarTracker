@@ -262,10 +262,82 @@ function mfrRecallUrl(make) {
   return MFR_RECALL_LOOKUP[String(make || '').toLowerCase()] || null;
 }
 
+/* ---------- powertrain longevity ---------- */
+
+// The plan is to keep the car until it dies, so what matters is how far the
+// powertrain goes, not what the badge resells for. Each entry is the known
+// life-limiting component for that model, with the repair that ends the car.
+// Advisory only — deliberately not folded into the 0-100 score, because these are
+// properties of the engine family rather than of this particular car's history.
+const LONGEVITY = [
+  {
+    match: v => v.make === 'Mazda',
+    rank: 'strong',
+    text: 'The 2.5L Skyactiv-G is naturally aspirated and paired with a conventional ' +
+          'automatic — no turbo, no CVT. Commonly reaches 200,000–260,000 miles on ' +
+          'routine maintenance. Best long-life bet on this list.',
+  },
+  {
+    match: v => v.make === 'Toyota',
+    rank: 'strong',
+    text: 'Naturally aspirated 2.5L with a conventional automatic, and the strongest ' +
+          'durability record in the segment. No known life-limiting defect.',
+  },
+  {
+    match: v => v.make === 'Hyundai' && v.year >= 2022,
+    rank: 'ok',
+    text: '2022+ uses the newer 2.5L, not the Theta II that caused the rod-bearing ' +
+          'failures. Conventional 8-speed automatic. Shorter track record than Toyota ' +
+          'or Mazda, but no known systemic failure.',
+  },
+  {
+    match: v => (v.make === 'Hyundai' || v.make === 'Kia') && v.year < 2022,
+    rank: 'caution',
+    text: 'Pre-2022 2.4L GDI is the Theta II family — rod-bearing failure, $5,000–$8,000 ' +
+          'to replace. A 15yr/150k transferable warranty extension applies; verify by VIN ' +
+          'that it is still in force before buying.',
+  },
+  {
+    match: v => v.make === 'Kia' && v.year >= 2022,
+    rank: 'ok',
+    text: '2022+ moved off the Theta II engine. Conventional automatic, no known ' +
+          'systemic failure, but a shorter record than Toyota or Mazda.',
+  },
+  {
+    match: v => v.make === 'Subaru',
+    rank: 'caution',
+    text: 'The boxer engine routinely reaches 300,000 miles — but the CVT is the ' +
+          'life-limiting part. Typical range is 120,000–200,000 miles, and replacement ' +
+          'runs $6,500–$10,000, which on a car this age ends it. Highway miles extend ' +
+          'it, stop-start city miles shorten it. Ask for CVT fluid service records.',
+  },
+  {
+    match: v => v.make === 'Honda' && /EX/i.test(v.trim || ''),
+    rank: 'caution',
+    text: 'EX and EX-L use the 1.5L turbo, which has a documented oil-dilution problem ' +
+          '(fuel entering the oil) that in the worst cases damages the engine. IMPORTANT ' +
+          'MITIGATION: the cause is engines not reaching full operating temperature, and ' +
+          "Honda's service bulletins targeted cold-weather states. Phoenix is close to " +
+          'the best-case climate for this engine. Still worth an oil-smell check and ' +
+          'asking about oil change intervals.',
+  },
+  {
+    match: v => v.make === 'Nissan' && v.model === 'Ariya',
+    rank: 'caution',
+    text: 'The battery sets a hard economic lifespan. Warranty is 8yr/100k; out of ' +
+          'warranty a replacement pack runs $12,000–$18,000, which will exceed the ' +
+          "car's value well before a gas equivalent would be worn out. A keep-forever " +
+          'plan means planning for the car to end at battery failure, not at 250k miles.',
+  },
+];
+
+function longevityFor(v) {
+  return LONGEVITY.find(l => l.match(v)) || null;
+}
+
 // How much of the original sticker the car still commands, and how fast it shed the
-// rest. Resale value is an explicit criterion but nothing in the score captured it,
-// because depreciation is a property of the badge rather than of this particular car.
-// Shown as information, deliberately not folded into the 0-100.
+// rest. With a keep-until-it-dies plan this is context for why a price is what it is,
+// not a decision factor — you never realise resale you do not collect.
 function depreciation(v) {
   const msrp = Number(v.msrp);
   if (!msrp) return null;

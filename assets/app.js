@@ -455,6 +455,18 @@ function render() {
          driven ${dep.milesPerYear.toLocaleString()} mi/yr</span>`);
     }
 
+    // How long the powertrain lasts — the thing that actually ends a keep-forever car.
+    const lng = longevityFor(v);
+    const lngEl = node.querySelector('.longevity');
+    if (lng) {
+      const label = { strong: 'Goes the distance', ok: 'No known issue',
+                      caution: 'Life-limiting part' }[lng.rank];
+      lngEl.className = 'longevity ' + lng.rank;
+      lngEl.innerHTML = `<span class="lng-label">${label}</span><span>${lng.text}</span>`;
+    } else {
+      lngEl.remove();
+    }
+
     // The research behind the score. Without this the card shows "Title & history 11/15"
     // and no hint that it is because an accident is reported.
     const notesEl = node.querySelector('.notes');

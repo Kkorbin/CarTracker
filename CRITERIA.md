@@ -124,8 +124,35 @@ nicer interior.
 
 ## Ownership
 
-- **Reliability:** good long-term reputation and reasonable ownership costs.
-- **Resale value:** important — avoid something cheap only because it resells poorly.
+> **Corrected 2026-09-16.** **Resale value is NOT a concern.** The plan is to keep the
+> car until it is worn out and then hand it to a relative, not to sell it. Anything
+> written earlier that treated weak resale as a mark against a car was wrong, and the
+> reasoning has been reversed accordingly.
+
+- **Reliability and condition now** matter most: is it sound today, and will it stay
+  sound for a long time.
+- **Powertrain longevity is the deciding factor.** At roughly 11,000 miles/year, a car
+  bought at ~55,000 miles reaches **170,000–220,000 miles** during ownership. The
+  question is not "what will it be worth" but "what part finally ends it, and when".
+- **Weak depreciation is now a benefit, not a cost.** A badge that resells poorly is
+  simply a discount on a car that may run just as long. Buying someone else's
+  depreciation is the whole point.
+
+### What ends each car on this list
+
+| Model | Life-limiting part | Practical ceiling |
+| --- | --- | --- |
+| Mazda CX-5 / CX-30 | Nothing known — NA 2.5L, conventional auto | 200k–260k miles |
+| Toyota RAV4 | Nothing known — NA 2.5L, conventional auto | Segment best |
+| Hyundai / Kia **2022+** | Nothing known — newer 2.5L, conventional auto | Short record, no systemic fault |
+| Hyundai / Kia **pre-2022** | Theta II rod bearings | $5k–$8k; 15yr/150k warranty may cover |
+| Subaru Forester / Crosstrek | **CVT**, not the engine | 120k–200k; $6.5k–$10k to replace |
+| Honda CR-V EX / EX-L | 1.5L turbo oil dilution | Climate-dependent — Phoenix is favourable |
+| Nissan Ariya | **Battery** | 8yr/100k warranty; $12k–$18k after |
+
+The Ariya is the sharpest case: with no intent to resell, its terrible depreciation stops
+mattering, but the battery gives it a hard economic end-of-life that a gas car does not
+have. A keep-forever plan means planning for it to die at battery failure.
 
 ## Listings
 
