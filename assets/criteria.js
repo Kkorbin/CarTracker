@@ -262,6 +262,26 @@ function mfrRecallUrl(make) {
   return MFR_RECALL_LOOKUP[String(make || '').toLowerCase()] || null;
 }
 
+// How much of the original sticker the car still commands, and how fast it shed the
+// rest. Resale value is an explicit criterion but nothing in the score captured it,
+// because depreciation is a property of the badge rather than of this particular car.
+// Shown as information, deliberately not folded into the 0-100.
+function depreciation(v) {
+  const msrp = Number(v.msrp);
+  if (!msrp) return null;
+  const age = Math.max(0, CRITERIA.currentYear - Number(v.year));
+  const retained = Number(v.price) / msrp;
+  const lost = 1 - retained;
+  return {
+    msrp,
+    retainedPct: retained * 100,
+    lostPct: lost * 100,
+    age,
+    lostPerYear: age > 0 ? (lost * 100) / age : null,
+    milesPerYear: age > 0 ? Math.round(Number(v.miles) / age) : Number(v.miles),
+  };
+}
+
 function kbbUrl(v) {
   const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return `https://www.kbb.com/${slug(v.make)}/${slug(v.model)}/${v.year}/`;

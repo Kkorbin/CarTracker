@@ -443,6 +443,18 @@ function render() {
         <span class="vb-kbb">${kbb}</span>`;
     }
 
+    // Depreciation, shown alongside the value box. Two cars at the same price can be
+    // holding value very differently, and that is the resale criterion in a number.
+    const dep = depreciation(v);
+    if (dep && dep.lostPerYear != null) {
+      const fast = dep.lostPerYear >= 12, slow = dep.lostPerYear <= 4;
+      const cls = slow ? 'good' : fast ? 'bad' : '';
+      vb.insertAdjacentHTML('beforeend',
+        `<span class="vb-dep ${cls}">Holding ${Math.round(dep.retainedPct)}% of its
+         ${money(dep.msrp)} sticker · losing ${dep.lostPerYear.toFixed(1)}%/yr ·
+         driven ${dep.milesPerYear.toLocaleString()} mi/yr</span>`);
+    }
+
     // The research behind the score. Without this the card shows "Title & history 11/15"
     // and no hint that it is because an accident is reported.
     const notesEl = node.querySelector('.notes');
