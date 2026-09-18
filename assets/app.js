@@ -461,8 +461,15 @@ function render() {
     if (lng) {
       const label = { strong: 'Goes the distance', ok: 'No known issue',
                       caution: 'Life-limiting part' }[lng.rank];
+      const pct = BRAND_250K[v.make];
+      const brandLine = pct == null ? '' :
+        `<span class="lng-brand">${v.make}: <strong>${pct}%</strong> of them reach 250k mi
+         (average is ${BRAND_250K_AVG}%) — ${
+           pct >= 10 ? 'well above average' :
+           pct >= BRAND_250K_AVG ? 'about average or better' :
+           pct >= 2.5 ? 'below average' : 'far below average'}</span>`;
       lngEl.className = 'longevity ' + lng.rank;
-      lngEl.innerHTML = `<span class="lng-label">${label}</span><span>${lng.text}</span>`;
+      lngEl.innerHTML = `<span class="lng-label">${label}</span><span>${lng.text}</span>${brandLine}`;
     } else {
       lngEl.remove();
     }

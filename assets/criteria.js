@@ -262,6 +262,21 @@ function mfrRecallUrl(make) {
   return MFR_RECALL_LOOKUP[String(make || '').toLowerCase()] || null;
 }
 
+/* ---------- brand longevity ---------- */
+
+// Share of each brand's vehicles that reach 250,000 miles (iSeeCars, 395M vehicles
+// analysed, 2026). Overall average is 5.4%. This is the single most relevant
+// published statistic for a keep-until-it-dies plan — far more so than 3-year
+// dependability studies, which are dominated by infotainment complaints.
+const BRAND_250K = {
+  Toyota: 19.7, Lexus: 14.4, Honda: 13.3, Acura: 9.5, GMC: 5.8, Mazda: 5.3,
+  Lincoln: 4.7, Ram: 4.2, Ford: 4.1, Cadillac: 3.9, Chevrolet: 3.6, Nissan: 3.4,
+  Tesla: 3.3, Subaru: 2.8, 'Mercedes-Benz': 2.6, Volvo: 2.6, INFINITI: 2.5,
+  Dodge: 1.7, Volkswagen: 1.5, Jeep: 1.2, Kia: 0.8, Mitsubishi: 0.8, Hyundai: 0.8,
+  Chrysler: 0.7, BMW: 0.5, Audi: 0.5, 'Land Rover': 0.4, Buick: 0.4, Porsche: 0.3,
+};
+const BRAND_250K_AVG = 5.4;
+
 /* ---------- powertrain longevity ---------- */
 
 // The plan is to keep the car until it dies, so what matters is how far the

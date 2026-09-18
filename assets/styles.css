@@ -253,6 +253,11 @@ button.danger:hover { border-color: var(--poor); color: var(--poor); }
 }
 .longevity.strong  .lng-label { color: var(--good); }
 .longevity.caution .lng-label { color: var(--ok); }
+.lng-brand {
+  margin-top: 4px; padding-top: 6px; border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--muted);
+}
+.lng-brand strong { color: var(--ink); }
 
 /* recalls */
 .recalls { margin-top: 12px; font-size: 13px; }
