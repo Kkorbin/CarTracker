@@ -168,6 +168,25 @@ have. A keep-forever plan means planning for it to die at battery failure.
   stable direct page exists, say so plainly rather than linking to a generic
   search-results page.
 
+## Branded-title dealers seen in this search
+
+Every one of these has produced at least one branded-title car during this search.
+None of it is hidden — they disclose it in the listing text — but the listings surface
+in normal searches looking like exceptional deals, so treat anything from them as
+branded until the title line says otherwise.
+
+| Dealer | What turned up |
+| --- | --- |
+| **AutoSavvy** (Gilbert, plus CO/UT/NV/NM/ID/TX) | A whole chain built on it. Their own listing text: a branded title "reflecting AutoSavvy's commitment to offering exceptional value". Six near-new Escapes in one search; a 2025 with 372 miles at $19,200. A dealer review describes "a drywall screw holding in the bumper". |
+| **American Auto Sales LLC** (Phoenix) | 2023 RAV4 XLE and 2024 Corolla Cross, both restored salvage. Also holds three of the eight sub-$21k Lexus SUVs in the metro. |
+| **Caspian Auto Group** (Mesa) | 2023 Crosstrek, 14,542 miles, branded title and reported accident. Notes reference "restored title vehicles" generally. |
+| **Expo Auto Sales LLC** (Phoenix) | 2024 Corolla Cross XLE, restored salvage — with 0 accidents and 1 owner on the same listing. |
+
+**The tell:** a 1–3 year old car at roughly half its normal price, usually with the full
+safety kit, from an independent lot. That has been a branded title every single time in
+this search. Read the title line separately from the accident line — a restored-salvage
+car can still show zero accidents and one owner.
+
 ## Geography
 
 Arizona, especially the Phoenix metro. Statewide Arizona is acceptable for a
