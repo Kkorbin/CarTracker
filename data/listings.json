@@ -401,7 +401,7 @@
     "make": "Honda",
     "model": "CR-V",
     "trim": "EX-L",
-    "price": 20496,
+    "price": 20096,
     "miles": 56677,
     "title": "clean",
     "accidents": "none",
@@ -409,7 +409,7 @@
     "location": "Henderson, NV",
     "dealer": "EchoPark Automotive Las Vegas",
     "status": "watching",
-    "notes": "Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate.",
+    "notes": "[PRICE DROP 2026-09-18: down another $400, updated today.] Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate.",
     "checks": [
       "Confirm how tax works buying out of state — AZ use tax at registration, not dealer TPT",
       "Ask whether they will deliver to Phoenix or whether you drive 5 hours each way",
@@ -436,6 +436,10 @@
       {
         "date": "2026-09-12",
         "price": 20496
+      },
+      {
+        "date": "2026-09-18",
+        "price": 20096
       }
     ]
   },
@@ -750,7 +754,7 @@
     "make": "Honda",
     "model": "CR-V",
     "trim": "EX-L",
-    "price": 22590,
+    "price": 21990,
     "miles": 57000,
     "title": "unknown",
     "accidents": "unknown",
@@ -758,7 +762,7 @@
     "location": "+$690 shipping",
     "dealer": "Carvana",
     "status": "watching",
-    "notes": "Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
+    "notes": "[PRICE DROP 2026-09-18: down $600.] Carvana, no-haggle. +$690 shipping, delivery Tuesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $690 shipping is real money and is counted in the out-the-door total.",
     "checks": [
       "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
       "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
@@ -785,6 +789,10 @@
       {
         "date": "2026-09-12",
         "price": 22590
+      },
+      {
+        "date": "2026-09-18",
+        "price": 21990
       }
     ],
     "shipping": 690,
@@ -960,7 +968,7 @@
     "location": "+$290 shipping",
     "dealer": "Carvana",
     "status": "watching",
-    "notes": "Carvana, no-haggle. +$290 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $290 shipping is real money and is counted in the out-the-door total.",
+    "notes": "[SHIPPING UP 2026-09-18: Carvana now quotes $690 to deliver this one, up from $290 - a +400 change to the out-the-door figure with no change to the car.] Carvana, no-haggle. +$290 shipping, delivery Wednesday. Title and accident history are NOT reflected in the score — Carvana publishes a free CarFax on the listing, so open it before judging this car. Safety features are inferred from the trim (Honda Sensing and CarPlay are standard on EX and up) rather than confirmed on the listing. The $290 shipping is real money and is counted in the out-the-door total.",
     "checks": [
       "Open the free CarFax on the Carvana listing and confirm title and accident history — none of that is reflected in the score below",
       "Confirm blind-spot and rear cross-traffic on the feature list; adaptive cruise, AEB, lane departure and CarPlay are standard Honda Sensing on EX and up",
@@ -989,7 +997,7 @@
         "price": 21990
       }
     ],
-    "shipping": 290,
+    "shipping": 690,
     "docFee": 0
   },
   {
@@ -1166,8 +1174,8 @@
     "drive": "fwd",
     "location": "Tucson, AZ",
     "dealer": "Bill Luke Marana",
-    "status": "watching",
-    "notes": "Cheapest Ariya found and a strong individual history: clean title, 0 accidents, 1 private owner (not a stated lease return), full ProPILOT Assist safety suite, heated front/rear seats, heated wheel, leather, memory seat. 63 kWh battery, 216 mi EPA range (FWD). Price is roughly 39% below the ~$43k original MSRP after 3 years — consistent with the Ariya's well-documented steep depreciation, not necessarily a red flag on this specific car. Same caveats as every Ariya here: 3 of its 4 recalls are propulsion-loss and Nissan has discontinued the model for the US as of MY2026.",
+    "status": "sold",
+    "notes": "[DELISTED 2026-09-18 - cars.com reports no longer available. This was the top-scoring car on the list at 99, and the cheapest Ariya found at $16,572.] Cheapest Ariya found and a strong individual history: clean title, 0 accidents, 1 private owner (not a stated lease return), full ProPILOT Assist safety suite, heated front/rear seats, heated wheel, leather, memory seat. 63 kWh battery, 216 mi EPA range (FWD). Price is roughly 39% below the ~$43k original MSRP after 3 years — consistent with the Ariya's well-documented steep depreciation, not necessarily a red flag on this specific car. Same caveats as every Ariya here: 3 of its 4 recalls are propulsion-loss and Nissan has discontinued the model for the US as of MY2026.",
     "checks": [
       "Not a stated lease return like the other two — ask directly what the prior use was",
       "31,601 miles in ~3 years is close to average; nothing unusual",
@@ -1262,7 +1270,7 @@
     "make": "Nissan",
     "model": "Ariya",
     "trim": "ENGAGE",
-    "price": 20072,
+    "price": 18572,
     "miles": 13615,
     "title": "clean",
     "accidents": "none",
@@ -1270,7 +1278,7 @@
     "location": "Phoenix, AZ",
     "dealer": "Bill Luke Chrysler Jeep Dodge RAM",
     "status": "watching",
-    "notes": "Also an explicit ONE OWNER LEASE RETURN. Lowest mileage of the three by a wide margin — 13,615 miles on a 2023, meaning it was barely driven during its lease. Clean title, 0 accidents, full safety suite, heated seats, leather. Costs $3,500 more than the Marana car for 18,000 fewer miles and one fewer model year of remaining battery warranty coverage.",
+    "notes": "[PRICE DROP 2026-09-18: down $1,500 on 09/17. Now the lowest-mileage car on the whole list at 13,615 mi and inside the $19k full-marks band.] Also an explicit ONE OWNER LEASE RETURN. Lowest mileage of the three by a wide margin — 13,615 miles on a 2023, meaning it was barely driven during its lease. Clean title, 0 accidents, full safety suite, heated seats, leather. Costs $3,500 more than the Marana car for 18,000 fewer miles and one fewer model year of remaining battery warranty coverage.",
     "checks": [
       "Priced highest of the three — the case for it is almost entirely the low mileage; decide whether that's worth $3,500 over the Marana car",
       "RUN THE VIN — three of the Ariya's four recalls are propulsion-loss (inverter x2, traction motor); the fourth is a steering wheel bolt that can detach. Check this VIN specifically before anything else.",
@@ -1300,6 +1308,10 @@
       {
         "date": "2026-09-15",
         "price": 20072
+      },
+      {
+        "date": "2026-09-18",
+        "price": 18572
       }
     ]
   },
@@ -1363,7 +1375,7 @@
     "make": "Mazda",
     "model": "CX-5",
     "trim": "2.5 S Select Package",
-    "price": 20981,
+    "price": 21684,
     "miles": 58553,
     "title": "clean",
     "accidents": "none",
@@ -1371,7 +1383,7 @@
     "location": "Mesa, AZ",
     "dealer": "CardinaleWay Mazda Mesa",
     "status": "watching",
-    "notes": "Newest CX-5 in budget and fully documented: clean title, 0 accidents, 1 owner, AWD, complete safety suite confirmed on the listing (unlike the Liberty Buick car, which never itemised rear cross-traffic or AEB), plus heated and leather seats. 120-point inspection. WATCH THE ADD-ON: the listing carries a $699 'Premium Window Tint' - window tint is the single most common Arizona dealer add-on and the Attorney General names this category as decline-able.",
+    "notes": "[PRICE *INCREASE* 2026-09-18: up $703. Unusual - almost everything else on the list is falling. Either the earlier figure was promotional or the dealer repriced upward; worth asking them directly what changed.] Newest CX-5 in budget and fully documented: clean title, 0 accidents, 1 owner, AWD, complete safety suite confirmed on the listing (unlike the Liberty Buick car, which never itemised rear cross-traffic or AEB), plus heated and leather seats. 120-point inspection. WATCH THE ADD-ON: the listing carries a $699 'Premium Window Tint' - window tint is the single most common Arizona dealer add-on and the Attorney General names this category as decline-able.",
     "checks": [
       "REFUSE OR NEGOTIATE OUT the $699 window tint add-on - it is not part of the car",
       "Confirm the $20,981 is before that add-on, not after",
@@ -1400,6 +1412,10 @@
       {
         "date": "2026-09-16",
         "price": 20981
+      },
+      {
+        "date": "2026-09-18",
+        "price": 21684
       }
     ]
   },
