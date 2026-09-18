@@ -1766,5 +1766,204 @@
         "price": 18999
       }
     ]
+  },
+  {
+    "id": "9b12a912-e321-4e94-a1f5-b46d86bd264a",
+    "url": "https://www.cars.com/vehicledetail/a2165c3b-6a0d-4473-bb76-4cbb291c60c5/",
+    "vin": "JM3KFBCM5M0445316",
+    "msrp": 29000,
+    "msrpEstimated": true,
+    "year": 2021,
+    "make": "Mazda",
+    "model": "CX-5",
+    "trim": "Touring",
+    "price": 18103,
+    "miles": 92243,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "awd",
+    "location": "Scottsdale, AZ",
+    "dealer": "Van Chevrolet",
+    "status": "watching",
+    "notes": "STRONGEST KEEP-FOREVER CANDIDATE FOUND. Naturally aspirated 2.5L with a conventional automatic - no turbo, no CVT, no battery - which is the powertrain most likely to still be running in fifteen years. Clean title, 0 accidents, AWD, full safety suite, heated and leather seats. Manufacturer CPO through CarBravo with 12mo/12k bumper-to-bumper and a 126-point inspection. Scottsdale's 8.0% tax is the lowest of any dealer tracked, putting it around $20.4k out the door - essentially exactly the target. The 92,243 miles look high, but on an engine family that commonly reaches 200-260k that is roughly 110-170k of remaining life, more than a Forester with half the miles would have before its CVT is due.",
+    "checks": [
+      "92k miles means maintenance history matters more than usual - ask for records, especially oil change intervals",
+      "Multiple previous owners; ask how many and over what period",
+      "Get the CarBravo CPO terms in writing and confirm what the 12mo/12k covers",
+      "Confirm the 8.0% Scottsdale rate applies at this address",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-18",
+    "history": [
+      {
+        "date": "2026-09-18",
+        "price": 18103
+      }
+    ]
+  },
+  {
+    "id": "f048ccf0-96d9-4f6f-908e-153ec6acee6c",
+    "url": "https://www.cars.com/vehicledetail/ca91a793-3594-45d5-9a22-c3fa09d68ae2/",
+    "vin": "JM3KFBCM9L0792520",
+    "msrp": 29000,
+    "msrpEstimated": true,
+    "year": 2020,
+    "make": "Mazda",
+    "model": "CX-5",
+    "trim": "Touring",
+    "price": 17999,
+    "miles": 87754,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "awd",
+    "location": "Scottsdale, AZ",
+    "dealer": "Certified Benz & Beemer",
+    "status": "watching",
+    "notes": "Nearly the same car as the Van Chevrolet CX-5 for $104 less and 4,500 fewer miles, one model year older. Same durable NA 2.5L and conventional automatic. Clean title, 0 accidents, AWD, full safety suite, heated and leather. Also Scottsdale, so the same 8.0% tax, landing near $20.2k out the door. No CPO here, which is the main thing the Van Chevrolet car has over it. Listing mentions a 'Premium Ceramic Paint Coating' - check whether that is baked into the price as an add-on.",
+    "checks": [
+      "Ask whether the 'Premium Ceramic Paint Coating' is an added cost on the buyer's order - that is the AZ add-on category worth refusing",
+      "No CPO, unlike the Van Chevrolet CX-5 - weigh that against the $104 saving",
+      "Multiple previous owners; ask for service records at 87k miles",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-18",
+    "history": [
+      {
+        "date": "2026-09-18",
+        "price": 17999
+      }
+    ]
+  },
+  {
+    "id": "c48162d5-1e43-44eb-89f4-df6effb3e244",
+    "url": "https://www.cars.com/vehicledetail/99ebf1ed-3c14-48c2-9587-e739f89148b6/",
+    "vin": "7MUBAAAG9RV078607",
+    "msrp": 26000,
+    "msrpEstimated": true,
+    "year": 2024,
+    "make": "Toyota",
+    "model": "Corolla Cross",
+    "trim": "LE",
+    "price": 17990,
+    "miles": 12524,
+    "title": "rebuilt",
+    "accidents": "minor",
+    "drive": "fwd",
+    "location": "Phoenix, AZ",
+    "dealer": "American Auto Sales LLC",
+    "status": "passed",
+    "notes": "REJECTED - RESTORED SALVAGE. A 2024 with 12,524 miles and the full safety suite at $17,990 would have been the find of the entire search. The seller states outright that the 'title is branded restored salvage' and that they are 'offering this vehicle thousands less than market value'. Also warns 'seller has not disclosed fees'. SAME DEALER as the salvage 2023 RAV4 already rejected - this lot appears to deal in restored-title cars.",
+    "checks": [
+      "Do not pursue - branded title",
+      "Note the dealer: American Auto Sales LLC has now produced two salvage-title cars in this search. Treat anything from them as branded until proven otherwise.",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-18",
+    "history": [
+      {
+        "date": "2026-09-18",
+        "price": 17990
+      }
+    ]
+  },
+  {
+    "id": "a4bd5886-342d-4f8a-b366-dc3fc1d7261a",
+    "url": "https://www.cars.com/vehicledetail/1e86ae3f-44aa-44db-bbed-f9b8319dedde/",
+    "vin": "7MUDAAAG4RV083013",
+    "msrp": 28000,
+    "msrpEstimated": true,
+    "year": 2024,
+    "make": "Toyota",
+    "model": "Corolla Cross",
+    "trim": "XLE",
+    "price": 17994,
+    "miles": 22112,
+    "title": "rebuilt",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Phoenix, AZ",
+    "dealer": "Expo Auto Sales LLC",
+    "status": "passed",
+    "notes": "REJECTED - RESTORED SALVAGE. Second 2024 Corolla Cross at essentially the same price, from a different Phoenix lot, with the same branded title and the same 'thousands less than market value' language. Reports 0 accidents and one owner, which shows a restored-salvage car can still have an otherwise clean history - the title brand is the disqualifier on its own.",
+    "checks": [
+      "Do not pursue - branded title",
+      "Useful datapoint: 0 accidents and 1 owner does NOT mean clean title. Always read the title line separately from the accident line.",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-18",
+    "history": [
+      {
+        "date": "2026-09-18",
+        "price": 17994
+      }
+    ]
   }
 ]
