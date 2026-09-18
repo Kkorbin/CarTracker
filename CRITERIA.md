@@ -14,14 +14,18 @@ Apple CarPlay, mid-level-or-better trim, priced **$18k–$23k**.
 | --- | --- |
 | Type | Compact SUV, roughly RAV4-sized |
 | Primary targets | Toyota RAV4, Honda CR-V, Mazda CX-5, Subaru Forester |
-| Added 2026-09-16 | Hyundai Tucson, Kia Sportage — see the caveats below |
+| **Excluded 2026-09-19** | **Hyundai and Kia — do not surface in searches.** |
 | Also searched | Subaru Crosstrek, Mazda CX-30 (both a size class down from a RAV4) |
 | Alternatives | Similarly sized competitors acceptable |
 
-## Hyundai / Kia — two model-year cutoffs that matter
+## Hyundai / Kia — excluded 2026-09-19
 
-These two reach the $18k goal more easily than anything else, but only certain
-years are worth buying:
+**Both brands are out of the search.** They reach the $18k goal more easily than
+anything else, but the two are corporate siblings sharing platforms and engines, so a
+fault in one is usually a fault in the other — which is exactly what the record below
+shows. Kept here as the reasoning, not as live targets.
+
+The two model-year cutoffs that mattered while they were in play:
 
 - **Engine immobilizers became standard in November 2021.** Roughly 8.3 million
   2011–2022 Hyundai/Kia vehicles shipped without one, and the resulting theft wave
