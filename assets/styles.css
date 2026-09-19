@@ -409,3 +409,22 @@ ul.guide strong { color: var(--ink); }
   .card-photo { width: 100%; }
   .card-photo img { height: 180px; }
 }
+
+/* Model filter. A single-select dropdown could not express "CR-V and RAV4", which
+   is the actual question being asked of this list, so it is a row of toggles.
+   Nothing selected means everything - an empty filter should not mean an empty page. */
+.modelfilter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.chip {
+  font: inherit; font-size: 13px; line-height: 1; cursor: pointer;
+  padding: 7px 12px; border-radius: 20px; width: auto;
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chip:hover { border-color: var(--accent); }
+.chip .chip-n { color: var(--muted); font-size: 12px; }
+.chip[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 500;
+}
+.chip[aria-pressed="true"] .chip-n { color: #fff; opacity: .75; }
+.chip.chip-all { border-style: dashed; }
+.chip.chip-all[aria-pressed="true"] { border-style: solid; }

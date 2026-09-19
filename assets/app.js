@@ -3,6 +3,7 @@
 const STORE_KEY = 'car-tracker/listings/v1';
 const FIN_KEY = 'car-tracker/finance/v1';
 const DONE_KEY = 'car-tracker/checks/v1';
+const MODEL_KEY = 'car-tracker/models/v1';
 const $ = sel => document.querySelector(sel);
 
 let listings = [];
@@ -10,6 +11,7 @@ let marketPoints = [];        // comparable local listings, for the value range
 let finance = { ...CRITERIA.finance };
 let doneChecks = {};          // { [listingId]: { [checkText]: true } }
 const compareSet = new Set();
+let modelFilter = new Set();   // empty = show every model
 
 /* ---------- finance + checklist persistence ---------- */
 
@@ -21,6 +23,10 @@ function loadPrefs() {
   try {
     doneChecks = JSON.parse(localStorage.getItem(DONE_KEY) || '{}') || {};
   } catch { doneChecks = {}; }
+  try {
+    const m = JSON.parse(localStorage.getItem(MODEL_KEY) || '[]');
+    if (Array.isArray(m)) modelFilter = new Set(m);
+  } catch { /* an empty filter shows everything, which is the safe default */ }
 }
 
 function savePrefs() {
@@ -29,6 +35,10 @@ function savePrefs() {
 
 function saveChecks() {
   try { localStorage.setItem(DONE_KEY, JSON.stringify(doneChecks)); } catch {}
+}
+
+function saveModelFilter() {
+  try { localStorage.setItem(MODEL_KEY, JSON.stringify([...modelFilter])); } catch {}
 }
 
 // Every car gets its own open questions plus the universal pre-purchase steps.
@@ -335,19 +345,67 @@ function renderCompare() {
   $('#cmpTable').innerHTML = head + body;
 }
 
-// Rebuilds the make dropdown's options without discarding the current selection,
-// so re-syncing from the repo doesn't silently reset what you were looking at.
-function refreshMakeFilter() {
-  const sel = $('#filterMake');
-  const current = sel.value;
-  const makes = [...new Set(listings.map(v => v.make))].filter(Boolean).sort();
-  sel.innerHTML = `<option value="__all__">All makes</option>`
-    + makes.map(m => `<option value="${m}">${m}</option>`).join('');
-  sel.value = makes.includes(current) ? current : '__all__';
+const modelKey = v => `${v.make}|${v.model}`;
+
+// One toggle per model, multi-select, because "CR-V and RAV4" is the question people
+// actually ask of this list and a single-select dropdown cannot express it. Counts
+// reflect the cars the OTHER filters currently allow, so a chip reading 0 tells you
+// the model is excluded by budget or by being sold rather than absent entirely.
+function refreshModelFilter() {
+  const host = $('#modelFilter');
+  const pool = listings.filter(v =>
+    ($('#showDead').checked || !['sold', 'passed'].includes(v.status)) &&
+    (!$('#budgetOnly').checked || Number(v.price) <= CRITERIA.price.target));
+
+  const counts = new Map();
+  for (const v of pool) {
+    if (!v.make || !v.model) continue;
+    counts.set(modelKey(v), (counts.get(modelKey(v)) || 0) + 1);
+  }
+  // Every model ever tracked stays on the row even at zero, so the filter does not
+  // rearrange itself under the cursor when a car sells.
+  for (const v of listings) {
+    if (v.make && v.model && !counts.has(modelKey(v))) counts.set(modelKey(v), 0);
+  }
+
+  // Drop selections for models that no longer exist at all, or the filter could get
+  // stuck on nothing with no visible way to clear it.
+  for (const k of [...modelFilter]) if (!counts.has(k)) modelFilter.delete(k);
+
+  const entries = [...counts.entries()].sort((a, b) =>
+    b[1] - a[1] || a[0].localeCompare(b[0]));
+
+  const wanted = ['__all__', ...entries.map(([k]) => k)];
+
+  // Rebuild the row only when the set of models changes. Re-writing innerHTML on
+  // every render detached the buttons mid-interaction, which dropped keyboard focus
+  // and meant a click landing on a stale node went nowhere. Counts and pressed
+  // state are cheap to update in place.
+  const existing = [...host.querySelectorAll(".chip")].map(c => c.dataset.model);
+  if (existing.join("\u0000") !== wanted.join("\u0000")) {
+    const chips = [`<button type="button" class="chip chip-all" data-model="__all__">`
+      + `All models<span class="chip-n"></span></button>`];
+    for (const [key] of entries) {
+      const [make, model] = key.split('|');
+      chips.push(`<button type="button" class="chip" data-model="${key}"`
+        + ` title="${make} ${model}">${model}<span class="chip-n"></span></button>`);
+    }
+    host.innerHTML = chips.join('');
+  }
+
+  const counted = new Map(entries);
+  for (const chip of host.querySelectorAll(".chip")) {
+    const key = chip.dataset.model;
+    const isAll = key === '__all__';
+    chip.setAttribute("aria-pressed",
+      String(isAll ? modelFilter.size === 0 : modelFilter.has(key)));
+    chip.querySelector(".chip-n").textContent =
+      isAll ? pool.length : (counted.get(key) || 0);
+  }
 }
 
 function render() {
-  refreshMakeFilter();
+  refreshModelFilter();
   renderStats();
   renderCompare();
   const host = $('#listings');
@@ -358,8 +416,9 @@ function render() {
   // candidates, and they were burying the live listings.
   if (!$('#showDead').checked) rows = rows.filter(v => !['sold', 'passed'].includes(v.status));
   if ($('#budgetOnly').checked) rows = rows.filter(v => Number(v.price) <= CRITERIA.price.target);
-  const makeFilter = $('#filterMake').value;
-  if (makeFilter !== '__all__') rows = rows.filter(v => v.make === makeFilter);
+  // An empty selection means everything. A filter that shows nothing by default
+  // would be a worse dropdown, not a better one.
+  if (modelFilter.size) rows = rows.filter(v => modelFilter.has(modelKey(v)));
 
   if (!rows.length) {
     host.innerHTML = `<p class="empty">No listings yet. Add one below, or load the sample data from the repo.</p>`;
@@ -910,7 +969,16 @@ function init() {
   render();
 
   $('#budgetOnly').addEventListener('change', render);
-  $('#filterMake').addEventListener('change', render);
+  $('#modelFilter').addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    const key = chip.dataset.model;
+    if (key === '__all__') modelFilter.clear();
+    else if (modelFilter.has(key)) modelFilter.delete(key);
+    else modelFilter.add(key);
+    saveModelFilter();
+    render();
+  });
   $('#clearCompare').addEventListener('click', () => {
     compareSet.clear();
     render();
