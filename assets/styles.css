@@ -323,3 +323,63 @@ ul.guide strong { color: var(--ink); }
 .freshness .fbtn { flex: none; font-size: 12px; padding: 5px 10px; }
 .card-verified { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
 .card-verified.stale { color: var(--ok); }
+
+/* ---- card slimming ----
+   The cards had grown past 800px, taller than the viewport, so the page showed one
+   car at a time. The value box and the longevity panel were the two worst offenders
+   at ~160px each, always open. Both now fold behind a one-line summary carrying the
+   conclusion, which is the only part worth seeing at a glance. */
+.card-head { align-items: flex-start; }
+.card-headline { min-width: 0; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 5px 0 0; }
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; line-height: 1; padding: 4px 7px; border-radius: 20px;
+  border: 1px solid var(--line); color: var(--muted); white-space: nowrap;
+}
+.badge-new {
+  border-color: var(--good); color: var(--good); font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase;
+}
+.badge-check::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--good); flex: none;
+}
+.badge-check.aging::before { background: var(--ok); }
+.badge-check.stale::before { background: var(--poor); }
+.badge-check.stale { color: var(--poor); border-color: var(--poor); }
+
+/* Folded detail sections. The summary line states the finding; opening shows the
+   working behind it. */
+.fold { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 8px; }
+.fold > .fold-sum {
+  cursor: pointer; font-size: 13px; list-style: none;
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+}
+.fold > .fold-sum::-webkit-details-marker { display: none; }
+.fold > .fold-sum::after {
+  content: '▸'; color: var(--muted); font-size: 10px; margin-left: auto; flex: none;
+}
+.fold[open] > .fold-sum::after { content: '▾'; }
+.fold > .fold-sum:hover { color: var(--accent); }
+.fold .sum-k { color: var(--muted); }
+.fold .sum-v { font-weight: 600; }
+.fold .sum-v.good { color: var(--good); }
+.fold .sum-v.bad  { color: var(--poor); }
+.fold .sum-v.ok   { color: var(--ok); }
+.fold .valuebox, .fold .longevity { margin-top: 10px; }
+
+/* Notes stay on the face of the card - they carry the reasoning and hiding them
+   behind a click defeats the point - but they are clamped so one long note cannot
+   push everything else off the screen. */
+.notes-wrap { margin-top: 10px; }
+.notes-wrap .notes {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.notes-wrap.open .notes { display: block; overflow: visible; }
+.notes-more {
+  margin-top: 4px; padding: 0; border: 0; background: none;
+  color: var(--accent); font-size: 12px; cursor: pointer; width: auto;
+}
+.notes-more:hover { text-decoration: underline; }

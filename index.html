@@ -204,11 +204,13 @@
   <article class="card">
     <div class="card-main">
       <div class="card-head">
-        <h3 class="card-title"></h3>
+        <div class="card-headline">
+          <h3 class="card-title"></h3>
+          <p class="badges"></p>
+        </div>
         <div class="score" title="Score against your criteria"><span class="score-num"></span><span class="score-max">/100</span></div>
       </div>
       <p class="card-sub"></p>
-      <p class="card-verified"></p>
       <ul class="flags"></ul>
       <div class="pricebox">
         <span class="price"></span>
@@ -219,9 +221,18 @@
         <summary><span class="otd-total"></span> out the door <span class="otd-note"></span></summary>
         <table class="otd-table"></table>
       </details>
-      <div class="valuebox"></div>
-      <div class="longevity"></div>
-      <p class="notes"></p>
+      <details class="fold value-fold">
+        <summary class="fold-sum value-sum"></summary>
+        <div class="valuebox"></div>
+      </details>
+      <details class="fold lng-fold">
+        <summary class="fold-sum lng-sum"></summary>
+        <div class="longevity"></div>
+      </details>
+      <div class="notes-wrap">
+        <p class="notes"></p>
+        <button type="button" class="notes-more" hidden>Show more</button>
+      </div>
       <details class="recalls">
         <summary>Open recalls <span class="recall-count">— check</span></summary>
         <div class="recall-body"></div>

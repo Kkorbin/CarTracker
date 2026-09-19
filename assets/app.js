@@ -388,18 +388,26 @@ function render() {
     ].filter(Boolean);
     node.querySelector('.card-sub').textContent = bits.join(' · ');
 
-    // Per-card verification age. The global banner says when the run happened; this
-    // says whether THIS car was actually reached in it. Carvana blocks automated
-    // requests, so those cards would otherwise inherit a freshness they do not have.
-    const vEl = node.querySelector('.card-verified');
+    // Badges: how new the car is to the board, and when its listing was last actually
+    // reached. The global banner says when the run happened; this says whether THIS
+    // car was in it. Carvana blocks automated requests, so those cards must not
+    // inherit a freshness they do not have.
+    const badges = [];
+    // "New" means new since the previous check run, not an arbitrary rolling window.
+    // A fixed window lit up nearly every card, because listings arrive in batches on
+    // the days the check runs - which made the badge mean nothing.
+    if (isNewSinceLastRun(v)) {
+      badges.push(`<span class="badge badge-new" title="Added ${fmtDate(v.added)}">New</span>`);
+    }
     const vAge = v.lastVerified ? daysSince(v.lastVerified) : null;
     if (vAge === null) {
-      vEl.textContent = 'Not yet verified against the live listing';
-      vEl.className = 'card-verified stale';
+      badges.push('<span class="badge badge-check stale">Never verified</span>');
     } else {
-      vEl.textContent = `Listing verified ${ageWords(vAge)}`;
-      vEl.className = 'card-verified' + (vAge > 3 ? ' stale' : '');
+      const cls = vAge <= 3 ? '' : vAge <= 7 ? ' aging' : ' stale';
+      badges.push(`<span class="badge badge-check${cls}" title="Listing last reached ${fmtDate(v.lastVerified)}">`
+        + `Checked ${vAge <= 0 ? 'today' : fmtDate(v.lastVerified)}</span>`);
     }
+    node.querySelector('.badges').innerHTML = badges.join('');
 
     const flags = node.querySelector('.flags');
     flags.innerHTML = s.flags.map(f => `<li class="flag ${f.level}">${f.text}</li>`).join('');
@@ -438,6 +446,7 @@ function render() {
 
     // What comparable local cars are actually asking, plus a way out to KBB.
     const vb = node.querySelector('.valuebox');
+    const vbSum = node.querySelector('.value-sum');
     const cmpRange = comparableRange(v, marketPoints);
     const kbb = `<a href="${kbbUrl(v)}" target="_blank" rel="noopener noreferrer">KBB value &rarr;</a>`;
     if (cmpRange) {
@@ -450,10 +459,16 @@ function render() {
          <span class="vb-mid">median ${money(Math.round(cmpRange.median))} · ${cmpRange.n} car${cmpRange.n === 1 ? '' : 's'}${cmpRange.widened ? ', widened search' : ''}</span>
          <span class="vb-verdict ${cls}">This one is ${verdict} the median${d ? ` (${d > 0 ? '+' : '−'}${money(Math.round(Math.abs(d)))})` : ''}</span>
          <span class="vb-kbb">${kbb}</span>`;
+      vbSum.innerHTML = `<span class="sum-k">Value</span>`
+        + `<span class="sum-v ${cls}">${verdict === 'in line with' ? 'In line with' : d < 0 ? 'Under' : 'Over'} market`
+        + `${d ? ` by ${money(Math.round(Math.abs(d)))}` : ''}</span>`
+        + `<span class="sum-k">${money(cmpRange.low)}–${money(cmpRange.high)}</span>`;
     } else {
       vb.innerHTML = `<span class="vb-label">Comparable asking prices</span>
         <span class="vb-mid">Not enough similar local listings to build a range.</span>
         <span class="vb-kbb">${kbb}</span>`;
+      vbSum.innerHTML = `<span class="sum-k">Value</span>`
+        + `<span class="sum-v">No local comparables</span>`;
     }
 
     // Depreciation, shown alongside the value box. Two cars at the same price can be
@@ -483,14 +498,27 @@ function render() {
            pct >= 2.5 ? 'below average' : 'far below average'}</span>`;
       lngEl.className = 'longevity ' + lng.rank;
       lngEl.innerHTML = `<span class="lng-label">${label}</span><span>${lng.text}</span>${brandLine}`;
+      const lcls = { strong: 'good', ok: '', caution: 'ok' }[lng.rank] || '';
+      node.querySelector('.lng-sum').innerHTML =
+        `<span class="sum-k">Longevity</span><span class="sum-v ${lcls}">${label}</span>`
+        + (pct == null ? '' : `<span class="sum-k">${pct}% reach 250k</span>`);
     } else {
-      lngEl.remove();
+      node.querySelector('.lng-fold').remove();
     }
 
     // The research behind the score. Without this the card shows "Title & history 11/15"
     // and no hint that it is because an accident is reported.
     const notesEl = node.querySelector('.notes');
-    if (v.notes) notesEl.textContent = v.notes; else notesEl.remove();
+    if (v.notes) {
+      notesEl.textContent = v.notes;
+      // Clamped to three lines. The notes carry the reasoning, so they stay on the
+      // face of the card rather than folding away, but a 1,400-character note should
+      // not push the rest of the car off the screen.
+      const moreBtn = node.querySelector('.notes-more');
+      if (v.notes.length > 220) moreBtn.hidden = false;
+    } else {
+      node.querySelector('.notes-wrap').remove();
+    }
 
     // Pre-purchase checklist, ticked state kept per car across visits.
     const items = checksFor(v);
@@ -566,6 +594,13 @@ function onListClick(e) {
   const id = card.dataset.id;
   const v = listings.find(x => x.id === id);
   if (!v) return;
+
+  if (e.target.classList.contains('notes-more')) {
+    const wrap = e.target.closest('.notes-wrap');
+    const open = wrap.classList.toggle('open');
+    e.target.textContent = open ? 'Show less' : 'Show more';
+    return;
+  }
 
   if (e.target.classList.contains('act-check')) {
     const text = e.target.dataset.text;
@@ -760,6 +795,17 @@ function fmtDate(iso) {
     { month: 'short', day: 'numeric', year: 'numeric' }) : '';
 }
 
+// A listing counts as new if it arrived after the previous check run. Falls back to
+// a 2-day window when meta has no previous run to compare against.
+function isNewSinceLastRun(v) {
+  if (!v.added) return false;
+  const prev = meta && meta.previousCheck ? parseDay(meta.previousCheck) : null;
+  const added = parseDay(v.added);
+  if (!added) return false;
+  if (!prev) return daysSince(v.added) <= 2;
+  return added > prev;
+}
+
 function renderFreshness() {
   const host = $('#freshness');
   if (!host) return;
@@ -792,6 +838,8 @@ async function loadMeta() {
     meta = null;
   }
   renderFreshness();
+  // Badges depend on meta.previousCheck, and meta lands after the first paint.
+  if (listings.length) render();
 }
 
 /* ---------- init ---------- */
