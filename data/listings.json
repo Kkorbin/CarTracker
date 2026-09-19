@@ -1973,5 +1973,106 @@
         "price": 17994
       }
     ]
+  },
+  {
+    "id": "c2ca703e-b7b9-4a82-b51b-e7a88a701042",
+    "url": "https://www.cars.com/vehicledetail/0750a503-ca27-4458-aa14-92abd8742404/",
+    "vin": "JM3KFACM9J1416143",
+    "msrp": 28000,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Mazda",
+    "model": "CX-5",
+    "trim": "Touring",
+    "price": 17995,
+    "miles": 70759,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Tucson, AZ",
+    "dealer": "Noble Motors",
+    "status": "watching",
+    "notes": "THE CAR THAT THE OLD SCORING WAS HIDING. Every single driver-assist feature is present - adaptive cruise, blind-spot, rear cross-traffic, AEB, lane departure - plus heated seats, moonroof and leather. Clean title, 0 accidents. The ONLY thing missing is Apple CarPlay, because 2018 was the last CX-5 year before Mazda made it standard. Under the previous rules that single absence capped the car at 75 and buried it. Mazda sells an OFFICIAL factory retrofit for 2016-2018 CX-5 at roughly $400-500 installed, which also updates Mazda Connect and the USB ports. So the real question is whether this car is worth $17,995 + ~$450 = ~$18,445 - and on a naturally aspirated 2.5L with a conventional automatic and 70,759 miles, that is the cheapest route to a fully-equipped keep-forever car found so far. Tucson is a ~110 mile drive.",
+    "checks": [
+      "Quote the Mazda CarPlay retrofit at a Phoenix Mazda dealer before buying so you know the real all-in number (expect $400-500)",
+      "Confirm the car has Mazda Connect (the retrofit needs it) rather than the older non-Connect head unit",
+      "Multiple previous owners - ask for service records at 70k",
+      "Tucson is ~110 miles each way; worth a call to confirm it is still there before making the drive",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": false,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-19",
+    "history": [
+      {
+        "date": "2026-09-19",
+        "price": 17995
+      }
+    ]
+  },
+  {
+    "id": "115324fc-8699-4bdd-975e-e93a56d21f05",
+    "url": "https://www.cars.com/vehicledetail/ade234a5-5548-40a9-9263-cbd4a3c1ff77/",
+    "vin": "JTMWFREV2JJ732420",
+    "msrp": 27000,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Toyota",
+    "model": "RAV4",
+    "trim": "XLE",
+    "price": 18090,
+    "miles": 72984,
+    "title": "clean",
+    "accidents": "minor",
+    "drive": "fwd",
+    "location": "Mesa, AZ",
+    "dealer": "Ideal Cars - Broadway Rd",
+    "status": "watching",
+    "notes": "Cheapest 2018 RAV4 XLE local, and a useful contrast to the Noble Motors CX-5. It has Toyota's radar cruise, AEB and lane departure, but NO blind-spot monitor and NO rear cross-traffic - and those two cannot be retrofitted at any sane price, unlike CarPlay. Also no CarPlay (2018 predates it on RAV4). Clean title but an accident is REPORTED and there are multiple owners. Toyota's 19.7% odds of reaching 250k is the best of any brand, so the powertrain case is strong; the equipment and history case is not.",
+    "checks": [
+      "PULL THE CARFAX - accident reported, severity unstated",
+      "Confirm in person whether blind-spot is genuinely absent - it was optional on some 2018 XLE builds",
+      "Independent lot; outside inspection matters more here",
+      "Run the VIN check on this card for UNREPAIRED recalls",
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Get the out-the-door number in writing, itemised"
+    ],
+    "features": {
+      "carplay": false,
+      "acc": true,
+      "bsm": false,
+      "rcta": false,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": true,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-19",
+    "history": [
+      {
+        "date": "2026-09-19",
+        "price": 18090
+      }
+    ]
   }
 ]

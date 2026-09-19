@@ -30,13 +30,20 @@ const CRITERIA = {
     'cx30':      ['select', 'preferred', 'premium', 'carbon', 'turbo'],
   },
 
+  // Reweighted 2026-09-19. The old table treated Apple CarPlay as essential and capped
+  // any car without it at 75 — which buried 2018 cars that have the entire driver-assist
+  // suite and lack only the head unit. CarPlay is the ONE item here that can be added
+  // later: Mazda sells an official factory retrofit for the 2016-2018 CX-5 at roughly
+  // $400-500 installed. Radar cruise, AEB and blind-spot cannot be retrofitted at any
+  // sane price, so those now carry the weight instead.
   safety: [
-    { id: 'carplay',   label: 'Apple CarPlay',              weight: 8, essential: true },
-    { id: 'acc',       label: 'Adaptive cruise control',    weight: 5 },
-    { id: 'bsm',       label: 'Blind-spot monitoring',      weight: 5 },
-    { id: 'rcta',      label: 'Rear cross-traffic alert',   weight: 4 },
-    { id: 'aeb',       label: 'Automatic emergency braking', weight: 4 },
-    { id: 'lane',      label: 'Lane departure / keep assist', weight: 4 },
+    { id: 'carplay', label: 'Apple CarPlay', weight: 4,
+      retrofit: { cost: 450, note: 'Mazda sells an official 2016-2018 CX-5 retrofit, ~$400-500 installed. Aftermarket head units are similar money on most cars.' } },
+    { id: 'acc',  label: 'Adaptive cruise control',     weight: 7 },
+    { id: 'bsm',  label: 'Blind-spot monitoring',       weight: 6 },
+    { id: 'aeb',  label: 'Automatic emergency braking', weight: 6 },
+    { id: 'rcta', label: 'Rear cross-traffic alert',    weight: 4 },
+    { id: 'lane', label: 'Lane departure / keep assist', weight: 3 },
   ],
 
   comfort: [
@@ -56,7 +63,10 @@ const CRITERIA = {
   caps: {
     brandedTitle:     35,  // salvage / rebuilt / flood / other branded
     majorDamage:      45,  // major or structural damage
-    missingEssential: 75,  // missing a feature marked essential (Apple CarPlay)
+    // The old missingEssential cap (75, for Apple CarPlay) is gone. A cap is for
+    // things that cannot be undone — a branded title, structural damage. A missing
+    // head unit is a $450 afternoon at a dealer, and capping for it was hiding
+    // otherwise excellent 2018 cars.
   },
 
   // Arizona purchase costs.
@@ -398,9 +408,13 @@ function scoreListing(v) {
   const safetyMax = CRITERIA.safety.reduce((s, f) => s + f.weight, 0);
   for (const f of CRITERIA.safety) {
     if (v.features && v.features[f.id]) safetyPts += f.weight;
-    else if (f.essential) {
-      flags.push({ level: 'bad', text: `No ${f.label}` });
-      caps.push(CRITERIA.caps.missingEssential);
+    else if (f.retrofit) {
+      // Missing but fixable — say what it costs rather than treating it as a defect.
+      flags.push({ level: 'warn',
+                   text: `No ${f.label} — retrofittable, ~$${f.retrofit.cost}` });
+    } else {
+      // Missing and NOT fixable at any reasonable price. This is the real loss.
+      flags.push({ level: 'bad', text: `No ${f.label} (cannot be retrofitted)` });
     }
   }
   const safety = (safetyPts / safetyMax) * W.safety;
