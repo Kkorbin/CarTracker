@@ -388,6 +388,19 @@ function render() {
     ].filter(Boolean);
     node.querySelector('.card-sub').textContent = bits.join(' · ');
 
+    // Per-card verification age. The global banner says when the run happened; this
+    // says whether THIS car was actually reached in it. Carvana blocks automated
+    // requests, so those cards would otherwise inherit a freshness they do not have.
+    const vEl = node.querySelector('.card-verified');
+    const vAge = v.lastVerified ? daysSince(v.lastVerified) : null;
+    if (vAge === null) {
+      vEl.textContent = 'Not yet verified against the live listing';
+      vEl.className = 'card-verified stale';
+    } else {
+      vEl.textContent = `Listing verified ${ageWords(vAge)}`;
+      vEl.className = 'card-verified' + (vAge > 3 ? ' stale' : '');
+    }
+
     const flags = node.querySelector('.flags');
     flags.innerHTML = s.flags.map(f => `<li class="flag ${f.level}">${f.text}</li>`).join('');
 
@@ -700,6 +713,87 @@ async function syncFromRepo({ quiet = false } = {}) {
   }
 }
 
+/* ---------- data freshness ----------
+   A used-car listing is a perishable fact. The page can look completely authoritative
+   while every price on it is a week out of date, so the banner states the age of the
+   data up front and turns amber, then red, as it rots. Sourced from data/meta.json,
+   written by the check run. */
+
+let meta = null;
+
+const DAY = 86400000;
+
+// Date.parse('2026-09-19') is specified to read a date-only string as UTC midnight,
+// which in Phoenix (UTC-7) is 5pm the PREVIOUS day. Left alone, every date in this
+// file reads one day early and a check run this morning reports as "yesterday".
+// Date-only strings here mean a local calendar day, so parse them as one.
+function parseDay(iso) {
+  if (typeof iso !== 'string') return null;
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso.trim());
+  if (m) return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  const t = Date.parse(iso);
+  return Number.isFinite(t) ? new Date(t) : null;
+}
+
+function daysSince(iso) {
+  const a = parseDay(iso);
+  if (!a) return null;
+  // Compare calendar days, so a check from this morning reads "today" rather than
+  // "0 days" or, worse, "1 day" because of a timezone boundary.
+  a.setHours(0, 0, 0, 0);
+  const b = new Date(); b.setHours(0, 0, 0, 0);
+  return Math.round((b - a) / DAY);
+}
+
+function ageWords(n) {
+  if (n === null) return 'at an unknown time';
+  if (n <= 0) return 'today';
+  if (n === 1) return 'yesterday';
+  if (n < 14) return `${n} days ago`;
+  if (n < 60) return `${Math.floor(n / 7)} weeks ago`;
+  return `${Math.floor(n / 30)} months ago`;
+}
+
+function fmtDate(iso) {
+  const d = parseDay(iso);
+  return d ? d.toLocaleDateString(undefined,
+    { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+}
+
+function renderFreshness() {
+  const host = $('#freshness');
+  if (!host) return;
+  if (!meta || !meta.lastChecked) { host.hidden = true; return; }
+
+  const n = daysSince(meta.lastChecked);
+  // Three days is about how long a keenly-priced car survives in this market, so that
+  // is where "trust this" ends and "verify before you drive anywhere" begins.
+  const level = n === null ? '' : n <= 3 ? 'fresh' : n <= 7 ? 'aging' : 'stale';
+  host.className = 'freshness ' + level;
+
+  const bits = [`Listings last checked <b>${ageWords(n)}</b>`];
+  if (n > 0) bits.push(`on ${fmtDate(meta.lastChecked)}`);
+  let line = bits.join(' ');
+  if (meta.summary) line += ` — ${meta.summary}`;
+  if (level === 'stale') {
+    line += ' <b>Prices and availability may have moved; confirm before travelling.</b>';
+  }
+  $('#freshText').innerHTML = line;
+  host.hidden = false;
+}
+
+async function loadMeta() {
+  try {
+    const res = await fetch('data/meta.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    meta = await res.json();
+  } catch {
+    // Never block the page on this. No banner is better than a wrong one.
+    meta = null;
+  }
+  renderFreshness();
+}
+
 /* ---------- init ---------- */
 
 function syncFinanceInputs() {
@@ -745,9 +839,15 @@ function init() {
   $('#exportBtn').addEventListener('click', exportJson);
   $('#loadRepoBtn').addEventListener('click', () => syncFromRepo({ quiet: false }));
 
+  $('#freshRefresh').addEventListener('click', () => {
+    loadMeta();
+    syncFromRepo({ quiet: false });
+  });
+
   // Pull the maintained dataset on every visit — otherwise the published site shows
   // an empty page to anyone who has not clicked the sync button.
   syncFromRepo({ quiet: true });
+  loadMeta();
 
   // Comparable-price data. Failure here only costs the value box, so don't block on it.
   fetch('data/market.json', { cache: 'no-store' })

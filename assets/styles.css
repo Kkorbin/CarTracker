@@ -298,3 +298,28 @@ ul.guide strong { color: var(--ink); }
 @media (max-width: 560px) {
   .bar { grid-template-columns: 110px 1fr 46px; }
 }
+
+/* Data freshness banner. A car listing goes stale fast - sold, delisted, repriced -
+   so the page says out loud how old its own data is rather than looking authoritative
+   about a week-old snapshot. */
+.freshness {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel); padding: 10px 14px; margin-bottom: 16px;
+  font-size: 13px; color: var(--muted);
+}
+.freshness .fdot {
+  width: 8px; height: 8px; border-radius: 50%; flex: none;
+  background: var(--muted);
+}
+.freshness.fresh .fdot { background: var(--good); }
+.freshness.aging .fdot { background: var(--ok); }
+.freshness.stale .fdot { background: var(--poor); }
+.freshness.stale  { border-color: var(--poor); }
+.freshness.aging  { border-color: var(--ok); }
+.freshness .ftext { flex: 1 1 auto; min-width: 0; }
+.freshness .ftext b { color: var(--ink); font-weight: 600; }
+.freshness.stale .ftext b { color: var(--poor); }
+.freshness .fbtn { flex: none; font-size: 12px; padding: 5px 10px; }
+.card-verified { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+.card-verified.stale { color: var(--ok); }

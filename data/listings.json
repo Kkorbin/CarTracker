@@ -45,7 +45,8 @@
         "date": "2026-09-12",
         "price": 20798
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "a9e2c5f7-6b34-4d18-8a71-4f2d9c6e0077",
@@ -64,14 +65,14 @@
     "drive": "fwd",
     "location": "Chandler, AZ",
     "dealer": "AutoNation Honda Chandler",
-    "status": "watching",
+    "status": "sold",
     "checks": [
       "PULL THE CARFAX — accident reported per AutoCheck, severity unstated",
       "Ask them to price-match or beat the Scottsdale EX-L at $20,798, which has more equipment",
       "Confirm the 5-day / 250-mile money-back guarantee in writing",
       "Honda franchise — ask whether it was a Honda service customer and get the history"
     ],
-    "notes": "The EX you asked about, at sweet-spot mileage. Clean title, 1 owner, all six safety features confirmed, heated seats and moonroof, cloth interior. Honda franchise dealer with a 5-day/250-mile money-back guarantee. CAVEAT: accident REPORTED per AutoCheck, severity unstated - same CarFax caveat as the Scottsdale EX-L. Costs $1,199 MORE than that EX-L while giving up leather, power liftgate and memory seat, which is why the EX-L outranks it despite EX being the cheaper trim in general.",
+    "notes": "The EX you asked about, at sweet-spot mileage. Clean title, 1 owner, all six safety features confirmed, heated seats and moonroof, cloth interior. Honda franchise dealer with a 5-day/250-mile money-back guarantee. CAVEAT: accident REPORTED per AutoCheck, severity unstated - same CarFax caveat as the Scottsdale EX-L. Costs $1,199 MORE than that EX-L while giving up leather, power liftgate and memory seat, which is why the EX-L outranks it despite EX being the cheaper trim in general. SOLD/DELISTED, confirmed 2026-09-19: Cars.com returns \"Sorry, this vehicle is no longer available\" and the listing is soft-deleted from AutoNation Honda Chandler's inventory.",
     "features": {
       "carplay": true,
       "acc": true,
@@ -97,7 +98,8 @@
         "date": "2026-09-16",
         "price": 21789
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "c4b8d1e6-2f57-4a92-b3c8-8d5f2a7e0088",
@@ -340,7 +342,8 @@
         "date": "2026-09-16",
         "price": 21894
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "b7e4d9a2-1c85-4a73-b0f6-3d9c1e6a0022",
@@ -355,7 +358,7 @@
     "price": 26998,
     "miles": 57450,
     "title": "unknown",
-    "accidents": "unknown",
+    "accidents": "none",
     "drive": "fwd",
     "location": "Gilbert, AZ",
     "dealer": "CarMax Phoenix-Gilbert",
@@ -363,12 +366,12 @@
     "checks": [
       "Former rental and $5k over budget — this is a benchmark, not a candidate. Consider marking it passed."
     ],
-    "notes": "PRIOR USE: RENTAL, per the seller notes. At $27,998 it is ~$5k over the new $23k ceiling. Title and accident history undisclosed. Adaptive cruise, rear cross-traffic and AEB all absent from the feature list. Costs $3.4k more than the Miracle Motors RAV4 while offering less. VIN on the page was malformed. CarMax is no-haggle. Included mainly as a benchmark for what to avoid.",
+    "notes": "PRIOR USE: RENTAL, per the seller notes. At $27,998 it is ~$5k over the new $23k ceiling. Title and accident history undisclosed. Adaptive cruise, rear cross-traffic and AEB all absent from the feature list. Costs $3.4k more than the Miracle Motors RAV4 while offering less. VIN on the page was malformed. CarMax is no-haggle. Included mainly as a benchmark for what to avoid. CORRECTED 2026-09-19: tagged as lacking adaptive cruise, which is wrong. Toyota Safety Sense 2.0 was standard on EVERY 2022 RAV4 trim and includes full-speed range Dynamic Radar Cruise Control. Same reporting gap as the CR-V blind-spot error - the dealer feature list simply did not enumerate it. ALSO: the live listing discloses PRIOR RENTAL USE, which was not recorded here before. Clean title, 0 accidents. Still well over budget at $26,998.",
     "features": {
       "carplay": true,
       "bsm": true,
       "lane": true,
-      "acc": false,
+      "acc": true,
       "rcta": false,
       "aeb": false,
       "powerseats": false,
@@ -389,7 +392,8 @@
         "date": "2026-09-16",
         "price": 26998
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "46610149-0293-4968-8ed4-baf1c21f3563",
@@ -441,7 +445,8 @@
         "date": "2026-09-18",
         "price": 20096
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "5824a711-1a31-47b8-a506-5ceb235e1c20",
@@ -492,7 +497,8 @@
         "date": "2026-09-16",
         "price": 20490
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "09d98a59-07be-4367-a6dd-36e451c8004e",
@@ -593,7 +599,8 @@
         "date": "2026-09-12",
         "price": 16500
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "fecfec48-1f57-4223-8452-88df12aca319",
@@ -647,7 +654,8 @@
       }
     ],
     "shipping": 690,
-    "docFee": 0
+    "docFee": 0,
+    "lastVerified": null
   },
   {
     "id": "11f3012b-e498-420b-adbb-8088915ec2c3",
@@ -800,7 +808,8 @@
       }
     ],
     "shipping": 690,
-    "docFee": 0
+    "docFee": 0,
+    "lastVerified": null
   },
   {
     "id": "3ad6db3f-7fde-4a4f-a2d1-78bb7abfd6ec",
@@ -903,7 +912,8 @@
       }
     ],
     "shipping": 690,
-    "docFee": 0
+    "docFee": 0,
+    "lastVerified": null
   },
   {
     "id": "8e89838a-b2e9-419e-87a2-9eb53768042f",
@@ -1006,7 +1016,8 @@
       }
     ],
     "shipping": 690,
-    "docFee": 0
+    "docFee": 0,
+    "lastVerified": null
   },
   {
     "id": "d12f4e43-0faf-46e9-800c-ddcefdabfee7",
@@ -1060,7 +1071,8 @@
       }
     ],
     "shipping": 1390,
-    "docFee": 0
+    "docFee": 0,
+    "lastVerified": null
   },
   {
     "id": "73e81343-32b6-4d68-880b-3328d154f9de",
@@ -1163,7 +1175,8 @@
       }
     ],
     "shipping": 990,
-    "docFee": 0
+    "docFee": 0,
+    "lastVerified": null
   },
   {
     "id": "bcc533c5-7458-4cf3-bc26-d115fb03fa87",
@@ -1266,7 +1279,8 @@
         "date": "2026-09-15",
         "price": 18172
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "bcaf5340-238b-42d9-b698-5a2f45e0b6a2",
@@ -1321,7 +1335,8 @@
         "date": "2026-09-18",
         "price": 18572
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "2bd3ef58-d581-43d6-9065-3c2a76d7746b",
@@ -1371,7 +1386,8 @@
         "date": "2026-09-16",
         "price": 22594
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "1e039885-d61b-4e6a-984a-7f4ec31918fc",
@@ -1390,8 +1406,8 @@
     "drive": "awd",
     "location": "Mesa, AZ",
     "dealer": "CardinaleWay Mazda Mesa",
-    "status": "watching",
-    "notes": "[PRICE *INCREASE* 2026-09-18: up $703. Unusual - almost everything else on the list is falling. Either the earlier figure was promotional or the dealer repriced upward; worth asking them directly what changed.] Newest CX-5 in budget and fully documented: clean title, 0 accidents, 1 owner, AWD, complete safety suite confirmed on the listing (unlike the Liberty Buick car, which never itemised rear cross-traffic or AEB), plus heated and leather seats. 120-point inspection. WATCH THE ADD-ON: the listing carries a $699 'Premium Window Tint' - window tint is the single most common Arizona dealer add-on and the Attorney General names this category as decline-able.",
+    "status": "sold",
+    "notes": "[PRICE *INCREASE* 2026-09-18: up $703. Unusual - almost everything else on the list is falling. Either the earlier figure was promotional or the dealer repriced upward; worth asking them directly what changed.] Newest CX-5 in budget and fully documented: clean title, 0 accidents, 1 owner, AWD, complete safety suite confirmed on the listing (unlike the Liberty Buick car, which never itemised rear cross-traffic or AEB), plus heated and leather seats. 120-point inspection. WATCH THE ADD-ON: the listing carries a $699 'Premium Window Tint' - window tint is the single most common Arizona dealer add-on and the Attorney General names this category as decline-able. SOLD/DELISTED, confirmed 2026-09-19: Cars.com returns \"Sorry, this vehicle is no longer available\"; CardinaleWay Mazda Mesa no longer lists it.",
     "checks": [
       "REFUSE OR NEGOTIATE OUT the $699 window tint add-on - it is not part of the car",
       "Confirm the $20,981 is before that add-on, not after",
@@ -1425,7 +1441,8 @@
         "date": "2026-09-18",
         "price": 21684
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "1d8204b0-2c63-4873-a308-6926c2a0b62f",
@@ -1474,7 +1491,8 @@
         "date": "2026-09-16",
         "price": 22655
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "eaf9ca3e-3b53-484f-a57e-42fb85b35067",
@@ -1489,12 +1507,12 @@
     "price": 21294,
     "miles": 71645,
     "title": "clean",
-    "accidents": "unknown",
+    "accidents": "minor",
     "drive": "fwd",
     "location": "Chandler, AZ",
     "dealer": "AutoNation Honda Chandler",
     "status": "watching",
-    "notes": "New CR-V EX-L at the same Honda franchise holding the other Chandler car. Listed at $21,294 with 71,645 miles. Detail page not yet pulled, so title and accident history are UNCONFIRMED and the score reflects that uncertainty rather than a known problem. Worth a look mainly as negotiating leverage against their own $21,789 EX with 20k fewer miles.",
+    "notes": "New CR-V EX-L at the same Honda franchise holding the other Chandler car. Listed at $21,294 with 71,645 miles. Detail page not yet pulled, so title and accident history are UNCONFIRMED and the score reflects that uncertainty rather than a known problem. Worth a look mainly as negotiating leverage against their own $21,789 EX with 20k fewer miles. Verified 2026-09-19: AutoCheck on the live listing shows an accident REPORTED and multiple previous owners. This was recorded as unknown before; it is now confirmed. Price also came down $956 from $22,250 on 09/16.",
     "checks": [
       "Pull the detail page / CarFax - title and accidents are unverified here",
       "Same dealer has a 2018 EX at $21,789 with 51k miles - play them against each other",
@@ -1523,7 +1541,8 @@
         "date": "2026-09-16",
         "price": 21294
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "50df3f93-4302-4d35-956e-cd4739960004",
@@ -1824,7 +1843,8 @@
         "date": "2026-09-18",
         "price": 18103
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "f048ccf0-96d9-4f6f-908e-153ec6acee6c",
@@ -1874,7 +1894,8 @@
         "date": "2026-09-18",
         "price": 17999
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "c48162d5-1e43-44eb-89f4-df6effb3e244",
@@ -2023,7 +2044,8 @@
         "date": "2026-09-19",
         "price": 17995
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   },
   {
     "id": "115324fc-8699-4bdd-975e-e93a56d21f05",
@@ -2073,6 +2095,7 @@
         "date": "2026-09-19",
         "price": 18090
       }
-    ]
+    ],
+    "lastVerified": "2026-09-19"
   }
 ]

@@ -19,6 +19,12 @@
 
 <main class="wrap">
 
+  <div class="freshness" id="freshness" hidden>
+    <span class="fdot" id="freshDot" aria-hidden="true"></span>
+    <span class="ftext" id="freshText"></span>
+    <button type="button" class="ghost fbtn" id="freshRefresh">Re-check now</button>
+  </div>
+
   <section class="stats" id="stats"></section>
 
   <section class="panel finance">
@@ -202,6 +208,7 @@
         <div class="score" title="Score against your criteria"><span class="score-num"></span><span class="score-max">/100</span></div>
       </div>
       <p class="card-sub"></p>
+      <p class="card-verified"></p>
       <ul class="flags"></ul>
       <div class="pricebox">
         <span class="price"></span>
