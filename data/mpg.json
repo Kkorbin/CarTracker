@@ -1,0 +1,110 @@
+{
+  "2017|Honda|CR-V|fwd": {
+    "city": 27.0,
+    "comb": 29.0,
+    "epaModel": "CR-V AWD",
+    "epaOption": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "hwy": 33.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2018|Honda|CR-V|fwd": {
+    "city": 27.0,
+    "comb": 29.0,
+    "epaModel": "CR-V AWD",
+    "epaOption": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "hwy": 33.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2018|Mazda|CX-5|fwd": {
+    "city": 25.0,
+    "comb": 28.0,
+    "epaModel": "CX-5 2WD",
+    "epaOption": "Auto (S6), 4 cyl, 2.5 L",
+    "hwy": 31.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2018|Toyota|RAV4|fwd": {
+    "city": 23.0,
+    "comb": 25.0,
+    "epaModel": "RAV4",
+    "epaOption": "Auto (S6), 4 cyl, 2.5 L",
+    "hwy": 29.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2019|Honda|CR-V|fwd": {
+    "city": 27.0,
+    "comb": 29.0,
+    "epaModel": "CR-V AWD",
+    "epaOption": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "hwy": 33.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2019|Subaru|Forester|awd": {
+    "city": 26.0,
+    "comb": 29.0,
+    "epaModel": "Forester AWD",
+    "epaOption": "Auto (AV-S7), 4 cyl, 2.5 L",
+    "hwy": 33.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2020|Mazda|CX-5|awd": {
+    "city": 24.0,
+    "comb": 26.0,
+    "epaModel": "CX-5 4WD",
+    "epaOption": "Auto (S6), 4 cyl, 2.5 L",
+    "hwy": 30.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2021|Mazda|CX-5|awd": {
+    "city": 24.0,
+    "comb": 26.0,
+    "epaModel": "CX-5 4WD",
+    "epaOption": "Auto (S6), 4 cyl, 2.5 L",
+    "hwy": 30.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2022|Toyota|RAV4|fwd": {
+    "city": 27.0,
+    "comb": 30.0,
+    "epaModel": "RAV4",
+    "epaOption": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+    "hwy": 35.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2023|Nissan|Ariya|fwd": {
+    "city": 97.0,
+    "comb": 92.0,
+    "epaModel": "ARIYA ENG Plus/EVO Plus e-4ORCE 87kWh",
+    "epaOption": "Auto (A1)",
+    "hwy": 86.0,
+    "isElectric": true,
+    "kwh100": 36.6389
+  },
+  "2024|Mazda|CX-5|awd": {
+    "city": 26.0,
+    "comb": 28.0,
+    "epaModel": "CX-5 4WD",
+    "epaOption": "Auto (S6), 4 cyl, 2.5 L, SIDI",
+    "hwy": 31.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2024|Nissan|Ariya|fwd": {
+    "city": 101.0,
+    "comb": 95.0,
+    "epaModel": "ARIYA ENGAGE e-4ORCE 63kWh",
+    "epaOption": "Auto (A1)",
+    "hwy": 89.0,
+    "isElectric": true,
+    "kwh100": 35.2939
+  }
+}

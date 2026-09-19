@@ -167,6 +167,44 @@ nicer interior.
   simply a discount on a car that may run just as long. Buying someone else's
   depreciation is the whole point.
 
+### Cost to own, added 2026-09-19
+
+Because the plan is to keep the car until it dies, **the sticker is the wrong number
+to optimise**. The tracker now shows an all-in figure next to it: out-the-door price
+plus fuel and maintenance over **150,000 miles** (about 14 years at 11,000 mi/yr).
+
+The assumptions, stated so they can be argued with:
+
+| Input | Value | Source |
+| --- | --- | --- |
+| Fuel | **$4.66/gal** | AAA Phoenix-Mesa regular, 16 Sep 2026 |
+| Electricity | **12.5c/kWh** | Midpoint of APS ~12.8c and SRP ~11.9c |
+| Economy | EPA combined | fueleconomy.gov, engine matched by VIN displacement |
+| Maintenance | Brand average | RepairPal annual average over 12,000 mi/yr |
+| EV maintenance | 40% of brand average | No oil changes, regenerative braking |
+
+**Excluded:** insurance and tyres. Insurance cannot be estimated honestly without
+personal details, and a fabricated number is worse than none.
+
+At $4.66/gal the spread is larger than expected. Over 150k miles the difference
+between a 25 mpg RAV4 and a 29 mpg CR-V is about **$3,900 in fuel alone** — more than
+most of the price gaps between cars on the board. Fuel dominates: on a typical car
+here it is roughly $24,000–$33,000 against $5,000–$8,000 of maintenance.
+
+The sharpest consequence is the Ariya. At 92–95 MPGe its running cost over the
+horizon is around **$9,000 against $29,000–$33,000** for the petrol cars, which puts
+it roughly **$18,000 ahead all-in**. That is real, and it is exactly the trade the
+"keep it forever" plan is supposed to favour — but it sits against the battery being
+a hard end-of-life that no petrol car here has. Read the two together.
+
+### Days on lot, added 2026-09-19
+
+Each card carries how long the dealer has been sitting on the car, taken from the
+listing's own price history. Over 90 days is flagged: that is past the point where a
+dealer is comfortable carrying it, and it is the strongest negotiating fact available
+without walking onto the lot. The DV Auto Center CR-V has been listed since
+**23 December 2025**.
+
 ### What ends each car on this list
 
 | Model | Life-limiting part | Practical ceiling |

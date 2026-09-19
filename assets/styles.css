@@ -428,3 +428,15 @@ ul.guide strong { color: var(--ink); }
 .chip[aria-pressed="true"] .chip-n { color: #fff; opacity: .75; }
 .chip.chip-all { border-style: dashed; }
 .chip.chip-all[aria-pressed="true"] { border-style: solid; }
+
+/* Cost to own. Purchase price is the wrong number to optimise for a car you intend
+   to keep until it dies, so the all-in figure sits next to it. */
+.ownbox { display: grid; gap: 6px; font-size: 13px; }
+.ownbox .ow-row { display: flex; justify-content: space-between; gap: 12px; }
+.ownbox .ow-row .ow-k { color: var(--muted); }
+.ownbox .ow-total { border-top: 1px solid var(--line); padding-top: 6px; font-weight: 600; }
+.ownbox .ow-note { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.ownbox .ow-warn { color: var(--ok); font-size: 12px; line-height: 1.45; }
+
+.badge-lot.high   { border-color: var(--good); color: var(--good); font-weight: 600; }
+.badge-lot.medium { border-color: var(--ok);   color: var(--ok); }

@@ -160,6 +160,98 @@ function estimateVlt(msrp, year) {
 }
 
 // Everything you actually hand over to drive away, not just the advertised price.
+/* ---------- cost to own ----------
+   The stated plan is to keep this car until it is worn out, which makes the sticker
+   the wrong number to optimise. At Phoenix fuel prices the gap between a 25 mpg RAV4
+   and a 29 mpg CR-V is a few thousand dollars over the ownership horizon, which is
+   larger than most of the price differences on the board. This puts that on the card.
+
+   Everything here is an assumption, stated out loud rather than buried, so a figure
+   you disagree with can be argued with instead of quietly trusted. */
+
+const OWN = {
+  horizonMiles: 150000,   // ~13.5 years at 11k/yr, i.e. "until it dies"
+
+  // AAA Phoenix-Mesa average for regular unleaded, 16 Sep 2026.
+  gasPerGallon: 4.66,
+  // APS ~12.8c, SRP ~11.9c per kWh; a Phoenix-metro midpoint.
+  kwhPrice: 0.125,
+
+  // Maintenance and repair per mile, from RepairPal's published average annual cost
+  // by brand over 12,000 miles/yr. These are averages across a brand's whole range,
+  // not a promise about one car, and they exclude tyres and collision work.
+  maintPerMile: {
+    Toyota: 441 / 12000,
+    Honda:  428 / 12000,
+    Mazda:  462 / 12000,
+    Subaru: 617 / 12000,
+    Nissan: 500 / 12000,
+  },
+  maintPerMileDefault: 500 / 12000,
+  // No oil changes, far less brake wear from regenerative braking. Applied to EVs.
+  evMaintDiscount: 0.4,
+};
+
+let MPG = null;   // loaded from data/mpg.json, EPA figures keyed year|make|model|drive
+
+function setMpgTable(t) { MPG = t || null; }
+
+function mpgFor(v) {
+  if (!MPG) return null;
+  return MPG[`${v.year}|${v.make}|${v.model}|${v.drive || 'fwd'}`] || null;
+}
+
+// Fuel or electricity plus maintenance over the horizon. Deliberately EXCLUDES the
+// purchase price, insurance and tyres: purchase price is already the headline number,
+// and insurance cannot be estimated honestly without the driver's own details.
+function costToOwn(v, horizon) {
+  const e = mpgFor(v);
+  if (!e || !e.comb) return null;
+  const miles = horizon || OWN.horizonMiles;
+
+  let energy, energyNote;
+  if (e.isElectric) {
+    // combE is kWh per 100 miles. Fall back to converting MPGe if it is missing.
+    const kwhPer100 = e.kwh100 || (3370.5 / e.comb);
+    energy = (miles / 100) * kwhPer100 * OWN.kwhPrice;
+    energyNote = `${kwhPer100.toFixed(0)} kWh/100mi at ${(OWN.kwhPrice * 100).toFixed(1)}c`;
+  } else {
+    energy = (miles / e.comb) * OWN.gasPerGallon;
+    energyNote = `${e.comb} mpg at $${OWN.gasPerGallon.toFixed(2)}/gal`;
+  }
+
+  let perMile = OWN.maintPerMile[v.make] ?? OWN.maintPerMileDefault;
+  if (e.isElectric) perMile *= OWN.evMaintDiscount;
+  const maint = miles * perMile;
+
+  return {
+    miles, energy, maint, total: energy + maint,
+    perMile: (energy + maint) / miles,
+    comb: e.comb, isElectric: !!e.isElectric, energyNote,
+    years: miles / (CRITERIA.milesPerYear || 11000),
+  };
+}
+
+// How long this listing has sat. The single most useful negotiating fact found so far:
+// a car listed last week at a sharp price means move now, a car at 90+ days means the
+// dealer is carrying it and knows it.
+function daysOnLot(v) {
+  if (!v.listedDate) return null;
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v.listedDate.trim());
+  if (!m) return null;
+  const then = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  const now = new Date(); now.setHours(0, 0, 0, 0);
+  return Math.round((now - then) / 86400000);
+}
+
+function lotPressure(days) {
+  if (days == null) return null;
+  if (days >= 90)  return { rank: 'high',   label: 'Sitting',      hint: 'Long past the point where a dealer wants it gone. Open well under asking.' };
+  if (days >= 45)  return { rank: 'medium', label: 'Slow',         hint: 'Has not moved in a while. There is room to negotiate.' };
+  if (days >= 14)  return { rank: 'normal', label: 'Normal',       hint: 'Ordinary time on market.' };
+  return             { rank: 'fresh',  label: 'Just listed', hint: 'New to the market. Little pressure on the dealer yet, but priced sharp it will go fast.' };
+}
+
 function outTheDoor(v) {
   const price = Number(v.price) || 0;
   const rate = tptRateFor(v.location);

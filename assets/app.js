@@ -207,6 +207,15 @@ function sortListings(arr) {
     case 'miles':      return c.sort((a, b) => a.miles - b.miles);
     case 'year':       return c.sort((a, b) => b.year - a.year);
     case 'added':      return c.sort((a, b) => (b.added || '').localeCompare(a.added || ''));
+    case 'own': {
+      // Cars with no EPA match sort last rather than pretending to be free.
+      const allIn = v => {
+        const o = costToOwn(v);
+        return o ? outTheDoor(v).total + o.total : Infinity;
+      };
+      return c.sort((a, b) => allIn(a) - allIn(b));
+    }
+    case 'lot':        return c.sort((a, b) => (daysOnLot(b) ?? -1) - (daysOnLot(a) ?? -1));
     default:           return c.sort((a, b) => s(b) - s(a));
   }
 }
@@ -483,6 +492,13 @@ function render() {
     if (isNewSinceLastRun(v)) {
       badges.push(`<span class="badge badge-new" title="Added ${fmtDate(v.added)}">New</span>`);
     }
+    const lot = daysOnLot(v);
+    const press = lotPressure(lot);
+    if (press) {
+      badges.push(`<span class="badge badge-lot ${press.rank}" title="${press.hint}">`
+        + `${lot} day${lot === 1 ? '' : 's'} on lot</span>`);
+    }
+
     const vAge = v.lastVerified ? daysSince(v.lastVerified) : null;
     if (vAge === null) {
       badges.push('<span class="badge badge-check stale">Never verified</span>');
@@ -572,6 +588,41 @@ function render() {
          driven ${dep.milesPerYear.toLocaleString()} mi/yr</span>`);
     }
 
+    // Cost to own over the ownership horizon. For a keep-forever car this competes
+    // with the sticker for which number actually matters.
+    const own = costToOwn(v);
+    const ownFold = node.querySelector('.own-fold');
+    if (own) {
+      const otdTotal = outTheDoor(v).total;
+      const allIn = otdTotal + own.total;
+      node.querySelector('.own-sum').innerHTML =
+        `<span class="sum-k">Cost to own</span>`
+        + `<span class="sum-v">${money(Math.round(allIn))} all-in</span>`
+        + `<span class="sum-k">${own.comb} ${own.isElectric ? 'MPGe' : 'mpg'}`
+        + ` · ${Math.round(own.miles / 1000)}k mi</span>`;
+
+      const rows = [
+        ['Out the door', money(Math.round(otdTotal))],
+        [own.isElectric ? 'Electricity' : 'Fuel', money(Math.round(own.energy))],
+        ['Maintenance', money(Math.round(own.maint))],
+      ];
+      node.querySelector('.ownbox').innerHTML =
+        rows.map(([k, val]) =>
+          `<div class="ow-row"><span class="ow-k">${k}</span><span>${val}</span></div>`).join('')
+        + `<div class="ow-row ow-total"><span>All-in over ${Math.round(own.miles / 1000)}k miles`
+          + ` (~${Math.round(own.years)} yr)</span><span>${money(Math.round(allIn))}</span></div>`
+        + `<p class="ow-note">Running costs are ${own.energyNote}, plus brand-average`
+          + ` maintenance. Excludes insurance and tyres — insurance cannot be estimated`
+          + ` honestly without your own details.</p>`
+        + (own.isElectric
+            ? `<p class="ow-warn">This is an EV, so the running cost is genuinely low —`
+              + ` but the battery is a hard end-of-life the petrol cars do not have.`
+              + ` Replacement runs $12k–$18k once the 8yr/100k warranty is gone.`
+              + ` Read this number alongside that risk, not instead of it.</p>`
+            : '');
+    } else {
+      ownFold.remove();
+    }
     // How long the powertrain lasts — the thing that actually ends a keep-forever car.
     const lng = longevityFor(v);
     const lngEl = node.querySelector('.longevity');
@@ -1007,6 +1058,12 @@ function init() {
   // an empty page to anyone who has not clicked the sync button.
   syncFromRepo({ quiet: true });
   loadMeta();
+
+  // EPA economy figures. Without them the cost-to-own box simply does not render.
+  fetch('data/mpg.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(t => { if (t) { setMpgTable(t); render(); } })
+    .catch(() => { /* card degrades to purchase price alone */ });
 
   // Comparable-price data. Failure here only costs the value box, so don't block on it.
   fetch('data/market.json', { cache: 'no-store' })
