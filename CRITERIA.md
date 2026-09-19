@@ -17,6 +17,8 @@ Apple CarPlay, mid-level-or-better trim, priced **$18k–$23k**.
 | **Excluded 2026-09-19** | **Hyundai and Kia — do not surface in searches.** |
 | Also searched | Subaru Crosstrek, Mazda CX-30 (both a size class down from a RAV4) |
 | Alternatives | Similarly sized competitors acceptable |
+| Model year | Prefer newer where it buys meaningful gains in safety, driver assistance, infotainment, or reliability |
+| Drive type | AWD is a bonus, not mandatory — a FWD car can win on overall value |
 
 ## Hyundai / Kia — excluded 2026-09-19
 
@@ -38,8 +40,6 @@ The two model-year cutoffs that mattered while they were in play:
   checkable by VIN. Verify both before buying one of these years.
 
 Practically: a **2022-or-newer** Tucson or Sportage avoids both problems entirely.
-| Model year | Prefer newer where it buys meaningful gains in safety, driver assistance, infotainment, or reliability |
-| Drive type | AWD is a bonus, not mandatory — a FWD car can win on overall value |
 
 ## Budget
 
@@ -98,14 +98,39 @@ pull against each other on every model except the CX-5.
 
 ## Safety & driver assistance
 
-All strongly preferred:
+> **Reweighted 2026-09-19.** CarPlay was previously marked essential and any car
+> without it was capped at 75. That rule was wrong, and it was expensive: 2018 is the
+> last model year before CarPlay went standard on several of these cars, so it was
+> burying vehicles that have the whole driver-assist suite and lack only a head unit.
 
-- Apple CarPlay (essential)
-- Adaptive cruise control
-- Blind-spot monitoring
-- Rear cross-traffic alert
-- Automatic emergency braking / forward-collision mitigation
-- Lane-departure warning and/or lane-keeping assist
+The list is now split by whether the feature **can be added later**, because that is
+the only distinction that actually changes the decision.
+
+### Cannot be retrofitted — this is what you are really buying
+
+| Feature | Weight |
+| --- | --- |
+| Adaptive cruise control | 7 |
+| Blind-spot monitoring | 6 |
+| Automatic emergency braking | 6 |
+| Rear cross-traffic alert | 4 |
+| Lane departure / keep assist | 3 |
+
+These are radar and camera hardware wired into the car's safety systems. Adding any of
+them after the fact is not realistic at a sensible price, so a car missing one is
+missing it permanently. The tracker flags these in red.
+
+### Can be retrofitted — a price, not a defect
+
+| Feature | Weight | Cost to add |
+| --- | --- | --- |
+| Apple CarPlay | 4 | ~$450 |
+
+Mazda sells an **official factory retrofit for the 2016–2018 CX-5**, roughly $400–500
+installed, which also updates Mazda Connect and the USB ports. Aftermarket head units
+run similar money on most other cars. The tracker flags this in amber with the cost
+attached, and the right way to read it is to add the figure to the sticker price and
+judge the car on the total.
 
 Strong overall crash-test performance and a modern safety suite matter a lot.
 
