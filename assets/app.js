@@ -924,6 +924,11 @@ function init() {
   $('#exportBtn').addEventListener('click', exportJson);
   $('#loadRepoBtn').addEventListener('click', () => syncFromRepo({ quiet: false }));
 
+  // Re-downloads data/listings.json and data/meta.json from the published site. It
+  // does NOT contact cars.com or Carvana — nothing in this page can, it is a static
+  // site with no backend. It was labelled "Re-check now", which implied otherwise.
+  // Verification happens in a check run, which is a separate thing that commits new
+  // data here; this button picks that data up.
   $('#freshRefresh').addEventListener('click', () => {
     loadMeta();
     syncFromRepo({ quiet: false });
