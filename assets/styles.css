@@ -389,3 +389,23 @@ ul.guide strong { color: var(--ink); }
 .badge-src { border-color: var(--line); color: var(--muted); }
 .badge-src.has-ship { border-color: var(--ok); color: var(--ok); }
 .badge-src b { font-weight: 600; }
+
+/* Listing photo. Hotlinked from the marketplace's own CDN rather than copied into
+   this repo — which also means a photo that stops loading is itself a signal that
+   the listing has gone. The image is hidden on error so a dead link leaves a clean
+   card instead of a broken-image icon. */
+.card { display: flex; gap: 14px; align-items: flex-start; }
+.card-main { flex: 1 1 auto; min-width: 0; }
+.card-photo {
+  flex: none; width: 168px; display: block; border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--line); line-height: 0;
+}
+.card-photo img { width: 100%; height: 126px; object-fit: cover; display: block; }
+.card-photo:hover { border-color: var(--accent); }
+.card.dead .card-photo img { filter: grayscale(1); opacity: .5; }
+
+@media (max-width: 640px) {
+  .card { flex-direction: column; }
+  .card-photo { width: 100%; }
+  .card-photo img { height: 180px; }
+}

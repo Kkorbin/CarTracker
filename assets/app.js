@@ -371,6 +371,21 @@ function render() {
     const node = $('#cardTpl').content.cloneNode(true);
     const card = node.querySelector('.card');
     card.dataset.id = v.id;
+
+    // Listing photo, hotlinked from the marketplace CDN. If it fails to load — the
+    // listing was pulled, the CDN moved it — hide the frame rather than show a
+    // broken image.
+    const photoEl = node.querySelector('.card-photo');
+    if (v.photo) {
+      const img = photoEl.querySelector('img');
+      img.src = v.photo;
+      img.alt = `${v.year} ${v.make} ${v.model}${v.trim ? ' ' + v.trim : ''}`;
+      img.addEventListener('error', () => { photoEl.hidden = true; }, { once: true });
+      if (v.url) photoEl.href = v.url;
+      photoEl.hidden = false;
+    } else {
+      photoEl.remove();
+    }
     if (['sold', 'passed'].includes(v.status)) card.classList.add('dead');
 
     node.querySelector('.card-title').textContent =
