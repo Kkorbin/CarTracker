@@ -27,37 +27,6 @@
 
   <section class="stats" id="stats"></section>
 
-  <section class="panel finance">
-    <div class="panel-head">
-      <h2>Financing</h2>
-      <span class="hint" id="financeNote"></span>
-    </div>
-    <div class="grid">
-      <div class="field">
-        <label for="fDown">Cash down ($)</label>
-        <input type="number" id="fDown" min="0" step="500">
-      </div>
-      <div class="field">
-        <label for="fApr">Your APR (%)</label>
-        <input type="number" id="fApr" min="0" max="30" step="0.1">
-      </div>
-      <div class="field">
-        <label for="fTerm">Term (months)</label>
-        <select id="fTerm">
-          <option value="36">36</option>
-          <option value="48">48</option>
-          <option value="60">60</option>
-          <option value="72">72</option>
-        </select>
-      </div>
-    </div>
-    <p class="hint">
-      Monthly figures below are estimates on the out-the-door total, not quotes. Use your own
-      pre-approval rate &mdash; walking in with one is the main defence against being sold a
-      payment instead of a price.
-    </p>
-  </section>
-
   <section class="panel compare-panel" id="comparePanel" hidden>
     <div class="panel-head">
       <h2>Compare</h2>
@@ -86,7 +55,7 @@
           <option value="added">Recently added</option>
         </select>
         <label class="check"><input type="checkbox" id="budgetOnly"> In budget only</label>
-        <label class="check"><input type="checkbox" id="hideDead"> Hide sold/passed</label>
+        <label class="check"><input type="checkbox" id="showDead"> Show sold/passed</label>
       </div>
     </div>
     <div id="listings" class="listings"></div>

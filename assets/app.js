@@ -354,7 +354,9 @@ function render() {
   host.innerHTML = '';
 
   let rows = listings;
-  if ($('#hideDead').checked) rows = rows.filter(v => !['sold', 'passed'].includes(v.status));
+  // Sold and passed cars are hidden unless asked for. They are history, not
+  // candidates, and they were burying the live listings.
+  if (!$('#showDead').checked) rows = rows.filter(v => !['sold', 'passed'].includes(v.status));
   if ($('#budgetOnly').checked) rows = rows.filter(v => Number(v.price) <= CRITERIA.price.target);
   const makeFilter = $('#filterMake').value;
   if (makeFilter !== '__all__') rows = rows.filter(v => v.make === makeFilter);
@@ -421,7 +423,12 @@ function render() {
     flags.innerHTML = s.flags.map(f => `<li class="flag ${f.level}">${f.text}</li>`).join('');
 
     node.querySelector('.price').textContent = money(v.price);
-    node.querySelector('.monthly').textContent = `≈ ${money(Math.round(paymentFor(v)))}/mo`;
+    const mEl = node.querySelector('.monthly');
+    mEl.textContent = `≈ ${money(Math.round(paymentFor(v)))}/mo`;
+    // The financing panel is gone, so state the assumptions on the number itself
+    // rather than leaving a payment figure with invisible inputs behind it.
+    mEl.title = `Estimate on the out-the-door total: ${money(finance.downPayment)} down, `
+      + `${finance.apr}% APR, ${finance.termMonths} months. Not a quote.`;
     const hist = v.history || [];
     const delta = hist.length > 1 ? v.price - hist[0].price : 0;
     const dEl = node.querySelector('.pricedelta');
@@ -881,33 +888,12 @@ async function loadMeta() {
 
 /* ---------- init ---------- */
 
-function syncFinanceInputs() {
-  $('#fDown').value = finance.downPayment;
-  $('#fApr').value = finance.apr;
-  $('#fTerm').value = finance.termMonths;
-  $('#financeNote').textContent =
-    `${money(finance.downPayment)} down · ${finance.apr}% APR · ${finance.termMonths} mo`;
-}
-
-function onFinanceChange() {
-  finance.downPayment = Math.max(0, Number($('#fDown').value) || 0);
-  finance.apr = Math.max(0, Number($('#fApr').value) || 0);
-  finance.termMonths = Number($('#fTerm').value) || 60;
-  savePrefs();
-  syncFinanceInputs();
-  render();
-}
-
 function init() {
   buildChecks();
   loadPrefs();
   load();
-  syncFinanceInputs();
   render();
 
-  for (const id of ['fDown', 'fApr', 'fTerm']) {
-    $('#' + id).addEventListener('change', onFinanceChange);
-  }
   $('#budgetOnly').addEventListener('change', render);
   $('#filterMake').addEventListener('change', render);
   $('#clearCompare').addEventListener('click', () => {
@@ -920,7 +906,7 @@ function init() {
   $('#resetForm').addEventListener('click', resetForm);
   $('#decodeVin').addEventListener('click', decodeVin);
   $('#sort').addEventListener('change', render);
-  $('#hideDead').addEventListener('change', render);
+  $('#showDead').addEventListener('change', render);
   $('#exportBtn').addEventListener('click', exportJson);
   $('#loadRepoBtn').addEventListener('click', () => syncFromRepo({ quiet: false }));
 
