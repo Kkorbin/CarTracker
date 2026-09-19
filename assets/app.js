@@ -393,6 +393,14 @@ function render() {
     // car was in it. Carvana blocks automated requests, so those cards must not
     // inherit a freshness they do not have.
     const badges = [];
+    const src = sourceOf(v);
+    if (src) {
+      const ship = Number(v.shipping) || 0;
+      badges.push(
+        `<span class="badge badge-src${ship ? ' has-ship' : ''}"`
+        + ` title="Listed on ${src.host}${ship ? ` · ${money(ship)} delivery, already counted in the out-the-door total` : ''}">`
+        + `${src.label}${ship ? ` <b>+${money(ship)} ship</b>` : ''}</span>`);
+    }
     // "New" means new since the previous check run, not an arbitrary rolling window.
     // A fixed window lit up nearly every card, because listings arrive in batches on
     // the days the check runs - which made the badge mean nothing.
@@ -797,6 +805,35 @@ function fmtDate(iso) {
 
 // A listing counts as new if it arrived after the previous check run. Falls back to
 // a 2-day window when meta has no previous run to compare against.
+// Where a listing lives, because it changes what you pay and how you buy. A Carvana
+// car is delivered and carries a fee; a dealer listing on cars.com is a drive. The
+// fee is already inside the out-the-door total, but it was buried in a collapsed
+// table, so it now rides on the badge next to the source name.
+const SOURCES = {
+  'carvana.com':    'Carvana',
+  'cars.com':       'Cars.com',
+  'carmax.com':     'CarMax',
+  'autotrader.com': 'Autotrader',
+  'cargurus.com':   'CarGurus',
+  'vroom.com':      'Vroom',
+  'truecar.com':    'TrueCar',
+  'shift.com':      'Shift',
+  'ebay.com':       'eBay Motors',
+  'craigslist.org': 'Craigslist',
+  'facebook.com':   'Facebook Marketplace',
+};
+
+function sourceOf(v) {
+  if (!v.url) return null;
+  let host;
+  try { host = new URL(v.url).hostname.replace(/^www\./, ''); }
+  catch { return null; }
+  for (const [k, label] of Object.entries(SOURCES)) {
+    if (host === k || host.endsWith('.' + k)) return { host, label };
+  }
+  return { host, label: host };
+}
+
 function isNewSinceLastRun(v) {
   if (!v.added) return false;
   const prev = meta && meta.previousCheck ? parseDay(meta.previousCheck) : null;

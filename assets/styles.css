@@ -383,3 +383,9 @@ ul.guide strong { color: var(--ink); }
   color: var(--accent); font-size: 12px; cursor: pointer; width: auto;
 }
 .notes-more:hover { text-decoration: underline; }
+
+/* Where the car is listed. Carries the delivery fee when there is one, because that
+   is the practical difference between a Carvana car and a local dealer's. */
+.badge-src { border-color: var(--line); color: var(--muted); }
+.badge-src.has-ship { border-color: var(--ok); color: var(--ok); }
+.badge-src b { font-weight: 600; }
