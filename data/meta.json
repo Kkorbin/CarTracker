@@ -1,9 +1,9 @@
 {
-  "lastChecked": "2026-09-19",
-  "activeCount": 21,
-  "verifiedCount": 15,
+  "lastChecked": "2026-09-20",
+  "previousCheck": "2026-09-19",
+  "activeCount": 20,
+  "verifiedCount": 14,
   "unverifiedCount": 6,
-  "summary": "15 of 21 live listings re-verified, 2 sold, 6 Carvana unreachable (403).",
-  "notes": "Carvana blocks automated requests. Those six cards keep their previous verification date and should be treated as unconfirmed.",
-  "previousCheck": "2026-09-18"
+  "summary": "14 of 20 re-verified, nothing sold, no price changes, 6 Carvana unreachable (403).",
+  "notes": "A completely quiet run. Every cars.com listing that was live yesterday is still live at the same price. Carvana still blocks automated requests, so those six remain unconfirmed."
 }
