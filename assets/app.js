@@ -492,6 +492,18 @@ function render() {
     if (isNewSinceLastRun(v)) {
       badges.push(`<span class="badge badge-new" title="Added ${fmtDate(v.added)}">New</span>`);
     }
+    // Seat material, flagged as a heads-up rather than a verdict: not wanted, but
+    // not a dealbreaker either, so it does not touch the score. Genuine leather and
+    // leatherette are labelled separately because the objection may only apply to one.
+    const seats = v.seats || ((v.features || {}).leather ? 'leather' : 'cloth');
+    if (seats === 'leather' || seats === 'leatherette') {
+      const real = seats === 'leather';
+      badges.push(`<span class="badge badge-leather" title="${real
+        ? 'Genuine leather seats.'
+        : 'Leatherette — synthetic, not animal hide.'
+      } Flagged as a heads-up; it does not affect the score.">${real ? 'Leather' : 'Leatherette'}</span>`);
+    }
+
     const lot = daysOnLot(v);
     const press = lotPressure(lot);
     if (press) {
