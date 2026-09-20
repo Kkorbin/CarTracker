@@ -252,21 +252,34 @@ function lotPressure(days) {
   return             { rank: 'fresh',  label: 'Just listed', hint: 'New to the market. Little pressure on the dealer yet, but priced sharp it will go fast.' };
 }
 
+// Arizona does not tax a casual sale between private parties: no transaction
+// privilege tax, no use tax at registration, and no doc fee because there is no
+// dealer to charge one. On an $18,000 car that is roughly $1,550 of tax plus $600
+// of doc fee — about 12% — so treating a private listing like a dealer listing
+// overstates its real cost by around two thousand dollars.
+// The trade is that A.R.S. 44-1267's 15-day/500-mile implied warranty covers DEALER
+// sales only. Private party is as-is, and that saving is partly the risk the dealer
+// was charging to carry.
+function isPrivateSale(v) {
+  return (v.sellerType || 'dealer') === 'private';
+}
+
 function outTheDoor(v) {
   const price = Number(v.price) || 0;
-  const rate = tptRateFor(v.location);
+  const priv = isPrivateSale(v);
+  const rate = priv ? 0 : tptRateFor(v.location);
   const tax = price * rate;
   const docKnown = v.docFee != null && v.docFee !== '';
-  const doc = docKnown ? Number(v.docFee) : CRITERIA.fees.defaultDocFee;
+  const doc = priv ? 0 : (docKnown ? Number(v.docFee) : CRITERIA.fees.defaultDocFee);
   const reg = CRITERIA.fees.titleRegPlate;
   const vlt = estimateVlt(v.msrp, v.year);
   // Online sellers ship. A cheap car 1,300 miles away is not a cheap car.
   const shipping = Number(v.shipping) || 0;
 
   return {
-    price, rate, tax, doc, reg, vlt, shipping,
+    price, rate, tax, doc, reg, vlt, shipping, private: priv,
     total: price + tax + doc + reg + (vlt || 0) + shipping,
-    docIsEstimate: !docKnown,
+    docIsEstimate: !docKnown && !priv,
     vltIsEstimate: Boolean(v.msrpEstimated),
     cityKnown: Object.prototype.hasOwnProperty.call(
       CRITERIA.fees.tptByCity, String(v.location || '').split(',')[0].trim().toLowerCase()

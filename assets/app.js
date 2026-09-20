@@ -504,6 +504,14 @@ function render() {
       } Flagged as a heads-up; it does not affect the score.">${real ? 'Leather' : 'Leatherette'}</span>`);
     }
 
+    if (isPrivateSale(v)) {
+      badges.push('<span class="badge badge-private"'
+        + ' title="Private seller. Arizona charges no sales tax and no doc fee on a'
+        + ' casual sale, so the out-the-door figure is much closer to the asking price.'
+        + ' In exchange there is no implied warranty — private sales are as-is.">'
+        + 'Private seller</span>');
+    }
+
     const lot = daysOnLot(v);
     const press = lotPressure(lot);
     if (press) {
@@ -556,6 +564,10 @@ function render() {
       ['Title, reg &amp; plate', money(otd.reg)],
     ];
     if (otd.shipping) rows.push(['Shipping', money(otd.shipping)]);
+    if (otd.private) {
+      rows.push(['Sales tax', 'none — private sale']);
+      rows.push(['Doc fee', 'none — no dealer']);
+    }
     if (otd.vlt) rows.push(['Vehicle License Tax (yr 1)', money(Math.round(otd.vlt))]);
     rows.push(['<strong>Total</strong>', `<strong>${money(Math.round(otd.total))}</strong>`]);
     node.querySelector('.otd-table').innerHTML =

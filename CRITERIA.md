@@ -231,6 +231,37 @@ have. A keep-forever plan means planning for it to die at battery failure.
   stable direct page exists, say so plainly rather than linking to a generic
   search-results page.
 
+## Private-party sales, added 2026-09-20
+
+**Arizona does not tax a casual sale between private parties.** No transaction
+privilege tax, no use tax at registration, and no doc fee because there is no dealer
+to charge one. Only title, registration and VLT apply.
+
+On a $19,200 car that is **$1,651 of tax plus $599 of doc fee — $2,250, about 12%**.
+The tracker models this: listings carry a `sellerType`, and a private sale's
+out-the-door figure drops to roughly the asking price.
+
+The trade is real, though. **A.R.S. 44-1267's 15-day/500-mile implied warranty covers
+dealer sales only.** Private party is as-is with no recourse, so part of that $2,250
+is simply the risk the dealer was charging to carry. It makes the independent
+inspection non-optional rather than merely sensible.
+
+### Craigslist and OfferUp
+
+Reachable, unlike CarGurus, CarMax, Autotrader, TrueCar, Edmunds and eBay, which all
+refuse automated requests. But the signal-to-noise is poor: one dealer flooded twenty
+of thirty-three CR-V results with pickups and cargo vans, and keyword search drags in
+unrelated cars.
+
+**Of the first four candidates that looked strong enough to chase, none survived
+verification** — two had rebuilt titles disclosed only in the listing body, one was a
+dealer post advertising "1 Owner, runs like new" on a 106,477-mile car, and one had
+132,153 miles not shown on the results page. All four are logged as passed so they do
+not get re-investigated.
+
+The lesson matches the dealer blocklist below: on a search-results page, a late-model
+car at roughly half money has meant a branded title every single time.
+
 ## Branded-title dealers seen in this search
 
 Every one of these has produced at least one branded-title car during this search.

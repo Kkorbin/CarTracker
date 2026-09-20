@@ -444,3 +444,6 @@ ul.guide strong { color: var(--ink); }
 /* Seat material. Amber heads-up - not preferred, but not a dealbreaker, so it does
    not touch the score. */
 .badge-leather { border-color: var(--ok); color: var(--ok); font-weight: 600; }
+
+/* Private seller: no Arizona sales tax and no doc fee, but no implied warranty. */
+.badge-private { border-color: var(--accent); color: var(--accent); font-weight: 600; }

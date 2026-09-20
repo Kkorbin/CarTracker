@@ -49,7 +49,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/b89a0ca3-0f12-572c-83b0-1802410fcf17/2d98c775-e710-4c56-adae-8b4a9f1ef298/5iwOOfIWixWR_tilMLs0nL2LoNE.jpg",
     "listedDate": "2026-08-06",
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "a9e2c5f7-6b34-4d18-8a71-4f2d9c6e0077",
@@ -103,7 +104,8 @@
       }
     ],
     "lastVerified": "2026-09-19",
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "c4b8d1e6-2f57-4a92-b3c8-8d5f2a7e0088",
@@ -152,7 +154,8 @@
         "price": 20298
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "c3a8e1f4-7d92-4b05-a6e8-1f4b9c2d0033",
@@ -201,7 +204,8 @@
         "price": 26599
       }
     ],
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "d5b9f2a6-3e17-4c88-b2d4-6a1e8f3c0044",
@@ -249,7 +253,8 @@
         "price": 26279
       }
     ],
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "a1f3c2d8-4b6e-4f10-9c31-8e2d5a7b0011",
@@ -298,7 +303,8 @@
         "price": 24593
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "e7c4a9b1-8f36-4d20-9e57-2b6d4f1a0055",
@@ -354,7 +360,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/6418ae95-f6ac-50e3-bc8a-156b3a573ce2/54e325a6-b10e-4ba2-a4f2-b88cbe99c56a/KsFBnYBOMv1XQ5hYosyNwVEkgkY.jpg",
     "listedDate": "2026-06-30",
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "b7e4d9a2-1c85-4a73-b0f6-3d9c1e6a0022",
@@ -406,7 +413,8 @@
     ],
     "lastVerified": "2026-09-19",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/1cf8c652-3b88-5da3-9dfd-60a49498f2ff/c670bc8f-eb20-4599-8b0b-1ef4d379c8d4/yDhO_QwgTVrkqHproodZzTUtGFM.jpg",
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "46610149-0293-4968-8ed4-baf1c21f3563",
@@ -462,7 +470,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/3b8835b1-09ec-49a3-a0cb-f99958b5c000/6ea8be40-2056-4e18-be1e-a04c9b23351d/ilML2_iAKdJ4cK2mp5Fcz7QbW2c.jpg",
     "listedDate": "2026-07-30",
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "5824a711-1a31-47b8-a506-5ceb235e1c20",
@@ -517,7 +526,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/ef5ede15-02a9-5bf8-9e2a-2bc6e1a964ab/86a1c143-37b5-4800-835b-878371cdbe70/nGP9XHyWtoW_2l9J1sDJZf9Eyow.jpg",
     "listedDate": "2026-07-23",
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "09d98a59-07be-4367-a6dd-36e451c8004e",
@@ -569,7 +579,8 @@
         "price": 19986
       }
     ],
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "56278693-3727-4f8a-8edf-182fb8293647",
@@ -633,7 +644,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/e5842869-5f05-5e6b-b795-c97b983bc8db/0aa05841-48ba-49fa-ba0e-3bd5d4890276/N74rRXmZo4TpIhBGU7M_1RajbbE.jpg",
     "listedDate": "2025-12-23",
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "fecfec48-1f57-4223-8452-88df12aca319",
@@ -689,7 +701,8 @@
     "shipping": 690,
     "docFee": 0,
     "lastVerified": null,
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "11f3012b-e498-420b-adbb-8088915ec2c3",
@@ -739,7 +752,8 @@
       }
     ],
     "docFee": 0,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "e83d6154-40fa-4a62-aec1-1981b935ec53",
@@ -790,7 +804,8 @@
     ],
     "shipping": 1290,
     "docFee": 0,
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "8eaf1bb1-3195-473c-ac0a-9069c79aeb7b",
@@ -846,7 +861,8 @@
     "shipping": 690,
     "docFee": 0,
     "lastVerified": null,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "3ad6db3f-7fde-4a4f-a2d1-78bb7abfd6ec",
@@ -896,7 +912,8 @@
       }
     ],
     "docFee": 0,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "e20739a6-4c3a-44d5-9cd4-a4c892448d76",
@@ -952,7 +969,8 @@
     "shipping": 690,
     "docFee": 0,
     "lastVerified": null,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "8e89838a-b2e9-419e-87a2-9eb53768042f",
@@ -1002,7 +1020,8 @@
       }
     ],
     "docFee": 0,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "f57c7b4d-b927-4690-970b-f80c29f79955",
@@ -1058,7 +1077,8 @@
     "shipping": 690,
     "docFee": 0,
     "lastVerified": null,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "d12f4e43-0faf-46e9-800c-ddcefdabfee7",
@@ -1114,7 +1134,8 @@
     "shipping": 1390,
     "docFee": 0,
     "lastVerified": null,
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "73e81343-32b6-4d68-880b-3328d154f9de",
@@ -1164,7 +1185,8 @@
       }
     ],
     "docFee": 0,
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "b702f48c-861b-4140-84ca-8c6ad9d853c4",
@@ -1220,7 +1242,8 @@
     "shipping": 990,
     "docFee": 0,
     "lastVerified": null,
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "bcc533c5-7458-4cf3-bc26-d115fb03fa87",
@@ -1273,7 +1296,8 @@
         "price": 16572
       }
     ],
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "5ff5f339-439e-4d0f-b994-1c2068cde6fa",
@@ -1328,7 +1352,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/cb5574f2-9c14-5e4c-8088-50bb537ba4bc/99946c49-c80c-485e-bb48-6af40c2a7dd4/KDL_OxLYApIrRpqiSE85j5iOSKs.jpg",
     "listedDate": "2026-07-23",
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "bcaf5340-238b-42d9-b698-5a2f45e0b6a2",
@@ -1387,7 +1412,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/cb5574f2-9c14-5e4c-8088-50bb537ba4bc/3be2435d-2097-44b7-a1f2-2e895264ea25/CiShKi1DQGUrTPPEI4kqhpimmmc.jpg",
     "listedDate": "2026-08-04",
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "2bd3ef58-d581-43d6-9065-3c2a76d7746b",
@@ -1441,7 +1467,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/65884cf8-f185-5c1f-859c-1845e23f0862/647739a0-2d71-4373-be6b-7fc053c87015/jxkW3gp1gb6Bk2TiBoFhmkiLNjQ.jpg",
     "listedDate": "2026-08-17",
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "1e039885-d61b-4e6a-984a-7f4ec31918fc",
@@ -1497,7 +1524,8 @@
       }
     ],
     "lastVerified": "2026-09-19",
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "1d8204b0-2c63-4873-a308-6926c2a0b62f",
@@ -1550,7 +1578,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/00cf529a-7a04-5b9c-ab0f-466834163635/0f1d3b20-e7c3-4c21-bbdd-1eb03b626bb3/r7S21d4Fb4iOtJoURkR7eEEskp8.jpg",
     "listedDate": "2026-08-11",
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "eaf9ca3e-3b53-484f-a57e-42fb85b35067",
@@ -1603,7 +1632,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/e45ca891-cce9-54a1-b1c8-f0dad5719aeb/a3daf8bf-82bd-4d92-90e5-6985ee745199/USULXWQbQ1bI6plL047ZiA1gckk.jpg",
     "listedDate": "2026-09-15",
-    "seats": "leather"
+    "seats": "leather",
+    "sellerType": "dealer"
   },
   {
     "id": "50df3f93-4302-4d35-956e-cd4739960004",
@@ -1653,7 +1683,8 @@
         "price": 19990
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "6e6ac3d6-ae7e-4b21-b006-e34bd3a3d614",
@@ -1704,7 +1735,8 @@
         "price": 18688
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "7da92f90-2bd2-43d0-8f19-1af9137343a3",
@@ -1755,7 +1787,8 @@
         "price": 19174
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "aa257ae5-927a-4d6b-8dfe-620723b771f0",
@@ -1808,7 +1841,8 @@
       }
     ],
     "docFee": 699,
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "1d1a6ee7-db43-45d3-b0be-68429ccf9a39",
@@ -1858,7 +1892,8 @@
         "price": 18999
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "9b12a912-e321-4e94-a1f5-b46d86bd264a",
@@ -1913,7 +1948,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/deea8a77-9594-5fa4-a8ba-5a9d04233537/d038ad57-abf9-46b8-aece-af86eef6c0a8/3VBIFuGhU_UgTI1BE6JgifKdR_0.jpg",
     "listedDate": "2026-09-03",
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "f048ccf0-96d9-4f6f-908e-153ec6acee6c",
@@ -1967,7 +2003,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/25d8f530-1d4c-5b34-9299-6df318f85ed3/3c9c6d87-075f-4579-a1b6-14df562e6391/dFWFbYUmkTperxbPjNGcLcQYPmI.jpg",
     "listedDate": "2026-08-29",
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "c48162d5-1e43-44eb-89f4-df6effb3e244",
@@ -2017,7 +2054,8 @@
         "price": 17990
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "a4bd5886-342d-4f8a-b366-dc3fc1d7261a",
@@ -2067,7 +2105,8 @@
         "price": 17994
       }
     ],
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
   },
   {
     "id": "c2ca703e-b7b9-4a82-b51b-e7a88a701042",
@@ -2122,7 +2161,8 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/d5790c00-613b-571c-89c8-067423a24b12/04b96770-cd66-4cb6-a942-ec6c7c645eeb/OSQpo6RjAmVEOAbCiuqvlT_01zo.jpg",
     "listedDate": "2026-08-14",
-    "seats": "leatherette"
+    "seats": "leatherette",
+    "sellerType": "dealer"
   },
   {
     "id": "115324fc-8699-4bdd-975e-e93a56d21f05",
@@ -2176,6 +2216,191 @@
     "lastVerified": "2026-09-20",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/48ab3ad1-2dc0-478c-988d-cd04ea18a641/89b51cf6-5bab-4b4b-83e1-63d17e4a07d9/HyJGoDGM2DBMjxe9LHSsUy-kjK0.jpg",
     "listedDate": "2026-08-29",
-    "seats": "cloth"
+    "seats": "cloth",
+    "sellerType": "dealer"
+  },
+  {
+    "id": "5ac98edb-0c18-4a52-b646-e0a097ffd226",
+    "url": "https://www.craigslist.org/view/d/phoenix-2019-honda-cr-ex-30k-miles-only/hQW1jXC3kKotvwszAU6DmN",
+    "vin": "",
+    "msrp": 31000,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX-L",
+    "price": 19200,
+    "miles": 30000,
+    "title": "rebuilt",
+    "accidents": "major",
+    "drive": "awd",
+    "location": "Phoenix, AZ",
+    "dealer": "Craigslist private seller (51st Ave & Union Hills)",
+    "sellerType": "private",
+    "status": "passed",
+    "seats": "leather",
+    "notes": "PASSED 2026-09-20 - REBUILT TITLE. This looked like the find of the search: a 2019 EX-L with 30,000 miles at $19,200, against $20,096 for 56,677 miles on the board, and as a private sale it would have dodged ~$2,150 of Arizona tax and doc fee. Then the listing itself discloses a restored salvage title - the seller says a passenger-side rear door was replaced with no frame damage and that it passed state inspection. Branded title is a hard stop in the criteria and caps at 35 regardless of everything else. Logged so it does not get re-investigated: the 30k-miles-for-$19,200 arithmetic will keep looking attractive from a search results page.",
+    "checks": [],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-20",
+    "lastVerified": "2026-09-20",
+    "history": [
+      {
+        "date": "2026-09-20",
+        "price": 19200
+      }
+    ]
+  },
+  {
+    "id": "d1087b8b-5f64-4d28-94fe-e9e76a285355",
+    "url": "https://www.craigslist.org/view/d/cashion-2021-subaru-forester-25k/cUBJ76WnzNXVPYGxYK9oVr",
+    "vin": "",
+    "msrp": 28000,
+    "msrpEstimated": true,
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Premium",
+    "price": 15900,
+    "miles": 25000,
+    "title": "rebuilt",
+    "accidents": "major",
+    "drive": "awd",
+    "location": "Avondale, AZ",
+    "dealer": "Craigslist private seller (Avondale)",
+    "sellerType": "private",
+    "status": "passed",
+    "seats": "cloth",
+    "notes": "PASSED 2026-09-20 - REBUILT TITLE, disclosed as \"restored title\" in the seller's own text. 2021 with 25,000 miles at $15,900 is roughly half money, which in this search has meant a branded title every single time without exception.",
+    "checks": [],
+    "features": {
+      "carplay": false,
+      "acc": false,
+      "bsm": false,
+      "rcta": false,
+      "aeb": false,
+      "lane": false,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-20",
+    "lastVerified": "2026-09-20",
+    "history": [
+      {
+        "date": "2026-09-20",
+        "price": 15900
+      }
+    ]
+  },
+  {
+    "id": "b49c91cd-e2bf-40f9-a7ab-e2cec69edf78",
+    "url": "https://www.craigslist.org/view/d/phoenix-2021-subaru-forester-limited/v1ZRvmZFhUxUb3aqbDCUuh",
+    "vin": "",
+    "msrp": 32000,
+    "msrpEstimated": true,
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Limited",
+    "price": 14975,
+    "miles": 106477,
+    "title": "clean",
+    "accidents": "unknown",
+    "drive": "awd",
+    "location": "Phoenix, AZ",
+    "dealer": "Craigslist dealer, 2333 E Union Hills Dr",
+    "sellerType": "dealer",
+    "status": "passed",
+    "seats": "cloth",
+    "notes": "PASSED 2026-09-20 - not private, and not what the headline said. Advertised as \"1Owner/Runs & Looks NEW\" at $14,975, but it is a dealer post (\"WE HAVE FINANCING HERE FOR EVERYONE\", \"CALL NOW ASK FOR JOHN\"), the odometer is 106,477 miles rather than anything low, and the description repeatedly calls the car a SUBARU CROSSTREK while the title says Forester. Three different Foresters from this seller all at exactly $14,975 is a curbstoner pattern.",
+    "checks": [],
+    "features": {
+      "carplay": false,
+      "acc": false,
+      "bsm": false,
+      "rcta": false,
+      "aeb": false,
+      "lane": false,
+      "heatedseats": false,
+      "liftgate": false,
+      "moonroof": false,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-20",
+    "lastVerified": "2026-09-20",
+    "history": [
+      {
+        "date": "2026-09-20",
+        "price": 14975
+      }
+    ]
+  },
+  {
+    "id": "61f15e8b-3e7b-4d3d-8084-11ac1d7d142e",
+    "url": "https://www.craigslist.org/view/d/mesa-2018-honda-cr-ex/6DwMUvSy8RGwW5UmYwTGtQ",
+    "vin": "5J6RW1H59JL005168",
+    "msrp": 28000,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 15495,
+    "miles": 132153,
+    "title": "clean",
+    "accidents": "unknown",
+    "drive": "fwd",
+    "location": "Mesa, AZ",
+    "dealer": "Brown & Brown Auto Center",
+    "sellerType": "dealer",
+    "status": "passed",
+    "seats": "cloth",
+    "notes": "PASSED 2026-09-20 - MILEAGE. Clean title, VIN disclosed, an established Mesa dealer, and the right trim - but 132,153 miles, which the search results page did not show. At ~11k miles/yr that is most of the powertrain's life already spent, against a plan to keep the car until it dies. Also a dealer, so the private-party tax saving does not apply.",
+    "checks": [],
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": true,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": false
+    },
+    "added": "2026-09-20",
+    "lastVerified": "2026-09-20",
+    "history": [
+      {
+        "date": "2026-09-20",
+        "price": 15495
+      }
+    ]
   }
 ]
