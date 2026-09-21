@@ -2402,5 +2402,73 @@
         "price": 15495
       }
     ]
+  },
+  {
+    "id": "3383ca1b-1f8d-402e-a69f-2269f69ec516",
+    "url": "https://www.cars.com/vehicledetail/72563db0-17e6-4956-a686-baf879e9b8a9/",
+    "vin": "7FARW1H5XJE043506",
+    "msrp": 27500,
+    "msrpEstimated": true,
+    "year": 2018,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 18700,
+    "docFee": 299,
+    "miles": 80495,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Mesa, AZ",
+    "dealer": "Fine Cars LLC",
+    "sellerType": "dealer",
+    "seats": "cloth",
+    "status": "watching",
+    "listedDate": "2026-07-28",
+    "added": "2026-09-20",
+    "lastVerified": "2026-09-20",
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": true,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": true
+    },
+    "notes": "CLEANEST HISTORY OF ANY CR-V ON THE BOARD: 1 owner, 0 accidents, clean title. Every other CR-V under $23k out the door either has a reported accident or is a Carvana car with history we cannot confirm. Full feature set with nothing missing - adaptive cruise, blind-spot, rear cross-traffic, AEB, lane departure, CarPlay, heated seats, moonroof, remote start. VIN decodes EX with the L15BE 1.5 turbo, FWD, built in Greensburg. NOTE the seller's own description calls it an \"EX-L\" - it is not, the VIN says EX, which means CLOTH seats. That is the trim the leather conversation was looking for, and it is the only cloth CR-V here that is not a Carvana car; the cloth Carvana ones run $24,299-$25,681 out the door. Doc fee is $299 against the $599 norm, saving $300, and a 6-month warranty is included, which is unusual for a small independent. Listed 28 Jul at $20,294 and cut twice to $18,999, now near the bottom of the $18,279-$20,330 market range. THE PROBLEM IS MILEAGE: 80,495. That is ~10,060/yr so it is normal for its age rather than thrashed, but against a keep-until-it-dies plan it starts with 12k less runway than the DV Auto car and 24k less than the EchoPark 2019. UNRESOLVED: the seller says it \"was just at Honda dealership for a recall and got new security module installed\". There is no security module recall for the 2018 CR-V - NHTSA lists five open campaigns and none of them is that. It may simply be the seat weight sensor recall (26V332000, letters mailed July 2026, right timing) described loosely, or it may be an electrical or theft-related repair. Ask before anything else.",
+    "checks": [
+      "ASK WHAT THE \"SECURITY MODULE\" WORK ACTUALLY WAS. No such recall exists for this car. Get the Honda repair order, or call any Honda dealer with the VIN and have them read the service history - it is free.",
+      "Recall 26V332000 (seat weight sensor, unintended airbag deployment) - confirm by VIN whether it is the one that was done, or still open",
+      "Recalls 23V858000 and 21V215000 (fuel pump, engine stall) - check by VIN",
+      "Recall 18V663000 (steering magnet) and 23V158000 (seat belt buckle) - check",
+      "Seller claims a Honda inspection found only an oil change needed, brakes good, Michelins near new. Ask for that inspection sheet in writing.",
+      "1.5L turbo oil dilution: smell the dipstick for fuel and check the oil is not reading ABOVE full",
+      "Read the 6-month warranty document before assuming it means anything - ask what is actually covered and the claim limit",
+      "Appointment-only independent at a suite address; get the out-the-door figure in writing and confirm the $299 doc fee is the only add-on",
+      "At 80k miles ask when the transmission fluid and rear diff (if any) were done",
+      "Free NICB VINCheck and a ~$4 NMVTIS report before spending on an inspection",
+      "Independent pre-purchase inspection, not the selling dealer's"
+    ],
+    "history": [
+      {
+        "date": "2026-07-28",
+        "price": 20294
+      },
+      {
+        "date": "2026-08-26",
+        "price": 19949
+      },
+      {
+        "date": "2026-09-19",
+        "price": 18700
+      }
+    ]
   }
 ]
