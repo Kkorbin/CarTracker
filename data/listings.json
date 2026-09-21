@@ -2442,7 +2442,7 @@
       "memoryseats": false,
       "remotestart": true
     },
-    "notes": "CLEANEST HISTORY OF ANY CR-V ON THE BOARD: 1 owner, 0 accidents, clean title. Every other CR-V under $23k out the door either has a reported accident or is a Carvana car with history we cannot confirm. Full feature set with nothing missing - adaptive cruise, blind-spot, rear cross-traffic, AEB, lane departure, CarPlay, heated seats, moonroof, remote start. VIN decodes EX with the L15BE 1.5 turbo, FWD, built in Greensburg. NOTE the seller's own description calls it an \"EX-L\" - it is not, the VIN says EX, which means CLOTH seats. That is the trim the leather conversation was looking for, and it is the only cloth CR-V here that is not a Carvana car; the cloth Carvana ones run $24,299-$25,681 out the door. Doc fee is $299 against the $599 norm, saving $300, and a 6-month warranty is included, which is unusual for a small independent. Listed 28 Jul at $20,294 and cut twice to $18,999, now near the bottom of the $18,279-$20,330 market range. THE PROBLEM IS MILEAGE: 80,495. That is ~10,060/yr so it is normal for its age rather than thrashed, but against a keep-until-it-dies plan it starts with 12k less runway than the DV Auto car and 24k less than the EchoPark 2019. UNRESOLVED: the seller says it \"was just at Honda dealership for a recall and got new security module installed\". There is no security module recall for the 2018 CR-V - NHTSA lists five open campaigns and none of them is that. It may simply be the seat weight sensor recall (26V332000, letters mailed July 2026, right timing) described loosely, or it may be an electrical or theft-related repair. Ask before anything else.",
+    "notes": "CLEANEST HISTORY OF ANY CR-V ON THE BOARD: 1 owner, 0 accidents, clean title. Every other CR-V under $23k out the door either has a reported accident or is a Carvana car with history we cannot confirm. Full feature set with nothing missing - adaptive cruise, blind-spot, rear cross-traffic, AEB, lane departure, CarPlay, heated seats, moonroof, remote start. VIN decodes EX with the L15BE 1.5 turbo, FWD, built in Greensburg. NOTE the seller's own description calls it an \"EX-L\" - it is not, the VIN says EX, which means CLOTH seats. That is the trim the leather conversation was looking for, and it is the only cloth CR-V here that is not a Carvana car; the cloth Carvana ones run $24,299-$25,681 out the door. Doc fee is $299 against the $599 norm, saving $300, and a 6-month warranty is included, which is unusual for a small independent. Listed 28 Jul at $20,294 and cut twice to $18,999, now near the bottom of the $18,279-$20,330 market range. THE PROBLEM IS MILEAGE: 80,495. That is ~10,060/yr so it is normal for its age rather than thrashed, but against a keep-until-it-dies plan it starts with 12k less runway than the DV Auto car and 24k less than the EchoPark 2019. UNRESOLVED: the seller says it \"was just at Honda dealership for a recall and got new security module installed\". There is no security module recall for the 2018 CR-V - NHTSA lists five open campaigns and none of them is that. It may simply be the seat weight sensor recall (26V332000, letters mailed July 2026, right timing) described loosely, or it may be an electrical or theft-related repair. Ask before anything else. DEALER CHECKED 2026-09-20, and the earlier caution about the suite address was wrong. Fine Cars LLC is a small owner-operated dealer run by Davor Sabic, trading since May 2020, BBB ACCREDITED WITH AN A+ AND ZERO COMPLAINTS CLOSED IN THREE YEARS, and 5.0 stars across 41 reviews on cars.com. Eight cars in inventory, mostly Hondas from $8,294 to $20,294 - this CR-V is the top of their stock. Review themes are consistent and specific: no hidden fees, no pressure, post-purchase support, and one reviewer noting he is picky about what he buys. That is a materially better dealer profile than DV Auto Center, which carries no cars.com rating at all. A one-man operation living on 41 five-star reviews is also the kind of seller most likely to say yes to an outside inspection - he already offers a free CarFax and a 6-month warranty unprompted.",
     "checks": [
       "ASK WHAT THE \"SECURITY MODULE\" WORK ACTUALLY WAS. No such recall exists for this car. Get the Honda repair order, or call any Honda dealer with the VIN and have them read the service history - it is free.",
       "Recall 26V332000 (seat weight sensor, unintended airbag deployment) - confirm by VIN whether it is the one that was done, or still open",
@@ -2451,10 +2451,10 @@
       "Seller claims a Honda inspection found only an oil change needed, brakes good, Michelins near new. Ask for that inspection sheet in writing.",
       "1.5L turbo oil dilution: smell the dipstick for fuel and check the oil is not reading ABOVE full",
       "Read the 6-month warranty document before assuming it means anything - ask what is actually covered and the claim limit",
-      "Appointment-only independent at a suite address; get the out-the-door figure in writing and confirm the $299 doc fee is the only add-on",
       "At 80k miles ask when the transmission fluid and rear diff (if any) were done",
       "Free NICB VINCheck and a ~$4 NMVTIS report before spending on an inspection",
-      "Independent pre-purchase inspection, not the selling dealer's"
+      "Independent pre-purchase inspection, not the selling dealer's",
+      "Ask Davor directly to take it to a Honda dealer for a PPI - small owner-operated lot, BBB A+, zero complaints, so a refusal here would be genuinely out of character and therefore very informative"
     ],
     "history": [
       {
@@ -2469,6 +2469,20 @@
         "date": "2026-09-19",
         "price": 18700
       }
-    ]
+    ],
+    "dealerRating": {
+      "carsDotCom": {
+        "stars": 5.0,
+        "reviews": 41
+      },
+      "bbb": {
+        "grade": "A+",
+        "accreditedSince": "2022-01-11",
+        "complaints3yr": 0
+      },
+      "owner": "Davor Sabic",
+      "inBusinessSince": "2020-05-29",
+      "inventoryCount": 8
+    }
   }
 ]
