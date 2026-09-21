@@ -434,7 +434,7 @@
     "location": "Henderson, NV",
     "dealer": "EchoPark Automotive Las Vegas",
     "status": "watching",
-    "notes": "[PRICE DROP 2026-09-18: down another $400, updated today.] Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate.",
+    "notes": "[PRICE DROP 2026-09-18: down another $400, updated today.] Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate. CORRECTED 2026-09-21: doc fee set to $699. EchoPark itemises $699 on their listings and this record had none, so it was falling back to the $599 default and understating the out-the-door figure by $100.",
     "checks": [
       "Confirm how tax works buying out of state — AZ use tax at registration, not dealer TPT",
       "Ask whether they will deliver to Phoenix or whether you drive 5 hours each way",
@@ -467,11 +467,12 @@
         "price": 20096
       }
     ],
-    "lastVerified": "2026-09-20",
+    "lastVerified": "2026-09-21",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/3b8835b1-09ec-49a3-a0cb-f99958b5c000/6ea8be40-2056-4e18-be1e-a04c9b23351d/ilML2_iAKdJ4cK2mp5Fcz7QbW2c.jpg",
     "listedDate": "2026-07-30",
     "seats": "leather",
-    "sellerType": "dealer"
+    "sellerType": "dealer",
+    "docFee": 699
   },
   {
     "id": "5824a711-1a31-47b8-a506-5ceb235e1c20",
@@ -2484,5 +2485,83 @@
       "inBusinessSince": "2020-05-29",
       "inventoryCount": 8
     }
+  },
+  {
+    "id": "28454baf-87e8-4231-aab3-7f11e99013b8",
+    "url": "https://www.cars.com/vehicledetail/c660a9a4-8243-4900-ac60-05458742e192/",
+    "vin": "7FARW1H99KE014079",
+    "msrp": 34000,
+    "msrpEstimated": true,
+    "year": 2019,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "Touring",
+    "price": 20197,
+    "docFee": 699,
+    "miles": 78726,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Henderson, NV",
+    "dealer": "EchoPark Automotive Las Vegas",
+    "sellerType": "dealer",
+    "seats": "leather",
+    "status": "watching",
+    "listedDate": "2026-08-19",
+    "added": "2026-09-21",
+    "lastVerified": "2026-09-21",
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": true,
+      "moonroof": true,
+      "leather": true,
+      "powerseats": true,
+      "memoryseats": true,
+      "remotestart": true
+    },
+    "notes": "LOSES TO THE EX-L THIS SAME DEALER ALREADY HAS ON THE BOARD. Side by side, same year, same model, same lot in Henderson: the EX-L is $20,096 with 56,677 miles and ONE owner; this Touring is $20,896 all-in with 78,726 miles and MULTIPLE owners. Out the door they are $127 apart. You would be paying the same money for 22,049 more miles and a worse ownership record, and against a plan to keep the car until it dies that is the wrong direction. What Touring buys over EX-L on this generation is navigation you will not use because CarPlay is standard, LED headlights, rain-sensing wipers, a 9-speaker system and a hands-free tailgate. NOTE: an earlier claim that Touring brings 19-inch wheels was WRONG - Honda's own spec page shows EX, EX-L and Touring all on 18s for 2019, so there is no tyre-cost penalty. The 19s arrived with the 2023 redesign. Clean title, 0 accidents, FWD, L15BE 1.5 turbo, built in Greensburg. PRICE IS FALLING FAST: listed 19 Aug at $22,696 and cut SIX times in 33 days to $20,896, $1,800 off. That is EchoPark's algorithmic pricing rather than a negotiation, and it may well keep going - worth watching rather than chasing. EchoPark includes a 190-point inspection, a free CarFax and a 7-DAY MONEY BACK GUARANTEE, which is genuinely valuable on a car 300 miles away.",
+    "checks": [
+      "BUY THE EX-L INSTEAD unless it sells - same dealer, 22k fewer miles, one owner, and $127 less out the door",
+      "If you do pursue this one, watch the price rather than acting: six cuts in 33 days suggests it is still falling",
+      "Henderson NV is a ~600 mile round trip; confirm availability before travelling",
+      "Out-of-state purchase - confirm how EchoPark handles Arizona use tax and registration, and get the out-the-door number in writing",
+      "Multiple owners at 78,726 miles - pull the CarFax for the ownership pattern",
+      "1.5L turbo oil dilution: smell the dipstick, check oil is not above full",
+      "Recall 26V332000 (seat weight sensor) and the fuel pump campaigns - check by VIN",
+      "Understand the 7-day money back guarantee terms before relying on them",
+      "Independent pre-purchase inspection, not the selling dealer's"
+    ],
+    "history": [
+      {
+        "date": "2026-08-19",
+        "price": 22696
+      },
+      {
+        "date": "2026-09-03",
+        "price": 22196
+      },
+      {
+        "date": "2026-09-08",
+        "price": 21996
+      },
+      {
+        "date": "2026-09-10",
+        "price": 21496
+      },
+      {
+        "date": "2026-09-15",
+        "price": 21196
+      },
+      {
+        "date": "2026-09-17",
+        "price": 20197
+      }
+    ]
   }
 ]
