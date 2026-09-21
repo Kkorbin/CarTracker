@@ -1,9 +1,9 @@
 {
-  "lastChecked": "2026-09-20",
-  "previousCheck": "2026-09-19",
-  "activeCount": 20,
-  "verifiedCount": 14,
-  "unverifiedCount": 6,
-  "summary": "14 of 20 re-verified, nothing sold, no price changes, 6 Carvana unreachable (403).",
-  "notes": "A completely quiet run. Every cars.com listing that was live yesterday is still live at the same price. Carvana still blocks automated requests, so those six remain unconfirmed."
+  "lastChecked": "2026-09-21",
+  "previousCheck": "2026-09-20",
+  "activeCount": 22,
+  "verifiedCount": 22,
+  "unverifiedCount": 0,
+  "summary": "All 22 live listings now verified — the six Carvana cars reached for the first time, all still available. Nothing sold.",
+  "notes": "Carvana blocks curl and the fetch tool with a 403 but loads normally in a browser, so nothing on the board is unverifiable any more. The 14 cars.com listings were checked 2026-09-20."
 }
