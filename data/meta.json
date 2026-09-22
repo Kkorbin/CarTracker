@@ -1,9 +1,9 @@
 {
   "lastChecked": "2026-09-21",
   "previousCheck": "2026-09-20",
-  "activeCount": 22,
-  "verifiedCount": 22,
+  "activeCount": 20,
+  "verifiedCount": 20,
   "unverifiedCount": 0,
-  "summary": "All 22 live listings now verified — the six Carvana cars reached for the first time, all still available. Nothing sold.",
-  "notes": "Carvana blocks curl and the fetch tool with a 403 but loads normally in a browser, so nothing on the board is unverifiable any more. The 14 cars.com listings were checked 2026-09-20."
+  "summary": "All 20 live listings verified. 2 sold today. No price changes on the survivors.",
+  "notes": "Every source is now reachable: cars.com via fetch, Carvana in a browser. Nothing on the board is unverified."
 }
