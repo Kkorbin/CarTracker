@@ -1,9 +1,9 @@
 {
-  "lastChecked": "2026-09-21",
-  "previousCheck": "2026-09-20",
-  "activeCount": 20,
-  "verifiedCount": 20,
+  "lastChecked": "2026-09-22",
+  "previousCheck": "2026-09-21",
+  "activeCount": 17,
+  "verifiedCount": 17,
   "unverifiedCount": 0,
-  "summary": "All 20 live listings verified. 2 sold today. No price changes on the survivors.",
-  "notes": "Every source is now reachable: cars.com via fetch, Carvana in a browser. Nothing on the board is unverified."
+  "summary": "Arizona and delivered cars only now — 3 out-of-state listings removed. 17 live, all verified. 1 sold, 3 price changes.",
+  "notes": "Henderson NV listings dropped: a 600-mile round trip is not a car you can go and look at. Carvana stays because they deliver to the door."
 }

@@ -9,7 +9,7 @@
     "make": "Honda",
     "model": "CR-V",
     "trim": "EX-L",
-    "price": 20798,
+    "price": 20598,
     "miles": 50288,
     "title": "clean",
     "accidents": "minor",
@@ -44,9 +44,13 @@
       {
         "date": "2026-09-12",
         "price": 20798
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20598
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/b89a0ca3-0f12-572c-83b0-1802410fcf17/2d98c775-e710-4c56-adae-8b4a9f1ef298/5iwOOfIWixWR_tilMLs0nL2LoNE.jpg",
     "listedDate": "2026-08-06",
     "seats": "leather",
@@ -357,7 +361,7 @@
         "price": 21894
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/6418ae95-f6ac-50e3-bc8a-156b3a573ce2/54e325a6-b10e-4ba2-a4f2-b88cbe99c56a/KsFBnYBOMv1XQ5hYosyNwVEkgkY.jpg",
     "listedDate": "2026-06-30",
     "seats": "leatherette",
@@ -433,8 +437,8 @@
     "drive": "fwd",
     "location": "Henderson, NV",
     "dealer": "EchoPark Automotive Las Vegas",
-    "status": "watching",
-    "notes": "[PRICE DROP 2026-09-18: down another $400, updated today.] Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate. CORRECTED 2026-09-21: doc fee set to $699. EchoPark itemises $699 on their listings and this record had none, so it was falling back to the $599 default and understating the out-the-door figure by $100.",
+    "status": "passed",
+    "notes": "[PRICE DROP 2026-09-18: down another $400, updated today.] Possibly the best history of any CR-V found: clean title, 0 accidents, ONE owner, 56,677 miles, and every safety feature plus heated seats, power liftgate, moonroof and leather — for $20,496. Cheaper than the Scottsdale EX-L and without its reported accident. THE CATCH: it is in Henderson, NV, roughly a 5-hour drive. An out-of-state purchase changes the tax treatment (Arizona charges use tax at registration rather than the dealer collecting TPT), so the out-the-door figure below is an approximation using the default rate. CORRECTED 2026-09-21: doc fee set to $699. EchoPark itemises $699 on their listings and this record had none, so it was falling back to the $599 default and understating the out-the-door figure by $100. PASSED 2026-09-22 - OUT OF STATE. Henderson, NV is a ~600 mile round trip from Phoenix. Not a car that can be looked at on a Saturday, and arranging an independent inspection at that distance means paying a remote inspector and trusting a report. Removed at your request; Carvana stays because they deliver.",
     "checks": [
       "Confirm how tax works buying out of state — AZ use tax at registration, not dealer TPT",
       "Ask whether they will deliver to Phoenix or whether you drive 5 hours each way",
@@ -467,7 +471,7 @@
         "price": 20096
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/3b8835b1-09ec-49a3-a0cb-f99958b5c000/6ea8be40-2056-4e18-be1e-a04c9b23351d/ilML2_iAKdJ4cK2mp5Fcz7QbW2c.jpg",
     "listedDate": "2026-07-30",
     "seats": "leather",
@@ -491,8 +495,8 @@
     "drive": "fwd",
     "location": "Henderson, NV",
     "dealer": "Towbin Kia",
-    "status": "watching",
-    "notes": "[PRICE DROP 2026-09-16: down $1,500.] Carfax-certified one owner, clean title, 0 accidents, and the listing notes it is 30,227 miles below market average for its year. Rear cross-traffic is the only safety item not listed. Also in Henderson, NV — same out-of-state caveat as the EchoPark car, and $1,494 more expensive for similar equipment and 4,600 more miles. CORRECTED 2026-09-19: this listing had been tagged as lacking blind-spot and rear cross-traffic. It is not. Honda made the Blind Spot Information System and Cross Traffic Monitor STANDARD on CR-V EX and above from the 2017 redesign onward, confirmed against Honda's own feature guide. The tags came from an incomplete dealer feature list, and the error was holding the score down by roughly 8 points.",
+    "status": "passed",
+    "notes": "[PRICE DROP 2026-09-16: down $1,500.] Carfax-certified one owner, clean title, 0 accidents, and the listing notes it is 30,227 miles below market average for its year. Rear cross-traffic is the only safety item not listed. Also in Henderson, NV — same out-of-state caveat as the EchoPark car, and $1,494 more expensive for similar equipment and 4,600 more miles. CORRECTED 2026-09-19: this listing had been tagged as lacking blind-spot and rear cross-traffic. It is not. Honda made the Blind Spot Information System and Cross Traffic Monitor STANDARD on CR-V EX and above from the 2017 redesign onward, confirmed against Honda's own feature guide. The tags came from an incomplete dealer feature list, and the error was holding the score down by roughly 8 points. PASSED 2026-09-22 - OUT OF STATE. Henderson, NV is a ~600 mile round trip from Phoenix. Not a car that can be looked at on a Saturday, and arranging an independent inspection at that distance means paying a remote inspector and trusting a report. Removed at your request; Carvana stays because they deliver.",
     "checks": [
       "Confirm rear cross-traffic alert is fitted",
       "Same out-of-state tax and registration questions as the other Nevada car",
@@ -524,7 +528,7 @@
         "price": 20490
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/ef5ede15-02a9-5bf8-9e2a-2bc6e1a964ab/86a1c143-37b5-4800-835b-878371cdbe70/nGP9XHyWtoW_2l9J1sDJZf9Eyow.jpg",
     "listedDate": "2026-07-23",
     "seats": "leather",
@@ -600,8 +604,8 @@
     "drive": "fwd",
     "location": "Phoenix, AZ",
     "dealer": "DV Auto Center",
-    "status": "watching",
-    "notes": "THE OUTLIER. At $16,500 this is roughly $4,300 under the median for the spec, fully equipped, clean title. Price has already dropped $1,495 from $17,995 back in December, so it has been sitting. Explanations on the listing: an accident is reported and there are multiple previous owners — but neither obviously accounts for that big a discount. The listing also says 'seller has not disclosed fees', which at an independent lot is worth taking literally. Your own criteria say to investigate cars this cheap, so treat it as a lead to verify rather than a bargain to grab. DEEP-DIVE 2026-09-19 - the cheapness is now explained. Three things, none of them hidden. (1) An accident is REPORTED and there are multiple owners. (2) It has been on this lot since 23 DEC 2025 - roughly nine months - and has been marked down twice: $17,995 to $16,995 in March, then to $16,500 on 28 Aug. (3) The listing says \"Seller has not disclosed fees\", and Arizona does not cap doc fees, so the $18,664 out-the-door figure here assumes the $599 default and could be materially wrong. The nine months is the important one: a complete-spec CR-V at $16,500 in Phoenix should not sit unsold that long, so something is putting buyers off in person or on the CarFax. That is either the best lever on this board or the reason to walk. VIN decodes clean as EX-L with the L15BE 1.5L turbo - the oil-dilution engine, which Phoenix heat mitigates but does not eliminate.",
+    "status": "sold",
+    "notes": "THE OUTLIER. At $16,500 this is roughly $4,300 under the median for the spec, fully equipped, clean title. Price has already dropped $1,495 from $17,995 back in December, so it has been sitting. Explanations on the listing: an accident is reported and there are multiple previous owners — but neither obviously accounts for that big a discount. The listing also says 'seller has not disclosed fees', which at an independent lot is worth taking literally. Your own criteria say to investigate cars this cheap, so treat it as a lead to verify rather than a bargain to grab. DEEP-DIVE 2026-09-19 - the cheapness is now explained. Three things, none of them hidden. (1) An accident is REPORTED and there are multiple owners. (2) It has been on this lot since 23 DEC 2025 - roughly nine months - and has been marked down twice: $17,995 to $16,995 in March, then to $16,500 on 28 Aug. (3) The listing says \"Seller has not disclosed fees\", and Arizona does not cap doc fees, so the $18,664 out-the-door figure here assumes the $599 default and could be materially wrong. The nine months is the important one: a complete-spec CR-V at $16,500 in Phoenix should not sit unsold that long, so something is putting buyers off in person or on the CarFax. That is either the best lever on this board or the reason to walk. VIN decodes clean as EX-L with the L15BE 1.5L turbo - the oil-dilution engine, which Phoenix heat mitigates but does not eliminate. SOLD/DELISTED, confirmed 2026-09-22: cars.com returns \"Sorry, this vehicle is no longer available\". After 272 days and two markdowns it finally went, at $16,500 with the reported accident never explained. It had been the cheapest complete CR-V on the board by roughly $2,000 and the benchmark every other car was measured against. That comparison is now gone.",
     "checks": [
       "ASK THE FEE QUESTION FIRST, before anything else: get the itemised out-the-door number in writing. \"Seller has not disclosed fees\" on an independent lot in a state with no doc-fee cap is where a $16,500 car becomes an $18,500 car.",
       "Ask why it has been on the lot since December. Listen to the answer.",
@@ -642,7 +646,7 @@
         "price": 16500
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/e5842869-5f05-5e6b-b795-c97b983bc8db/0aa05841-48ba-49fa-ba0e-3bd5d4890276/N74rRXmZo4TpIhBGU7M_1RajbbE.jpg",
     "listedDate": "2025-12-23",
     "seats": "leather",
@@ -701,7 +705,7 @@
     ],
     "shipping": 690,
     "docFee": 0,
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "seats": "cloth",
     "sellerType": "dealer"
   },
@@ -861,7 +865,7 @@
     ],
     "shipping": 690,
     "docFee": 0,
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "seats": "leather",
     "sellerType": "dealer"
   },
@@ -969,7 +973,7 @@
     ],
     "shipping": 690,
     "docFee": 0,
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "seats": "leather",
     "sellerType": "dealer"
   },
@@ -1075,9 +1079,9 @@
         "price": 21590
       }
     ],
-    "shipping": 690,
+    "shipping": 490,
     "docFee": 0,
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "seats": "leather",
     "sellerType": "dealer"
   },
@@ -1134,7 +1138,7 @@
     ],
     "shipping": 1590,
     "docFee": 0,
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "seats": "cloth",
     "sellerType": "dealer"
   },
@@ -1242,7 +1246,7 @@
     ],
     "shipping": 990,
     "docFee": 0,
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "seats": "cloth",
     "sellerType": "dealer"
   },
@@ -1350,7 +1354,7 @@
         "price": 18172
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/cb5574f2-9c14-5e4c-8088-50bb537ba4bc/99946c49-c80c-485e-bb48-6af40c2a7dd4/KDL_OxLYApIrRpqiSE85j5iOSKs.jpg",
     "listedDate": "2026-07-23",
     "seats": "leatherette",
@@ -1410,7 +1414,7 @@
         "price": 18572
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/cb5574f2-9c14-5e4c-8088-50bb537ba4bc/3be2435d-2097-44b7-a1f2-2e895264ea25/CiShKi1DQGUrTPPEI4kqhpimmmc.jpg",
     "listedDate": "2026-08-04",
     "seats": "leatherette",
@@ -1465,7 +1469,7 @@
         "price": 22594
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/65884cf8-f185-5c1f-859c-1845e23f0862/647739a0-2d71-4373-be6b-7fc053c87015/jxkW3gp1gb6Bk2TiBoFhmkiLNjQ.jpg",
     "listedDate": "2026-08-17",
     "seats": "cloth",
@@ -1538,7 +1542,7 @@
     "make": "Mazda",
     "model": "CX-5",
     "trim": "2.5 S Select Package",
-    "price": 22655,
+    "price": 22046,
     "miles": 51403,
     "title": "clean",
     "accidents": "none",
@@ -1574,9 +1578,13 @@
       {
         "date": "2026-09-16",
         "price": 22655
+      },
+      {
+        "date": "2026-09-22",
+        "price": 22046
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/00cf529a-7a04-5b9c-ab0f-466834163635/0f1d3b20-e7c3-4c21-bbdd-1eb03b626bb3/r7S21d4Fb4iOtJoURkR7eEEskp8.jpg",
     "listedDate": "2026-08-11",
     "seats": "cloth",
@@ -1630,7 +1638,7 @@
         "price": 21294
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/e45ca891-cce9-54a1-b1c8-f0dad5719aeb/a3daf8bf-82bd-4d92-90e5-6985ee745199/USULXWQbQ1bI6plL047ZiA1gckk.jpg",
     "listedDate": "2026-09-15",
     "seats": "leather",
@@ -2001,7 +2009,7 @@
         "price": 17999
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/25d8f530-1d4c-5b34-9299-6df318f85ed3/3c9c6d87-075f-4579-a1b6-14df562e6391/dFWFbYUmkTperxbPjNGcLcQYPmI.jpg",
     "listedDate": "2026-08-29",
     "seats": "leatherette",
@@ -2159,7 +2167,7 @@
         "price": 17995
       }
     ],
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "photo": "https://platform.cstatic-images.com/medium/in/v2/d5790c00-613b-571c-89c8-067423a24b12/04b96770-cd66-4cb6-a942-ec6c7c645eeb/OSQpo6RjAmVEOAbCiuqvlT_01zo.jpg",
     "listedDate": "2026-08-14",
     "seats": "leatherette",
@@ -2427,7 +2435,7 @@
     "status": "watching",
     "listedDate": "2026-07-28",
     "added": "2026-09-20",
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "features": {
       "carplay": true,
       "acc": true,
@@ -2506,10 +2514,10 @@
     "dealer": "EchoPark Automotive Las Vegas",
     "sellerType": "dealer",
     "seats": "leather",
-    "status": "watching",
+    "status": "passed",
     "listedDate": "2026-08-19",
     "added": "2026-09-21",
-    "lastVerified": "2026-09-21",
+    "lastVerified": "2026-09-22",
     "features": {
       "carplay": true,
       "acc": true,
@@ -2525,7 +2533,7 @@
       "memoryseats": true,
       "remotestart": true
     },
-    "notes": "LOSES TO THE EX-L THIS SAME DEALER ALREADY HAS ON THE BOARD. Side by side, same year, same model, same lot in Henderson: the EX-L is $20,096 with 56,677 miles and ONE owner; this Touring is $20,896 all-in with 78,726 miles and MULTIPLE owners. Out the door they are $127 apart. You would be paying the same money for 22,049 more miles and a worse ownership record, and against a plan to keep the car until it dies that is the wrong direction. What Touring buys over EX-L on this generation is navigation you will not use because CarPlay is standard, LED headlights, rain-sensing wipers, a 9-speaker system and a hands-free tailgate. NOTE: an earlier claim that Touring brings 19-inch wheels was WRONG - Honda's own spec page shows EX, EX-L and Touring all on 18s for 2019, so there is no tyre-cost penalty. The 19s arrived with the 2023 redesign. Clean title, 0 accidents, FWD, L15BE 1.5 turbo, built in Greensburg. PRICE IS FALLING FAST: listed 19 Aug at $22,696 and cut SIX times in 33 days to $20,896, $1,800 off. That is EchoPark's algorithmic pricing rather than a negotiation, and it may well keep going - worth watching rather than chasing. EchoPark includes a 190-point inspection, a free CarFax and a 7-DAY MONEY BACK GUARANTEE, which is genuinely valuable on a car 300 miles away.",
+    "notes": "LOSES TO THE EX-L THIS SAME DEALER ALREADY HAS ON THE BOARD. Side by side, same year, same model, same lot in Henderson: the EX-L is $20,096 with 56,677 miles and ONE owner; this Touring is $20,896 all-in with 78,726 miles and MULTIPLE owners. Out the door they are $127 apart. You would be paying the same money for 22,049 more miles and a worse ownership record, and against a plan to keep the car until it dies that is the wrong direction. What Touring buys over EX-L on this generation is navigation you will not use because CarPlay is standard, LED headlights, rain-sensing wipers, a 9-speaker system and a hands-free tailgate. NOTE: an earlier claim that Touring brings 19-inch wheels was WRONG - Honda's own spec page shows EX, EX-L and Touring all on 18s for 2019, so there is no tyre-cost penalty. The 19s arrived with the 2023 redesign. Clean title, 0 accidents, FWD, L15BE 1.5 turbo, built in Greensburg. PRICE IS FALLING FAST: listed 19 Aug at $22,696 and cut SIX times in 33 days to $20,896, $1,800 off. That is EchoPark's algorithmic pricing rather than a negotiation, and it may well keep going - worth watching rather than chasing. EchoPark includes a 190-point inspection, a free CarFax and a 7-DAY MONEY BACK GUARANTEE, which is genuinely valuable on a car 300 miles away. PASSED 2026-09-22 - OUT OF STATE. Henderson, NV is a ~600 mile round trip from Phoenix. Not a car that can be looked at on a Saturday, and arranging an independent inspection at that distance means paying a remote inspector and trusting a report. Removed at your request; Carvana stays because they deliver.",
     "checks": [
       "BUY THE EX-L INSTEAD unless it sells - same dealer, 22k fewer miles, one owner, and $127 less out the door",
       "If you do pursue this one, watch the price rather than acting: six cuts in 33 days suggests it is still falling",
