@@ -80,6 +80,15 @@
     "isElectric": false,
     "kwh100": 0.0
   },
+  "2023|Mazda|CX-5|awd": {
+    "city": 24.0,
+    "comb": 26.0,
+    "epaModel": "CX-5 4WD",
+    "epaOption": "Auto (S6), 4 cyl, 2.5 L",
+    "hwy": 30.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
   "2023|Nissan|Ariya|fwd": {
     "city": 97.0,
     "comb": 92.0,
