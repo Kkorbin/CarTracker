@@ -2688,5 +2688,61 @@
         "price": 23998
       }
     ]
+  },
+  {
+    "id": "02472167-702a-4693-a088-0eea7fba214d",
+    "url": "https://www.cars.com/vehicledetail/cf6a2947-3a6e-48a5-9c63-90bc4501df4b/",
+    "vin": "2HKRW1H51LH421549",
+    "msrp": 30000,
+    "msrpEstimated": true,
+    "year": 2020,
+    "make": "Honda",
+    "model": "CR-V",
+    "trim": "EX",
+    "price": 22497,
+    "docFee": 699,
+    "miles": 39862,
+    "title": "clean",
+    "accidents": "none",
+    "drive": "fwd",
+    "location": "Avondale, AZ",
+    "dealer": "EchoPark Automotive Phoenix",
+    "sellerType": "dealer",
+    "seats": "cloth",
+    "status": "watching",
+    "listedDate": "2026-09-12",
+    "added": "2026-09-22",
+    "lastVerified": "2026-09-22",
+    "features": {
+      "carplay": true,
+      "acc": true,
+      "bsm": true,
+      "rcta": true,
+      "aeb": true,
+      "lane": true,
+      "heatedseats": true,
+      "liftgate": false,
+      "moonroof": true,
+      "leather": false,
+      "powerseats": false,
+      "memoryseats": false,
+      "remotestart": true
+    },
+    "notes": "THE BETTER VERSION OF THE CR-V YOU WANT. Found comparing Courtesy Kia's 2021 EX-L against every other Arizona CR-V at the same money. One owner, zero accidents, clean title, 39,862 miles - against Courtesy's MULTIPLE owners and 50,256 miles - and $1,103 less on sticker. 2020 and 2021 are the same car: 2020 was the mid-cycle refresh, 2021 carried it over, both on the 1.5 turbo with full Honda Sensing. So the extra year at Courtesy buys one Phoenix summer of calendar age and nothing else. EX not EX-L, which means CLOTH, heated seats, moonroof and remote start but no leather, power liftgate or memory seat. The cloth is what was wanted anyway. EchoPark Phoenix is in Avondale, 33 miles from Mesa and in state. 7-day money back guarantee and a 190-point inspection. Listed 12 Sep, so 10 days. Avondale tax is 8.8%, the highest city rate on the board, which costs about $110 against Mesa - noise next to the $1,103.",
+    "checks": [
+      "Ask EchoPark for the free CarFax and confirm the one-owner / zero-accident history",
+      "EchoPark is no-haggle, so the price is the price - compare out-the-door numbers",
+      "Understand the 7-day money back terms: mileage cap, restocking, who pays for what",
+      "1.5L turbo oil dilution: smell the dipstick, check the level is not above full",
+      "Check open recalls by VIN at nhtsa.gov/recalls, including 26V332000",
+      "Call any Phoenix Honda dealer with the VIN for the free factory service history",
+      "Independent pre-purchase inspection, not EchoPark's own 190-point one"
+    ],
+    "history": [
+      {
+        "date": "2026-09-12",
+        "price": 22497
+      }
+    ]
   }
 ]

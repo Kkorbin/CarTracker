@@ -4,11 +4,13 @@ const CRITERIA = {
   currentYear: 2026,
   milesPerYear: 11000,
 
-  // Retargeted 2026-09-16: the goal is roughly $18k sticker so the out-the-door
-  // number lands near $20k. Budget applies to STICKER, since that is how listings
-  // are priced and searched — Phoenix tax plus a doc fee adds about $2,200 on an
-  // $18k car, so read both numbers on every card.
-  price: { budgetLow: 16500, target: 19000, stretch: 21500, ceiling: 23000 },
+  // Raised 2026-09-22, deliberately: the target is now about $24,000 sticker, which
+  // lands near $26,800 out the door. The previous bands ($19k target, $23k ceiling)
+  // were built for a $20k out-the-door goal, and once the budget moved they were
+  // penalising every newer car for a brief that no longer applied — a 2023 CX-5
+  // with 34k miles scored below a 2018 with 70k. Budget still applies to STICKER,
+  // because that is how listings are priced and searched; read OTD on every card.
+  price: { budgetLow: 18000, target: 24000, stretch: 25500, ceiling: 27000 },
   miles: { idealLow: 45000, idealHigh: 60000, hardHigh: 100000 },
   year:  { preferredLow: 2021, preferredHigh: 2024 },
 
@@ -71,25 +73,45 @@ const CRITERIA = {
 
   // Arizona purchase costs.
   fees: {
-    // TPT ("sales tax") is levied at the DEALER's city rate, not the buyer's, so a
-    // Scottsdale dealer is cheaper than a Phoenix one on the same car. Only rates
-    // actually verified are listed; anything else falls back to the Phoenix rate,
-    // which is the highest of the group and so errs toward over-estimating.
-    // Verified 2026-09-12. Exact rate depends on the dealer's street address.
-    tptByCity: {
-      'phoenix':    0.086,  // 5.6 state + 0.7 Maricopa + 2.3 city
-      'scottsdale': 0.080,
-      'peoria':     0.081,
-      'gilbert':    0.083,
-      'mesa':       0.083,
+    // TPT ("sales tax") = state + county + CITY, and the city portion is levied at
+    // the DEALER's city, not the buyer's. City rates are retail (business code 017)
+    // from the ADOR Transaction Privilege Tax rate table effective 2026-01-01.
+    //
+    // Some cities tax the portion of a single item above a threshold at a lower rate,
+    // which is exactly a car purchase. Phoenix does: 2.8% up to $14,338 and 2.0% on
+    // the rest. The previous table had Phoenix at a flat 2.3% city rate, which was
+    // stale; the real effective rate on a car is about 8.8-8.9%, not 8.6%.
+    //
+    // Mesa checks against a real dealer proposal: 5.6 + 0.7 + 2.0 = 8.3%, exactly
+    // what Courtesy Kia charged on $23,600.
+    tpt: {
+      state: 0.056,
+      county: { maricopa: 0.007, pima: 0.005 },
+      city: {
+        phoenix:    { county: 'maricopa', rate: 0.028, singleOver: 14338, singleRate: 0.020 },
+        avondale:   { county: 'maricopa', rate: 0.025 },
+        mesa:       { county: 'maricopa', rate: 0.020 },
+        gilbert:    { county: 'maricopa', rate: 0.020 },
+        peoria:     { county: 'maricopa', rate: 0.018 },
+        scottsdale: { county: 'maricopa', rate: 0.017 },
+        chandler:   { county: 'maricopa', rate: 0.015 },
+        tucson:     { county: 'pima',     rate: 0.026 },
+      },
+      // Unknown dealer city: Phoenix, the highest effective rate listed, so the error
+      // runs toward over-estimating rather than a pleasant surprise that is not real.
+      fallbackCity: 'phoenix',
+      // A delivered car (Carvana) is taxed where it is delivered, not where it ships
+      // from, so the buyer's own city applies.
+      deliveredCity: 'mesa',
     },
-    defaultTpt: 0.086,
 
     // Arizona does not cap dealer doc fees. Used where a listing doesn't state one.
     defaultDocFee: 599,
 
-    // Title $4 + registration $8 + plate $5 + air quality $1.50.
-    titleRegPlate: 18.50,
+    // Title $4 + registration $8 + plate $5 + air quality $1.50 + AQ compliance $0.25.
+    // One-year registration. The old $32 "public safety fee" was repealed and is not
+    // included. A two-year registration pays these once but VLT for both years.
+    titleRegPlate: 18.75,
 
     // Vehicle License Tax, collected at registration. Assessed on 60% of the
     // ORIGINAL MSRP, reduced 16.25% for each year since new, taxed at $2.89 per
@@ -145,9 +167,21 @@ function trimMeetsFloor(model, trim) {
 
 /* ---------- Arizona cost of purchase ---------- */
 
-function tptRateFor(location) {
-  const city = String(location || '').split(',')[0].trim().toLowerCase();
-  return CRITERIA.fees.tptByCity[city] ?? CRITERIA.fees.defaultTpt;
+// Tax on a given price at a given dealer location. Returns the tax, the effective
+// rate it works out to, and whether the city was actually in the table.
+function tptFor(location, price) {
+  const T = CRITERIA.fees.tpt;
+  let key = String(location || '').split(',')[0].trim().toLowerCase();
+  if (key.startsWith('deliver')) key = T.deliveredCity;
+  const known = Object.prototype.hasOwnProperty.call(T.city, key);
+  const c = T.city[known ? key : T.fallbackCity];
+  const p = Number(price) || 0;
+  const base = p * (T.state + (T.county[c.county] || 0));
+  const city = (c.singleOver && p > c.singleOver)
+    ? c.singleOver * c.rate + (p - c.singleOver) * c.singleRate
+    : p * c.rate;
+  const tax = base + city;
+  return { tax, rate: p ? tax / p : 0, known };
 }
 
 function estimateVlt(msrp, year) {
@@ -267,8 +301,9 @@ function isPrivateSale(v) {
 function outTheDoor(v) {
   const price = Number(v.price) || 0;
   const priv = isPrivateSale(v);
-  const rate = priv ? 0 : tptRateFor(v.location);
-  const tax = price * rate;
+  const t = priv ? { tax: 0, rate: 0, known: true } : tptFor(v.location, price);
+  const rate = t.rate;
+  const tax = t.tax;
   const docKnown = v.docFee != null && v.docFee !== '';
   const doc = priv ? 0 : (docKnown ? Number(v.docFee) : CRITERIA.fees.defaultDocFee);
   const reg = CRITERIA.fees.titleRegPlate;
@@ -281,9 +316,7 @@ function outTheDoor(v) {
     total: price + tax + doc + reg + (vlt || 0) + shipping,
     docIsEstimate: !docKnown && !priv,
     vltIsEstimate: Boolean(v.msrpEstimated),
-    cityKnown: Object.prototype.hasOwnProperty.call(
-      CRITERIA.fees.tptByCity, String(v.location || '').split(',')[0].trim().toLowerCase()
-    ),
+    cityKnown: t.known,
   };
 }
 

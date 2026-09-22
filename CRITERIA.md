@@ -1,7 +1,15 @@
 # Vehicle Search Criteria
 
 The target: a clean-title compact SUV, around 40k–60k miles, full modern safety package,
-Apple CarPlay, mid-level-or-better trim, priced **$18k–$23k**.
+Apple CarPlay, mid-level-or-better trim, priced **around $24k sticker (~$26.8k out the door)**.
+
+> **Budget raised 2026-09-22 — deliberately.** Target is now about **$24,000 sticker,
+> ~$26,800 out the door**, up from $19,000 / ~$20,000. This was a considered decision
+> after pricing a 2021 CR-V EX-L at $26,778 out the door, not drift: the extra money
+> buys roughly three model years and 30,000 fewer miles, which matters on a car meant
+> to be driven until it dies. Scoring bands moved to match — target $24,000, stretch
+> $25,500, ceiling $27,000. The old bands were scoring a 2023 CX-5 with 34k miles
+> below a 2018 with 70k, purely on a budget that no longer applied.
 
 > **Budget revised 2026-09-12** from $22k–$26k down to $18k–$23k. This is a material
 > change: at the lower ceiling, 2021–2022 examples of the RAV4, CR-V and Forester are
@@ -51,7 +59,7 @@ Practically: a **2022-or-newer** Tucson or Sportage avoids both problems entirel
 - **Target:** around $18,000 sticker; $19,000 still scores full marks.
 - Value over sticker price: a car at the top of the range with lower mileage beats a
   cheaper one carrying 85k+ miles.
-- **Budget is measured on sticker, not out the door.** Arizona adds roughly 8–8.6% tax
+- **Budget is measured on sticker, not out the door.** Arizona adds roughly 7.8–8.9% tax
   plus a doc fee, so a $23,000 car is about $25,600 before you drive away. The tracker
   shows both numbers per listing.
 
@@ -166,6 +174,32 @@ nicer interior.
 - **Weak depreciation is now a benefit, not a cost.** A badge that resells poorly is
   simply a discount on a car that may run just as long. Buying someone else's
   depreciation is the whole point.
+
+### Sales tax, corrected 2026-09-22
+
+City rates now come from the **ADOR TPT rate table effective 2026-01-01** (retail,
+business code 017), plus 5.6% state and county (Maricopa 0.7%, Pima 0.5%).
+
+| Dealer city | Effective on a car |
+| --- | --- |
+| Avondale | 8.8% |
+| Phoenix | ~8.8–8.9% — 2.8% city up to $14,338, 2.0% above |
+| Tucson | 8.7% |
+| Mesa, Gilbert | 8.3% |
+| Peoria | 8.1% |
+| Scottsdale | 8.0% |
+| Chandler | 7.8% |
+
+Two corrections. **Phoenix was wrong** — the table had a stale 2.3% city rate, so every
+Phoenix car was under-taxed by ~$50–60. And **Avondale, Chandler and Tucson were missing**,
+silently falling back to a default. Mesa is verified against a real dealer proposal:
+$1,958.80 on $23,600, to the penny.
+
+A delivered car (Carvana) is taxed at the buyer's address, not the seller's.
+
+**Registration:** $18.75 of fees plus VLT for one year. The $32 public safety fee some
+guides still list was repealed. On a 2021 CR-V that is ~$245 for one year, ~$430 for
+two. A dealer line above both deserves an itemised answer.
 
 ### Cost to own, added 2026-09-19
 

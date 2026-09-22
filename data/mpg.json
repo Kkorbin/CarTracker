@@ -53,12 +53,30 @@
     "isElectric": false,
     "kwh100": 0.0
   },
+  "2020|Honda|CR-V|fwd": {
+    "city": 28.0,
+    "comb": 30.0,
+    "epaModel": "CR-V FWD",
+    "epaOption": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "hwy": 34.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
   "2020|Mazda|CX-5|awd": {
     "city": 24.0,
     "comb": 26.0,
     "epaModel": "CX-5 4WD",
     "epaOption": "Auto (S6), 4 cyl, 2.5 L",
     "hwy": 30.0,
+    "isElectric": false,
+    "kwh100": 0.0
+  },
+  "2021|Honda|CR-V|fwd": {
+    "city": 28.0,
+    "comb": 30.0,
+    "epaModel": "CR-V FWD",
+    "epaOption": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "hwy": 34.0,
     "isElectric": false,
     "kwh100": 0.0
   },
