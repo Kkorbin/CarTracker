@@ -90,6 +90,7 @@ const CRITERIA = {
       city: {
         phoenix:    { county: 'maricopa', rate: 0.028, singleOver: 14338, singleRate: 0.020 },
         avondale:   { county: 'maricopa', rate: 0.025 },
+        tolleson:   { county: 'maricopa', rate: 0.025, singleOver: 5000, singleRate: 0.020 },
         mesa:       { county: 'maricopa', rate: 0.020 },
         gilbert:    { county: 'maricopa', rate: 0.020 },
         peoria:     { county: 'maricopa', rate: 0.018 },
