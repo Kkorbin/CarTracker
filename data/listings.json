@@ -2611,11 +2611,13 @@
       "memoryseats": true,
       "remotestart": true
     },
-    "notes": "A GOOD CAR IN THE WRONG BUDGET. Out the door this is $26,498 against a $20,000 target - over by $6,498, and past the $23,000 ceiling on sticker alone. Nothing wrong with the car: 50,256 miles is the second-lowest of any CR-V tracked, it is three years newer than anything else on the board, the feature set is complete with nothing to retrofit, and it is 0 accidents on a clean title. VIN confirms EX-L, L15BE 1.5 turbo, FWD, built in Alliston. Cars.com calls it a Great Deal at $734 under the $25,033 average, and that is probably fair - the problem is not that this car is overpriced, it is that 2021 EX-Ls cost more than the budget. Useful as a price-tier marker: against the Fine Cars 2018 EX it is $5,813 more out the door for three years newer and 30,239 fewer miles. WATCH THE ADD-ONS: the listing offers \"complimentary benefits valued at up to $1,167\" - concierge, GPS theft protection, ceramic coating, nitrogen fill. Those are usually pre-installed dealer profit items with the cost already inside the asking price rather than genuine gifts, and nitrogen fill is worth nothing. Ask whether the price falls if you decline them. Price was cut $2,042 TODAY, 19 days after listing, so it is moving.",
+    "notes": "A GOOD CAR IN THE WRONG BUDGET. Out the door this is $26,498 against a $20,000 target - over by $6,498, and past the $23,000 ceiling on sticker alone. Nothing wrong with the car: 50,256 miles is the second-lowest of any CR-V tracked, it is three years newer than anything else on the board, the feature set is complete with nothing to retrofit, and it is 0 accidents on a clean title. VIN confirms EX-L, L15BE 1.5 turbo, FWD, built in Alliston. Cars.com calls it a Great Deal at $734 under the $25,033 average, and that is probably fair - the problem is not that this car is overpriced, it is that 2021 EX-Ls cost more than the budget. Useful as a price-tier marker: against the Fine Cars 2018 EX it is $5,813 more out the door for three years newer and 30,239 fewer miles. WATCH THE ADD-ONS: the listing offers \"complimentary benefits valued at up to $1,167\" - concierge, GPS theft protection, ceramic coating, nitrogen fill. Those are usually pre-installed dealer profit items with the cost already inside the asking price rather than genuine gifts, and nitrogen fill is worth nothing. Ask whether the price falls if you decline them. Price was cut $2,042 TODAY, 19 days after listing, so it is moving. AUTOCHECK 2026-09-22 - CLEAN, and the reassuring kind of clean. TWO owners, not an unknown number: owner 1 bought it new in Yuma on 26 Apr 2021 and kept it three years (~9,500 mi/yr); owner 2 in Mesa from Jun 2024 (~9,700 mi/yr). Both personal use, both Arizona, no fleet, rental or lease. No accidents, no damage, airbags never deployed, no structural damage. Clean title, no brands. Five odometer readings from the MVD, two dealer listings and an emissions test all line up, with no rollback. Passed Arizona emissions 18 May 2026. That settles the 'multiple owners' worry raised earlier: it is two ordinary owners. The in-service date also confirms the factory warranty point - Honda's 5yr/60k powertrain coverage ran out 26 Apr 2026. Two small open items: (1) liens were recorded for both owners, three times for owner 2 in 2024, which usually means a refinance - a dealer has to deliver clear title, but confirm the lien release is done; (2) it is at 50,256 miles, right at Honda's 50k service - ask whether Courtesy did it. The report shows no service records at all, so call a Honda dealer with the VIN; owner 2 was in Mesa, so the history is probably at a local Honda store.",
     "checks": [
+      "Confirm the lien from the previous owner has been released and Courtesy can deliver a clear title - AutoCheck shows liens recorded in 2024",
+      "Ask whether the 50,000-mile service was done: oil and filter, engine air filter, tire rotation, brake inspection. If not, ask them to do it before delivery",
+      "Call a Honda dealer (a Mesa one is likely) with the VIN for the service history - AutoCheck shows none",
       "ASK WHETHER THE PRICE DROPS IF YOU DECLINE the $1,167 of \"complimentary\" add-ons - concierge, GPS theft protection, ceramic coating, nitrogen fill",
       "Get the out-the-door number in writing; $699 doc is at the high end",
-      "Multiple owners on a 5-year-old car - pull the CarFax for the pattern",
       "Cut $2,042 today after 19 days. It may not be finished falling.",
       "1.5L turbo oil dilution: smell the dipstick, check oil is not above full",
       "Check open recalls by VIN, including 26V332000 (seat weight sensor)",
@@ -2632,7 +2634,18 @@
         "date": "2026-09-22",
         "price": 23600
       }
-    ]
+    ],
+    "owners": 2,
+    "history_report": {
+      "source": "AutoCheck (via Courtesy Kia)",
+      "date": "2026-09-22",
+      "owners": 2,
+      "use": "personal",
+      "accidents": 0,
+      "title": "clean",
+      "odometerIssues": false,
+      "inServiceDate": "2021-04-26"
+    }
   },
   {
     "id": "125bc9d7-cd5a-4a88-b8ac-5476dbd85649",
