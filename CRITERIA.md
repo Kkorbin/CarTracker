@@ -248,7 +248,8 @@ without walking onto the lot. The DV Auto Center CR-V has been listed since
 | Hyundai / Kia **2022+** | Nothing known — newer 2.5L, conventional auto | Short record, no systemic fault |
 | Hyundai / Kia **pre-2022** | Theta II rod bearings | $5k–$8k; 15yr/150k warranty may cover |
 | Subaru Forester / Crosstrek | **CVT**, not the engine | 120k–200k; $6.5k–$10k to replace |
-| Honda CR-V EX / EX-L | 1.5L turbo oil dilution | Climate-dependent — Phoenix is favourable |
+| Honda CR-V 2017–2018 EX / EX-L | 1.5L turbo oil dilution — peak years; fix was a retrofit update | Climate-dependent — Phoenix is favourable; confirm the update by VIN |
+| Honda CR-V 2019+ | Oil-dilution fix built in at the factory | Ordinary small turbo — keep oil changes on schedule |
 | Nissan Ariya | **Battery** | 8yr/100k warranty; $12k–$18k after |
 
 The Ariya is the sharpest case: with no intent to resell, its terrible depreciation stops

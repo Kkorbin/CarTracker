@@ -474,15 +474,27 @@ const LONGEVITY = [
           'runs $6,500–$10,000, which on a car this age ends it. Highway miles extend ' +
           'it, stop-start city miles shorten it. Ask for CVT fluid service records.',
   },
+  // The 1.5L turbo oil-dilution problem is a MODEL-YEAR question, not a model one.
+  // Corrected 2026-09-22: this used to put the same "life-limiting part" warning on
+  // every CR-V, which overstated it badly for 2019 onward.
   {
-    match: v => v.make === 'Honda' && /EX/i.test(v.trim || ''),
+    match: v => v.make === 'Honda' && v.model === 'CR-V' && v.year <= 2018,
     rank: 'caution',
-    text: 'EX and EX-L use the 1.5L turbo, which has a documented oil-dilution problem ' +
-          '(fuel entering the oil) that in the worst cases damages the engine. IMPORTANT ' +
-          'MITIGATION: the cause is engines not reaching full operating temperature, and ' +
-          "Honda's service bulletins targeted cold-weather states. Phoenix is close to " +
-          'the best-case climate for this engine. Still worth an oil-smell check and ' +
-          'asking about oil change intervals.',
+    text: '2017-2018 is the peak of the 1.5L turbo oil-dilution problem (fuel getting ' +
+          'into the oil on cold starts and short trips). Honda\'s fix was a product update - ' +
+          'new engine and transmission software so the engine warms faster, an oil change, ' +
+          'sometimes a new A/C control unit - pushed mainly in cold-weather states. Ask a ' +
+          'Honda dealer whether it was applied to this VIN. Phoenix heat is close to the ' +
+          'best-case climate for this engine, which helps a lot.',
+  },
+  {
+    match: v => v.make === 'Honda' && v.model === 'CR-V' && v.year >= 2019,
+    rank: 'ok',
+    text: 'From 2019 Honda built the oil-dilution fix in at the factory, and later years ' +
+          'kept refining it; complaints dropped sharply. The problem was a cold-climate, ' +
+          'short-trip one, and in Phoenix heat the engine reaches temperature in minutes. ' +
+          'Treat it as an ordinary small turbo: oil changes on schedule matter more than ' +
+          'on a non-turbo engine, and a dipstick check takes thirty seconds.',
   },
   {
     match: v => v.make === 'Nissan' && v.model === 'Ariya',
