@@ -26,6 +26,9 @@ META = os.path.join(ROOT, "data", "meta.json")
 AZ = datetime.timezone(datetime.timedelta(hours=-7))  # Arizona, no DST
 TODAY = datetime.datetime.now(AZ).strftime("%Y-%m-%d")
 
+if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
+    sys.stdout.reconfigure(encoding="utf-8")
+
 
 def load(path):
     with io.open(path, encoding="utf-8") as f:

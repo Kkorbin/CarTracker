@@ -5,7 +5,7 @@ https://kkorbin.github.io/CarTracker/ — always give the user that link after c
 
 - `data/listings.json` listings · `data/meta.json` last-check status · `assets/criteria.js` scoring, Arizona tax and fees · `CRITERIA.md` buying criteria and budget
 - **Checks:** run `/check-cars`. It works in its own clean subagent, so it never carries this conversation.
-- **Python/Node run only in WSL:** `MSYS_NO_PATHCONV=1 wsl -e python3 /mnt/c/Users/diazj/Desktop/car-tracker/...`
+- **Python:** `py -3 <script>` runs natively on Windows. Node and Linux-only tools (LibreOffice) are in WSL.
 - **Sites:** cars.com works with WebFetch; Carvana, CarMax and Autotrader refuse it but load in the browser.
 - **Publish:** `git push origin main` (SSH deploy key via the `github-cartracker` host alias).
 - **Features:** dealer feature lists often omit equipment the car has. Check the manufacturer's spec or the VIN before recording a feature as missing.

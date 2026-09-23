@@ -14,7 +14,7 @@ costs usage, so aim for four steps and do nothing extra.
 
 **1. List** (one Bash call):
 
-    MSYS_NO_PATHCONV=1 wsl -e python3 /mnt/c/Users/diazj/Desktop/car-tracker/scripts/check.py list
+    py -3 /c/Users/diazj/Desktop/car-tracker/scripts/check.py list
 
 Each line is `id8|source|url|expect $headline|car`.
 
@@ -35,7 +35,7 @@ Each line is `id8|source|url|expect $headline|car`.
 **3. Apply, commit, publish** (one Bash call). Results map each id8 to
 `{"seen": <headline price>}`, plus `"shipping": N` for Carvana, or `{"sold": true}`:
 
-    cd /c/Users/diazj/Desktop/car-tracker && MSYS_NO_PATHCONV=1 wsl -e python3 /mnt/c/Users/diazj/Desktop/car-tracker/scripts/check.py apply - <<'JSON'
+    cd /c/Users/diazj/Desktop/car-tracker && py -3 scripts/check.py apply - <<'JSON'
     {...}
     JSON
     git add data && git commit -qm "Check $(date +%F): <summary line printed by apply>" -m "Co-Authored-By: Claude <noreply@anthropic.com>" && git push -q origin main && for i in 1 2 3 4 5 6; do sleep 20; curl -s "https://kkorbin.github.io/CarTracker/data/meta.json?cb=$RANDOM" | grep -q "$(date +%F)" && { echo LIVE; break; }; done
